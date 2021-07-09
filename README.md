@@ -1,1 +1,1 @@
-# Resources for Summary Explorer
+# Code and Resources for Summary Explorer
