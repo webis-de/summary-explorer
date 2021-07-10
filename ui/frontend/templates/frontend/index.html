@@ -1,0 +1,76 @@
+{% extends "frontend/base.html" %}
+{% block js %}
+{% endblock %}
+{% block content %}
+    <div id="root" class="container mx-auto w-full mt-2">
+        <ul class="grid grid-cols-1 gap-20 sm:grid-cols-2 lg:grid-cols-3 mt-16">
+          <li class="col-span-1 bg-white rounded-lg divide-y divide-gray-200 z-0">
+            <div class="w-full flex items-center justify-between p-6 space-x-6">
+              <div class="flex-1 truncate">
+                <div class="flex items-center space-x-3">
+                  <h3 class="text-blue-800 text-sm font-bold truncate">CNN/Daily Mail Corpus </h3>
+                  <span class="index-corpus-category-badge">News</span>
+                </div>
+                  <p class="index-corpus-desc">Multi-sentence Summaries</p>
+                  <p class="index-corpus-desc">11,448 News Articles</p>
+                  <p class="index-corpus-desc">45 Models</p>
+              </div>
+            </div>
+            <div>
+              <div class="-mt-px flex divide-x divide-gray-200 bg-blue-800 hover:bg-blue-700">
+                <div class="-ml-px w-0 flex-1 flex">
+                  <a href="./main?dataset=1" class="index-explore-button">
+                    <span class="ml-3">Explore</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="col-span-1 bg-white rounded-lg divide-y divide-gray-200 z-0">
+            <div class="w-full flex items-center justify-between p-6 space-x-6">
+              <div class="flex-1 truncate">
+                <div class="flex items-center space-x-3">
+                  <h3 class="text-blue-800 text-sm font-bold truncate">XSum </h3>
+                  <span class="index-corpus-category-badge">News</span>
+                </div>
+                  <p class="index-corpus-desc">Single sentence Summaries</p>
+                  <p class="index-corpus-desc">10,360 News Articles</p>
+                  <p class="index-corpus-desc">6 Models</p>
+              </div>
+            </div>
+            <div>
+              <div class="-mt-px flex divide-x divide-gray-200  bg-blue-800 hover:bg-blue-700 ">
+                <div class="-ml-px w-0 flex-1 flex">
+                  <a href="./main?dataset=2" class="index-explore-button">
+                    <span class="ml-3">Explore</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="col-span-1 bg-white rounded-lg divide-y divide-gray-200 z-0">
+            <div class="w-full flex items-center justify-between p-6 space-x-6">
+              <div class="flex-1 truncate">
+                <div class="flex items-center space-x-3">
+                  <h3 class="text-blue-800 text-sm font-bold truncate">Webis TL;DR</h3>
+                  <span class="index-corpus-category-badge">Reddit</span>
+                </div>
+                  <p class="index-corpus-desc">Single sentence Summaries</p>
+                  <p class="index-corpus-desc">250 Reddit Posts</p>
+                  <p class="index-corpus-desc">4 Models</p>
+              </div>
+            </div>
+            <div>
+              <div class="-mt-px flex divide-x divide-gray-200">
+                <div class="-ml-px w-0 flex-1 flex bg-blue-800 hover:bg-blue-700">
+                  <a href="./main?dataset=3" class="index-explore-button">
+                    <span class="ml-3">Explore</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+    </div>
+{% endblock %}
+

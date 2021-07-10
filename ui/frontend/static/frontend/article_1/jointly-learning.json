@@ -1,0 +1,1520 @@
+{
+  "article_id": 1,
+  "relations": [],
+  "sentences": [
+    {
+      "sent_id": 1,
+      "text": "marseille , france ( cnn ) the french prosecutor leading an investigation into the crash of germanwings flight 9525 insisted wednesday that he was not aware of any video footage from on board the plane",
+      "tokens": [
+        "marseille",
+        ",",
+        "france",
+        "(",
+        "cnn",
+        ")",
+        "the",
+        "french",
+        "prosecutor",
+        "leading",
+        "an",
+        "investigation",
+        "into",
+        "the",
+        "crash",
+        "of",
+        "germanwings",
+        "flight",
+        "9525",
+        "insisted",
+        "wednesday",
+        "that",
+        "he",
+        "was",
+        "not",
+        "aware",
+        "of",
+        "any",
+        "video",
+        "footage",
+        "from",
+        "on",
+        "board",
+        "the",
+        "plane"
+      ],
+      "pos_tags": [
+        "PROPN",
+        "PUNCT",
+        "PROPN",
+        "PUNCT",
+        "PROPN",
+        "PUNCT",
+        "DET",
+        "ADJ",
+        "NOUN",
+        "VERB",
+        "DET",
+        "NOUN",
+        "ADP",
+        "DET",
+        "NOUN",
+        "ADP",
+        "PROPN",
+        "PROPN",
+        "NUM",
+        "VERB",
+        "PROPN",
+        "SCONJ",
+        "PRON",
+        "AUX",
+        "PART",
+        "ADJ",
+        "ADP",
+        "DET",
+        "NOUN",
+        "NOUN",
+        "ADP",
+        "ADP",
+        "NOUN",
+        "DET",
+        "NOUN"
+      ],
+      "is_alpha": [
+        true,
+        false,
+        true,
+        false,
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "is_stop": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        false,
+        true,
+        false,
+        true,
+        true,
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        true,
+        true,
+        false,
+        true,
+        true,
+        false,
+        false,
+        true,
+        true,
+        false,
+        true,
+        false
+      ],
+      "entities": [
+        [
+          "marseille",
+          "GPE",
+          0,
+          9
+        ],
+        [
+          "france",
+          "GPE",
+          12,
+          18
+        ],
+        [
+          "cnn",
+          "ORG",
+          21,
+          24
+        ],
+        [
+          "french",
+          "NORP",
+          31,
+          37
+        ],
+        [
+          "germanwings flight 9525",
+          "PRODUCT",
+          92,
+          115
+        ],
+        [
+          "wednesday",
+          "DATE",
+          125,
+          134
+        ]
+      ],
+      "chunks": [
+        [
+          "marseille",
+          "NP",
+          0,
+          9
+        ],
+        [
+          "france",
+          "NP",
+          12,
+          18
+        ],
+        [
+          ")",
+          "NP",
+          25,
+          26
+        ],
+        [
+          "the french prosecutor",
+          "NP",
+          27,
+          48
+        ],
+        [
+          "leading",
+          "VP",
+          49,
+          56
+        ],
+        [
+          "an investigation",
+          "NP",
+          57,
+          73
+        ],
+        [
+          "into",
+          "PP",
+          74,
+          78
+        ],
+        [
+          "the crash",
+          "NP",
+          79,
+          88
+        ],
+        [
+          "of",
+          "PP",
+          89,
+          91
+        ],
+        [
+          "germanwings flight 9525",
+          "NP",
+          92,
+          115
+        ],
+        [
+          "insisted",
+          "VP",
+          116,
+          124
+        ],
+        [
+          "wednesday",
+          "NP",
+          125,
+          134
+        ],
+        [
+          "that",
+          "SBAR",
+          135,
+          139
+        ],
+        [
+          "he",
+          "NP",
+          140,
+          142
+        ],
+        [
+          "was",
+          "VP",
+          143,
+          146
+        ],
+        [
+          "aware",
+          "ADJP",
+          151,
+          156
+        ],
+        [
+          "of",
+          "PP",
+          157,
+          159
+        ],
+        [
+          "any video footage",
+          "NP",
+          160,
+          177
+        ],
+        [
+          "from",
+          "PP",
+          178,
+          182
+        ],
+        [
+          "on",
+          "PP",
+          183,
+          185
+        ],
+        [
+          "board",
+          "NP",
+          186,
+          191
+        ],
+        [
+          "the plane",
+          "NP",
+          192,
+          201
+        ]
+      ],
+      "frames": [
+        [
+          "leading",
+          "lead.02"
+        ],
+        [
+          "crash",
+          "crash.01"
+        ],
+        [
+          "flight",
+          "fly.01"
+        ],
+        [
+          "insisted",
+          "insist.01"
+        ],
+        [
+          "was",
+          "be.01"
+        ]
+      ],
+      "tokens_det": [
+        {
+          "id": 1,
+          "token": "marseille",
+          "pos_tags": "PROPN",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 1
+        },
+        {
+          "id": 2,
+          "token": ",",
+          "pos_tags": "PUNCT",
+          "is_alpha": false,
+          "is_stop": false,
+          "aligned_to": 2
+        },
+        {
+          "id": 3,
+          "token": "france",
+          "pos_tags": "PROPN",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 3
+        },
+        {
+          "id": 4,
+          "token": "(",
+          "pos_tags": "PUNCT",
+          "is_alpha": false,
+          "is_stop": false,
+          "aligned_to": 4
+        },
+        {
+          "id": 5,
+          "token": "cnn",
+          "pos_tags": "PROPN",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 5
+        },
+        {
+          "id": 6,
+          "token": ")",
+          "pos_tags": "PUNCT",
+          "is_alpha": false,
+          "is_stop": false,
+          "aligned_to": 6
+        },
+        {
+          "id": 7,
+          "token": "the",
+          "pos_tags": "DET",
+          "is_alpha": true,
+          "is_stop": true,
+          "aligned_to": 7
+        },
+        {
+          "id": 8,
+          "token": "french",
+          "pos_tags": "ADJ",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 8
+        },
+        {
+          "id": 9,
+          "token": "prosecutor",
+          "pos_tags": "NOUN",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 9
+        },
+        {
+          "id": 10,
+          "token": "leading",
+          "pos_tags": "VERB",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 10
+        },
+        {
+          "id": 11,
+          "token": "an",
+          "pos_tags": "DET",
+          "is_alpha": true,
+          "is_stop": true,
+          "aligned_to": 11
+        },
+        {
+          "id": 12,
+          "token": "investigation",
+          "pos_tags": "NOUN",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 12
+        },
+        {
+          "id": 13,
+          "token": "into",
+          "pos_tags": "ADP",
+          "is_alpha": true,
+          "is_stop": true,
+          "aligned_to": 13
+        },
+        {
+          "id": 14,
+          "token": "the",
+          "pos_tags": "DET",
+          "is_alpha": true,
+          "is_stop": true,
+          "aligned_to": 14
+        },
+        {
+          "id": 15,
+          "token": "crash",
+          "pos_tags": "NOUN",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 15
+        },
+        {
+          "id": 16,
+          "token": "of",
+          "pos_tags": "ADP",
+          "is_alpha": true,
+          "is_stop": true,
+          "aligned_to": 16
+        },
+        {
+          "id": 17,
+          "token": "germanwings",
+          "pos_tags": "PROPN",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 17
+        },
+        {
+          "id": 18,
+          "token": "flight",
+          "pos_tags": "PROPN",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 18
+        },
+        {
+          "id": 19,
+          "token": "9525",
+          "pos_tags": "NUM",
+          "is_alpha": false,
+          "is_stop": false,
+          "aligned_to": 19
+        },
+        {
+          "id": 20,
+          "token": "insisted",
+          "pos_tags": "VERB",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 20
+        },
+        {
+          "id": 21,
+          "token": "wednesday",
+          "pos_tags": "PROPN",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 21
+        },
+        {
+          "id": 22,
+          "token": "that",
+          "pos_tags": "SCONJ",
+          "is_alpha": true,
+          "is_stop": true,
+          "aligned_to": 22
+        },
+        {
+          "id": 23,
+          "token": "he",
+          "pos_tags": "PRON",
+          "is_alpha": true,
+          "is_stop": true,
+          "aligned_to": 23
+        },
+        {
+          "id": 24,
+          "token": "was",
+          "pos_tags": "AUX",
+          "is_alpha": true,
+          "is_stop": true,
+          "aligned_to": 24
+        },
+        {
+          "id": 25,
+          "token": "not",
+          "pos_tags": "PART",
+          "is_alpha": true,
+          "is_stop": true,
+          "aligned_to": 25
+        },
+        {
+          "id": 26,
+          "token": "aware",
+          "pos_tags": "ADJ",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 26
+        },
+        {
+          "id": 27,
+          "token": "of",
+          "pos_tags": "ADP",
+          "is_alpha": true,
+          "is_stop": true,
+          "aligned_to": 27
+        },
+        {
+          "id": 28,
+          "token": "any",
+          "pos_tags": "DET",
+          "is_alpha": true,
+          "is_stop": true,
+          "aligned_to": 28
+        },
+        {
+          "id": 29,
+          "token": "video",
+          "pos_tags": "NOUN",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 29
+        },
+        {
+          "id": 30,
+          "token": "footage",
+          "pos_tags": "NOUN",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 30
+        },
+        {
+          "id": 31,
+          "token": "from",
+          "pos_tags": "ADP",
+          "is_alpha": true,
+          "is_stop": true,
+          "aligned_to": 31
+        },
+        {
+          "id": 32,
+          "token": "on",
+          "pos_tags": "ADP",
+          "is_alpha": true,
+          "is_stop": true,
+          "aligned_to": 32
+        },
+        {
+          "id": 33,
+          "token": "board",
+          "pos_tags": "NOUN",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 33
+        },
+        {
+          "id": 34,
+          "token": "the",
+          "pos_tags": "DET",
+          "is_alpha": true,
+          "is_stop": true,
+          "aligned_to": 34
+        },
+        {
+          "id": 35,
+          "token": "plane",
+          "pos_tags": "NOUN",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 35
+        }
+      ]
+    },
+    {
+      "sent_id": 2,
+      "text": "marseille prosecutor brice robin told cnn that `` so far no videos were used in the crash investigation",
+      "tokens": [
+        "marseille",
+        "prosecutor",
+        "brice",
+        "robin",
+        "told",
+        "cnn",
+        "that",
+        "`",
+        "`",
+        "so",
+        "far",
+        "no",
+        "videos",
+        "were",
+        "used",
+        "in",
+        "the",
+        "crash",
+        "investigation"
+      ],
+      "pos_tags": [
+        "PROPN",
+        "NOUN",
+        "PROPN",
+        "PROPN",
+        "VERB",
+        "PROPN",
+        "SCONJ",
+        "PUNCT",
+        "PUNCT",
+        "ADV",
+        "ADV",
+        "DET",
+        "NOUN",
+        "AUX",
+        "VERB",
+        "ADP",
+        "DET",
+        "NOUN",
+        "NOUN"
+      ],
+      "is_alpha": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "is_stop": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        true,
+        false,
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "entities": [
+        [
+          "marseille",
+          "GPE",
+          0,
+          9
+        ],
+        [
+          "brice robin",
+          "PERSON",
+          21,
+          32
+        ],
+        [
+          "cnn",
+          "ORG",
+          38,
+          41
+        ]
+      ],
+      "chunks": [
+        [
+          "marseille prosecutor brice robin",
+          "NP",
+          0,
+          32
+        ],
+        [
+          "told",
+          "VP",
+          33,
+          37
+        ],
+        [
+          "cnn",
+          "NP",
+          38,
+          41
+        ],
+        [
+          "that",
+          "SBAR",
+          42,
+          46
+        ],
+        [
+          "so far",
+          "ADVP",
+          50,
+          56
+        ],
+        [
+          "no videos",
+          "NP",
+          57,
+          66
+        ],
+        [
+          "were used",
+          "VP",
+          67,
+          76
+        ],
+        [
+          "in",
+          "PP",
+          77,
+          79
+        ],
+        [
+          "the crash investigation",
+          "NP",
+          80,
+          103
+        ]
+      ],
+      "frames": [
+        [
+          "told",
+          "tell.01"
+        ],
+        [
+          "were",
+          "be.03"
+        ],
+        [
+          "used",
+          "use.01"
+        ]
+      ],
+      "tokens_det": [
+        {
+          "id": 36,
+          "token": "marseille",
+          "pos_tags": "PROPN",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 37
+        },
+        {
+          "id": 37,
+          "token": "prosecutor",
+          "pos_tags": "NOUN",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 38
+        },
+        {
+          "id": 38,
+          "token": "brice",
+          "pos_tags": "PROPN",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 39
+        },
+        {
+          "id": 39,
+          "token": "robin",
+          "pos_tags": "PROPN",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 40
+        },
+        {
+          "id": 40,
+          "token": "told",
+          "pos_tags": "VERB",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 41
+        },
+        {
+          "id": 41,
+          "token": "cnn",
+          "pos_tags": "PROPN",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 42
+        },
+        {
+          "id": 42,
+          "token": "that",
+          "pos_tags": "SCONJ",
+          "is_alpha": true,
+          "is_stop": true,
+          "aligned_to": 43
+        },
+        {
+          "id": 43,
+          "token": "`",
+          "pos_tags": "PUNCT",
+          "is_alpha": false,
+          "is_stop": false,
+          "aligned_to": 44
+        },
+        {
+          "id": 44,
+          "token": "`",
+          "pos_tags": "PUNCT",
+          "is_alpha": false,
+          "is_stop": false,
+          "aligned_to": 45
+        },
+        {
+          "id": 45,
+          "token": "so",
+          "pos_tags": "ADV",
+          "is_alpha": true,
+          "is_stop": true,
+          "aligned_to": 46
+        },
+        {
+          "id": 46,
+          "token": "far",
+          "pos_tags": "ADV",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 47
+        },
+        {
+          "id": 47,
+          "token": "no",
+          "pos_tags": "DET",
+          "is_alpha": true,
+          "is_stop": true,
+          "aligned_to": 48
+        },
+        {
+          "id": 48,
+          "token": "videos",
+          "pos_tags": "NOUN",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 49
+        },
+        {
+          "id": 49,
+          "token": "were",
+          "pos_tags": "AUX",
+          "is_alpha": true,
+          "is_stop": true,
+          "aligned_to": 50
+        },
+        {
+          "id": 50,
+          "token": "used",
+          "pos_tags": "VERB",
+          "is_alpha": true,
+          "is_stop": true,
+          "aligned_to": 51
+        },
+        {
+          "id": 51,
+          "token": "in",
+          "pos_tags": "ADP",
+          "is_alpha": true,
+          "is_stop": true,
+          "aligned_to": 432
+        },
+        {
+          "id": 52,
+          "token": "the",
+          "pos_tags": "DET",
+          "is_alpha": true,
+          "is_stop": true,
+          "aligned_to": 505
+        },
+        {
+          "id": 53,
+          "token": "crash",
+          "pos_tags": "NOUN",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 506
+        },
+        {
+          "id": 54,
+          "token": "investigation",
+          "pos_tags": "NOUN",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 543
+        }
+      ]
+    },
+    {
+      "sent_id": 3,
+      "text": "'' what was mental state of germanwings co-pilot ?",
+      "tokens": [
+        "''",
+        "what",
+        "was",
+        "mental",
+        "state",
+        "of",
+        "germanwings",
+        "co",
+        "-",
+        "pilot",
+        "?"
+      ],
+      "pos_tags": [
+        "PUNCT",
+        "PRON",
+        "AUX",
+        "ADJ",
+        "NOUN",
+        "ADP",
+        "PROPN",
+        "NOUN",
+        "NOUN",
+        "NOUN",
+        "PUNCT"
+      ],
+      "is_alpha": [
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        true,
+        false
+      ],
+      "is_stop": [
+        false,
+        true,
+        true,
+        false,
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "entities": [],
+      "chunks": [
+        [
+          "what",
+          "NP",
+          3,
+          7
+        ],
+        [
+          "was",
+          "VP",
+          8,
+          11
+        ],
+        [
+          "mental state",
+          "NP",
+          12,
+          24
+        ],
+        [
+          "of",
+          "PP",
+          25,
+          27
+        ],
+        [
+          "germanwings co-pilot",
+          "NP",
+          28,
+          48
+        ]
+      ],
+      "frames": [
+        [
+          "was",
+          "be.01"
+        ]
+      ],
+      "tokens_det": [
+        {
+          "id": 55,
+          "token": "''",
+          "pos_tags": "PUNCT",
+          "is_alpha": false,
+          "is_stop": false,
+          "aligned_to": 548
+        },
+        {
+          "id": 56,
+          "token": "what",
+          "pos_tags": "PRON",
+          "is_alpha": true,
+          "is_stop": true,
+          "aligned_to": 552
+        },
+        {
+          "id": 57,
+          "token": "was",
+          "pos_tags": "AUX",
+          "is_alpha": true,
+          "is_stop": true,
+          "aligned_to": 553
+        },
+        {
+          "id": 58,
+          "token": "mental",
+          "pos_tags": "ADJ",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 554
+        },
+        {
+          "id": 59,
+          "token": "state",
+          "pos_tags": "NOUN",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 555
+        },
+        {
+          "id": 60,
+          "token": "of",
+          "pos_tags": "ADP",
+          "is_alpha": true,
+          "is_stop": true,
+          "aligned_to": 556
+        },
+        {
+          "id": 61,
+          "token": "germanwings",
+          "pos_tags": "PROPN",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 557
+        },
+        {
+          "id": 62,
+          "token": "co",
+          "pos_tags": "NOUN",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 568
+        },
+        {
+          "id": 63,
+          "token": "-",
+          "pos_tags": "NOUN",
+          "is_alpha": false,
+          "is_stop": false,
+          "aligned_to": 781
+        },
+        {
+          "id": 64,
+          "token": "pilot",
+          "pos_tags": "NOUN",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 1059
+        },
+        {
+          "id": 65,
+          "token": "?",
+          "pos_tags": "PUNCT",
+          "is_alpha": false,
+          "is_stop": false,
+          "aligned_to": 1310
+        }
+      ]
+    }
+  ],
+  "alignment": [
+    [
+      1,
+      1
+    ],
+    [
+      2,
+      2
+    ],
+    [
+      3,
+      3
+    ],
+    [
+      4,
+      4
+    ],
+    [
+      5,
+      5
+    ],
+    [
+      6,
+      6
+    ],
+    [
+      7,
+      7
+    ],
+    [
+      8,
+      8
+    ],
+    [
+      9,
+      9
+    ],
+    [
+      10,
+      10
+    ],
+    [
+      11,
+      11
+    ],
+    [
+      12,
+      12
+    ],
+    [
+      13,
+      13
+    ],
+    [
+      14,
+      14
+    ],
+    [
+      15,
+      15
+    ],
+    [
+      16,
+      16
+    ],
+    [
+      17,
+      17
+    ],
+    [
+      18,
+      18
+    ],
+    [
+      19,
+      19
+    ],
+    [
+      20,
+      20
+    ],
+    [
+      21,
+      21
+    ],
+    [
+      22,
+      22
+    ],
+    [
+      23,
+      23
+    ],
+    [
+      24,
+      24
+    ],
+    [
+      25,
+      25
+    ],
+    [
+      26,
+      26
+    ],
+    [
+      27,
+      27
+    ],
+    [
+      28,
+      28
+    ],
+    [
+      29,
+      29
+    ],
+    [
+      30,
+      30
+    ],
+    [
+      31,
+      31
+    ],
+    [
+      32,
+      32
+    ],
+    [
+      33,
+      33
+    ],
+    [
+      34,
+      34
+    ],
+    [
+      35,
+      35
+    ],
+    [
+      36,
+      37
+    ],
+    [
+      37,
+      38
+    ],
+    [
+      38,
+      39
+    ],
+    [
+      39,
+      40
+    ],
+    [
+      40,
+      41
+    ],
+    [
+      41,
+      42
+    ],
+    [
+      42,
+      43
+    ],
+    [
+      43,
+      44
+    ],
+    [
+      44,
+      45
+    ],
+    [
+      45,
+      46
+    ],
+    [
+      46,
+      47
+    ],
+    [
+      47,
+      48
+    ],
+    [
+      48,
+      49
+    ],
+    [
+      49,
+      50
+    ],
+    [
+      50,
+      51
+    ],
+    [
+      51,
+      432
+    ],
+    [
+      52,
+      505
+    ],
+    [
+      53,
+      506
+    ],
+    [
+      54,
+      543
+    ],
+    [
+      55,
+      548
+    ],
+    [
+      56,
+      552
+    ],
+    [
+      57,
+      553
+    ],
+    [
+      58,
+      554
+    ],
+    [
+      59,
+      555
+    ],
+    [
+      60,
+      556
+    ],
+    [
+      61,
+      557
+    ],
+    [
+      62,
+      568
+    ],
+    [
+      63,
+      781
+    ],
+    [
+      64,
+      1059
+    ],
+    [
+      65,
+      1310
+    ]
+  ],
+  "commonWords": [
+    {
+      "token": "marseille",
+      "freq": 2
+    },
+    {
+      "token": "cnn",
+      "freq": 2
+    },
+    {
+      "token": "prosecutor",
+      "freq": 2
+    },
+    {
+      "token": "investigation",
+      "freq": 2
+    },
+    {
+      "token": "crash",
+      "freq": 2
+    },
+    {
+      "token": "germanwings",
+      "freq": 2
+    },
+    {
+      "token": "france",
+      "freq": 1
+    },
+    {
+      "token": "french",
+      "freq": 1
+    },
+    {
+      "token": "leading",
+      "freq": 1
+    },
+    {
+      "token": "flight",
+      "freq": 1
+    },
+    {
+      "token": "insisted",
+      "freq": 1
+    },
+    {
+      "token": "wednesday",
+      "freq": 1
+    },
+    {
+      "token": "aware",
+      "freq": 1
+    },
+    {
+      "token": "video",
+      "freq": 1
+    },
+    {
+      "token": "footage",
+      "freq": 1
+    },
+    {
+      "token": "board",
+      "freq": 1
+    },
+    {
+      "token": "plane",
+      "freq": 1
+    },
+    {
+      "token": "brice",
+      "freq": 1
+    },
+    {
+      "token": "robin",
+      "freq": 1
+    },
+    {
+      "token": "told",
+      "freq": 1
+    },
+    {
+      "token": "far",
+      "freq": 1
+    },
+    {
+      "token": "videos",
+      "freq": 1
+    },
+    {
+      "token": "mental",
+      "freq": 1
+    },
+    {
+      "token": "state",
+      "freq": 1
+    },
+    {
+      "token": "co",
+      "freq": 1
+    },
+    {
+      "token": "pilot",
+      "freq": 1
+    }
+  ],
+  "novelWords": []
+}

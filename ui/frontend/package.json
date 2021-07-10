@@ -1,0 +1,49 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode development ./src/index.js --output ./static/frontend/main.js",
+    "build": "webpack --mode production ./src/index.js --output ./static/frontend/main.js",
+    "build:css": "postcss ./src/assets/tailwind.css -o ./static/frontend/main.css",
+    "watch:css": "postcss ./src/assets/tailwind.css -o ./static/frontend/main.css"
+  },
+  "keywords": [],
+  "author": "Tariq Yousef & Shahbaz Syed",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-react": "^7.10.4",
+    "@heroicons/react": "^1.0.1",
+    "autoprefixer": "^10.0.0",
+    "axios": "^0.20.0",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^4.3.0",
+    "postcss-cli": "^7.1.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "style-loader": "^1.2.1",
+    "svg-inline-loader": "^0.8.2",
+    "tailwindcss": "^1.8.10",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
+  },
+  "dependencies": {
+    "@headlessui/react": "^1.2.0",
+    "@solid/react": "^1.10.0",
+    "@styled-icons/heroicons-solid": "^10.33.0",
+    "d3": "^6.7.0",
+    "d3-cloud": "^1.2.5",
+    "d3-interpolate": "^2.0.1",
+    "d3-scale": "^3.2.3",
+    "d3-selection": "^2.0.0",
+    "d3-simple-slider": "^1.10.4",
+    "d3-svg-legend": "^2.25.6",
+    "fuse.js": "^6.4.6",
+    "heroicons": "^1.0.1",
+    "react-d3-cloud": "^0.7.0"
+  }
+}

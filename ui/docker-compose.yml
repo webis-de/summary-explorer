@@ -1,0 +1,41 @@
+version: '3.7'
+
+services:
+  web:
+    build: ./
+    command: gunicorn SumViz.wsgi:application  --bind 0.0.0.0:8000 #python manage.py runserver 0.0.0.0:8000 # --timeout 120 --workers 6
+    volumes:
+      #- ./:/usr/src/sumviz/
+      - static_volume:/usr/src/sumviz/static/
+    expose:
+      - 8000
+    env_file:
+      - ./.env
+    depends_on:
+      - db
+    restart: always
+
+  db:
+    image: postgres:12
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    env_file:
+      - ./.env.db
+    shm_size: '2gb'
+    restart: always
+
+
+  nginx:
+    build: ./nginx
+    restart: always
+    ports:
+      - 127.0.0.1::80
+    volumes:
+      - static_volume:/usr/src/sumviz/static
+    depends_on:
+      - web
+
+
+volumes:
+  postgres_data:
+  static_volume:

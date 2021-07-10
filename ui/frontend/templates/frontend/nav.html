@@ -1,0 +1,84 @@
+<nav class="bg-gradient-to-r from-blue-900 to-blue-800" >
+    <div class="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
+        <div class="relative flex items-center justify-between h-16">
+            <div class="flex items-center px-2 lg:px-0">
+                <a href="/" >
+                    <div class="flex-shrink-0" style="font-family: var(--headers_font), sans-serif;">
+                        <span class="text-white font-semibold" >
+                            Summary
+                        </span>
+                        <span class="font-extrabold text-yellow-600">
+                            Explorer
+                        </span>
+                    </div>
+                </a>
+                <div class="hidden lg:block lg:ml-6" style="font-family: 'Open Sans'">
+                    <div class="flex space-x-2 h-">
+{#                        <div class="inline-block relative">#}
+{#                            <a href="/" class="hover:text-yellow-600 hover:underline text-white px-3 py-2 rounded-md text-sm font-medium block">#}
+{#                            <button class="relative inline-flex items-center px-0 py-2">#}
+{#                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1 inline-block text-yellow-600" viewBox="0 0 20 20" fill="currentColor">#}
+{#                                  <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"></path>#}
+{#                                </svg>#}
+{#                                <span>#}
+{#                                    Home#}
+{#                                </span>#}
+{#                                </button>#}
+{#                                </a>#}
+{#                        </div>#}
+                        <div class="dropdown inline-block relative">
+                            <a href="#" class="hover:text-yellow-600 hover:underline text-white px-2 py-2 rounded-md text-sm font-medium block">
+                                <button class="relative inline-flex items-center px-0 py-2 ">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1 text-yellow-600" viewBox="0 0 20 20" fill="currentColor">
+                                      <path d="M4 3a2 2 0 100 4h12a2 2 0 100-4H4z" />
+                                      <path fill-rule="evenodd" d="M3 8h14v7a2 2 0 01-2 2H5a2 2 0 01-2-2V8zm5 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z" clip-rule="evenodd" />
+                                    </svg>
+                                    <span>
+                                        Datasets
+                                    </span>
+                                </button>
+                            </a>
+                            <ul class="dropdown-menu absolute hidden text-white -mt-1 pt-1 bg-blue-900 rounded shadow z-50 opacity-100">
+                                <li class=""><a
+                                        class="rounded-t bg-blue-900 hover:text-yellow-800 text-xs  hover:bg-white hover:border hover:border-blue-800  py-2 px-4 block whitespace-no-wrap"
+                                        href="main?dataset=1">CNN/DailyMail</a></li>
+                                <li class=""><a
+                                        class=" bg-blue-900  hover:text-yellow-800  text-xs  hover:bg-white hover:border hover:border-blue-800  py-2 px-4 block whitespace-no-wrap"
+                                        href="main?dataset=2">
+                                    XSum</a></li>
+                                <li class=""><a
+                                        class="rounded-b bg-blue-900  hover:text-yellow-800 text-xs   hover:bg-white hover:border hover:border-blue-800 py-2 px-4 block whitespace-no-wrap"
+                                        href="main?dataset=3">Webis TL;DR</a></li>
+                            </ul>
+                        </div>
+                        <div class="inline-block relative">
+                            <a href="/metrics" class="hover:text-yellow-600 hover:underline text-white px-3 py-2 rounded-md text-sm font-medium block">
+                                <button class="relative inline-flex items-center px-0 py-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1 inline-block text-yellow-600" viewBox="0 0 20 20" fill="currentColor">
+                                      <path d="M5 4a1 1 0 00-2 0v7.268a2 2 0 000 3.464V16a1 1 0 102 0v-1.268a2 2 0 000-3.464V4zM11 4a1 1 0 10-2 0v1.268a2 2 0 000 3.464V16a1 1 0 102 0V8.732a2 2 0 000-3.464V4zM16 3a1 1 0 011 1v7.268a2 2 0 010 3.464V16a1 1 0 11-2 0v-1.268a2 2 0 010-3.464V4a1 1 0 011-1z" />
+                                    </svg>
+                                    <span>
+                                        Metrics
+                                    </span>
+                                </button>
+                            </a>
+                        </div>
+                        <div class="inline-block relative">
+                            <a href="/models" class="hover:text-yellow-600 hover:underline text-white px-3 py-2 rounded-md text-sm font-medium block">
+                            <button class="relative inline-flex items-center px-0 py-2">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1 inline-block text-yellow-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                                </svg>
+
+                                <span>
+                                    Models
+                                </span>
+                                </button>
+                                </a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</nav>

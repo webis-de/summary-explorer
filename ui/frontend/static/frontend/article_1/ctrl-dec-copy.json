@@ -1,0 +1,1375 @@
+{
+  "article_id": 1,
+  "relations": [
+    {
+      "subject": "video",
+      "relation": "shows",
+      "object": "harrowing final seconds"
+    },
+    {
+      "subject": "video",
+      "relation": "shows",
+      "object": "harrowing final seconds from on board germanwings flight 9525"
+    },
+    {
+      "subject": "video",
+      "relation": "shows",
+      "object": "final seconds"
+    },
+    {
+      "subject": "video",
+      "relation": "shows",
+      "object": "seconds from on board germanwings flight 9525"
+    },
+    {
+      "subject": "video",
+      "relation": "shows",
+      "object": "final seconds from on board germanwings flight 9525"
+    },
+    {
+      "subject": "video",
+      "relation": "shows",
+      "object": "seconds"
+    },
+    {
+      "subject": "video",
+      "relation": "shows",
+      "object": "harrowing seconds"
+    },
+    {
+      "subject": "video",
+      "relation": "shows",
+      "object": "harrowing seconds from on board germanwings flight 9525"
+    },
+    {
+      "subject": "video",
+      "relation": "shows",
+      "object": "video of cell phone video"
+    },
+    {
+      "subject": "video",
+      "relation": "shows",
+      "object": "video"
+    },
+    {
+      "subject": "cell phones",
+      "relation": "far been sent to",
+      "object": "site"
+    },
+    {
+      "subject": "cell phones",
+      "relation": "so far been sent to",
+      "object": "site"
+    },
+    {
+      "subject": "cell phones",
+      "relation": "been",
+      "object": "far sent"
+    },
+    {
+      "subject": "cell phones",
+      "relation": "been",
+      "object": "sent"
+    },
+    {
+      "subject": "cell phones",
+      "relation": "been sent to",
+      "object": "site"
+    },
+    {
+      "subject": "cell phones",
+      "relation": "been",
+      "object": "so far sent"
+    }
+  ],
+  "sentences": [
+    {
+      "sent_id": 1,
+      "text": "french prosecutor leading investigation into crash of germanwings flight 9525 .",
+      "tokens": [
+        "french",
+        "prosecutor",
+        "leading",
+        "investigation",
+        "into",
+        "crash",
+        "of",
+        "germanwings",
+        "flight",
+        "9525",
+        "."
+      ],
+      "pos_tags": [
+        "ADJ",
+        "NOUN",
+        "VERB",
+        "NOUN",
+        "ADP",
+        "NOUN",
+        "ADP",
+        "PROPN",
+        "NOUN",
+        "NUM",
+        "PUNCT"
+      ],
+      "is_alpha": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "is_stop": [
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        true,
+        false,
+        false,
+        false,
+        false
+      ],
+      "entities": [
+        [
+          "french",
+          "NORP",
+          0,
+          6
+        ],
+        [
+          "germanwings flight 9525",
+          "PRODUCT",
+          54,
+          77
+        ]
+      ],
+      "chunks": [
+        [
+          "french prosecutor leading investigation",
+          "NP",
+          0,
+          39
+        ],
+        [
+          "into",
+          "PP",
+          40,
+          44
+        ],
+        [
+          "crash",
+          "NP",
+          45,
+          50
+        ],
+        [
+          "of",
+          "PP",
+          51,
+          53
+        ],
+        [
+          "germanwings flight 9525",
+          "NP",
+          54,
+          77
+        ]
+      ],
+      "frames": [
+        [
+          "leading",
+          "lead.01"
+        ],
+        [
+          "crash",
+          "crash.01"
+        ],
+        [
+          "flight",
+          "fly.01"
+        ]
+      ],
+      "tokens_det": [
+        {
+          "id": 1,
+          "token": "french",
+          "pos_tags": "ADJ",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 8
+        },
+        {
+          "id": 2,
+          "token": "prosecutor",
+          "pos_tags": "NOUN",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 9
+        },
+        {
+          "id": 3,
+          "token": "leading",
+          "pos_tags": "VERB",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 10
+        },
+        {
+          "id": 4,
+          "token": "investigation",
+          "pos_tags": "NOUN",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 12
+        },
+        {
+          "id": 5,
+          "token": "into",
+          "pos_tags": "ADP",
+          "is_alpha": true,
+          "is_stop": true,
+          "aligned_to": 13
+        },
+        {
+          "id": 6,
+          "token": "crash",
+          "pos_tags": "NOUN",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 15
+        },
+        {
+          "id": 7,
+          "token": "of",
+          "pos_tags": "ADP",
+          "is_alpha": true,
+          "is_stop": true,
+          "aligned_to": 16
+        },
+        {
+          "id": 8,
+          "token": "germanwings",
+          "pos_tags": "PROPN",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 17
+        },
+        {
+          "id": 9,
+          "token": "flight",
+          "pos_tags": "NOUN",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 18
+        },
+        {
+          "id": 10,
+          "token": "9525",
+          "pos_tags": "NUM",
+          "is_alpha": false,
+          "is_stop": false,
+          "aligned_to": 19
+        },
+        {
+          "id": 11,
+          "token": ".",
+          "pos_tags": "PUNCT",
+          "is_alpha": false,
+          "is_stop": false,
+          "aligned_to": 78
+        }
+      ]
+    },
+    {
+      "sent_id": 2,
+      "text": "video shows harrowing final seconds from on board germanwings flight 9525 .",
+      "tokens": [
+        "video",
+        "shows",
+        "harrowing",
+        "final",
+        "seconds",
+        "from",
+        "on",
+        "board",
+        "germanwings",
+        "flight",
+        "9525",
+        "."
+      ],
+      "pos_tags": [
+        "NOUN",
+        "VERB",
+        "ADJ",
+        "ADJ",
+        "NOUN",
+        "ADP",
+        "ADP",
+        "NOUN",
+        "PROPN",
+        "NOUN",
+        "NUM",
+        "PUNCT"
+      ],
+      "is_alpha": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        false
+      ],
+      "is_stop": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "entities": [
+        [
+          "germanwings flight 9525",
+          "PRODUCT",
+          50,
+          73
+        ]
+      ],
+      "chunks": [
+        [
+          "video",
+          "NP",
+          0,
+          5
+        ],
+        [
+          "shows",
+          "VP",
+          6,
+          11
+        ],
+        [
+          "harrowing final seconds",
+          "NP",
+          12,
+          35
+        ],
+        [
+          "from",
+          "PP",
+          36,
+          40
+        ],
+        [
+          "on",
+          "PP",
+          41,
+          43
+        ],
+        [
+          "board germanwings flight 9525",
+          "NP",
+          44,
+          73
+        ]
+      ],
+      "frames": [
+        [
+          "shows",
+          "show.01"
+        ],
+        [
+          "flight",
+          "fly.01"
+        ]
+      ],
+      "tokens_det": [
+        {
+          "id": 12,
+          "token": "video",
+          "pos_tags": "NOUN",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 101
+        },
+        {
+          "id": 13,
+          "token": "shows",
+          "pos_tags": "VERB",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": []
+        },
+        {
+          "id": 14,
+          "token": "harrowing",
+          "pos_tags": "ADJ",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 104
+        },
+        {
+          "id": 15,
+          "token": "final",
+          "pos_tags": "ADJ",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 105
+        },
+        {
+          "id": 16,
+          "token": "seconds",
+          "pos_tags": "NOUN",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 106
+        },
+        {
+          "id": 17,
+          "token": "from",
+          "pos_tags": "ADP",
+          "is_alpha": true,
+          "is_stop": true,
+          "aligned_to": 107
+        },
+        {
+          "id": 18,
+          "token": "on",
+          "pos_tags": "ADP",
+          "is_alpha": true,
+          "is_stop": true,
+          "aligned_to": 108
+        },
+        {
+          "id": 19,
+          "token": "board",
+          "pos_tags": "NOUN",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 109
+        },
+        {
+          "id": 20,
+          "token": "germanwings",
+          "pos_tags": "PROPN",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 110
+        },
+        {
+          "id": 21,
+          "token": "flight",
+          "pos_tags": "NOUN",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 111
+        },
+        {
+          "id": 22,
+          "token": "9525",
+          "pos_tags": "NUM",
+          "is_alpha": false,
+          "is_stop": false,
+          "aligned_to": 112
+        },
+        {
+          "id": 23,
+          "token": ".",
+          "pos_tags": "PUNCT",
+          "is_alpha": false,
+          "is_stop": false,
+          "aligned_to": 127
+        }
+      ]
+    },
+    {
+      "sent_id": 3,
+      "text": "video shows video of cell phone video , which was found by source close to investigation .",
+      "tokens": [
+        "video",
+        "shows",
+        "video",
+        "of",
+        "cell",
+        "phone",
+        "video",
+        ",",
+        "which",
+        "was",
+        "found",
+        "by",
+        "source",
+        "close",
+        "to",
+        "investigation",
+        "."
+      ],
+      "pos_tags": [
+        "NOUN",
+        "VERB",
+        "NOUN",
+        "ADP",
+        "NOUN",
+        "NOUN",
+        "NOUN",
+        "PUNCT",
+        "DET",
+        "AUX",
+        "VERB",
+        "ADP",
+        "NOUN",
+        "ADJ",
+        "ADP",
+        "NOUN",
+        "PUNCT"
+      ],
+      "is_alpha": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false
+      ],
+      "is_stop": [
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        true,
+        false,
+        true,
+        false,
+        false,
+        true,
+        false,
+        false
+      ],
+      "entities": [],
+      "chunks": [
+        [
+          "video",
+          "NP",
+          0,
+          5
+        ],
+        [
+          "shows",
+          "VP",
+          6,
+          11
+        ],
+        [
+          "video",
+          "NP",
+          12,
+          17
+        ],
+        [
+          "of",
+          "PP",
+          18,
+          20
+        ],
+        [
+          "cell phone video",
+          "NP",
+          21,
+          37
+        ],
+        [
+          "which",
+          "NP",
+          40,
+          45
+        ],
+        [
+          "was found",
+          "VP",
+          46,
+          55
+        ],
+        [
+          "by",
+          "PP",
+          56,
+          58
+        ],
+        [
+          "source",
+          "NP",
+          59,
+          65
+        ],
+        [
+          "close",
+          "ADJP",
+          66,
+          71
+        ],
+        [
+          "to",
+          "PP",
+          72,
+          74
+        ],
+        [
+          "investigation",
+          "NP",
+          75,
+          88
+        ]
+      ],
+      "frames": [
+        [
+          "shows",
+          "show.01"
+        ],
+        [
+          "was",
+          "be.03"
+        ],
+        [
+          "found",
+          "find.01"
+        ]
+      ],
+      "tokens_det": [
+        {
+          "id": 24,
+          "token": "video",
+          "pos_tags": "NOUN",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 135
+        },
+        {
+          "id": 25,
+          "token": "shows",
+          "pos_tags": "VERB",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": []
+        },
+        {
+          "id": 26,
+          "token": "video",
+          "pos_tags": "NOUN",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 152
+        },
+        {
+          "id": 27,
+          "token": "of",
+          "pos_tags": "ADP",
+          "is_alpha": true,
+          "is_stop": true,
+          "aligned_to": []
+        },
+        {
+          "id": 28,
+          "token": "cell",
+          "pos_tags": "NOUN",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": []
+        },
+        {
+          "id": 29,
+          "token": "phone",
+          "pos_tags": "NOUN",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": []
+        },
+        {
+          "id": 30,
+          "token": "video",
+          "pos_tags": "NOUN",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 170
+        },
+        {
+          "id": 31,
+          "token": ",",
+          "pos_tags": "PUNCT",
+          "is_alpha": false,
+          "is_stop": false,
+          "aligned_to": 171
+        },
+        {
+          "id": 32,
+          "token": "which",
+          "pos_tags": "DET",
+          "is_alpha": true,
+          "is_stop": true,
+          "aligned_to": 172
+        },
+        {
+          "id": 33,
+          "token": "was",
+          "pos_tags": "AUX",
+          "is_alpha": true,
+          "is_stop": true,
+          "aligned_to": 173
+        },
+        {
+          "id": 34,
+          "token": "found",
+          "pos_tags": "VERB",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 174
+        },
+        {
+          "id": 35,
+          "token": "by",
+          "pos_tags": "ADP",
+          "is_alpha": true,
+          "is_stop": true,
+          "aligned_to": 175
+        },
+        {
+          "id": 36,
+          "token": "source",
+          "pos_tags": "NOUN",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 177
+        },
+        {
+          "id": 37,
+          "token": "close",
+          "pos_tags": "ADJ",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 178
+        },
+        {
+          "id": 38,
+          "token": "to",
+          "pos_tags": "ADP",
+          "is_alpha": true,
+          "is_stop": true,
+          "aligned_to": 221
+        },
+        {
+          "id": 39,
+          "token": "investigation",
+          "pos_tags": "NOUN",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 282
+        },
+        {
+          "id": 40,
+          "token": ".",
+          "pos_tags": "PUNCT",
+          "is_alpha": false,
+          "is_stop": false,
+          "aligned_to": 408
+        }
+      ]
+    },
+    {
+      "sent_id": 4,
+      "text": "cell phones found so far have been sent to the site , he says .",
+      "tokens": [
+        "cell",
+        "phones",
+        "found",
+        "so",
+        "far",
+        "have",
+        "been",
+        "sent",
+        "to",
+        "the",
+        "site",
+        ",",
+        "he",
+        "says",
+        "."
+      ],
+      "pos_tags": [
+        "NOUN",
+        "NOUN",
+        "VERB",
+        "ADV",
+        "ADV",
+        "AUX",
+        "AUX",
+        "VERB",
+        "ADP",
+        "DET",
+        "NOUN",
+        "PUNCT",
+        "PRON",
+        "VERB",
+        "PUNCT"
+      ],
+      "is_alpha": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        true,
+        true,
+        false
+      ],
+      "is_stop": [
+        false,
+        false,
+        false,
+        true,
+        false,
+        true,
+        true,
+        false,
+        true,
+        true,
+        false,
+        false,
+        true,
+        false,
+        false
+      ],
+      "entities": [],
+      "chunks": [
+        [
+          "cell phones",
+          "NP",
+          0,
+          11
+        ],
+        [
+          "found",
+          "VP",
+          12,
+          17
+        ],
+        [
+          "so far",
+          "ADVP",
+          18,
+          24
+        ],
+        [
+          "have been sent",
+          "VP",
+          25,
+          39
+        ],
+        [
+          "to",
+          "PP",
+          40,
+          42
+        ],
+        [
+          "the site",
+          "NP",
+          43,
+          51
+        ],
+        [
+          "he",
+          "NP",
+          54,
+          56
+        ],
+        [
+          "says",
+          "VP",
+          57,
+          61
+        ]
+      ],
+      "frames": [
+        [
+          "found",
+          "find.01"
+        ],
+        [
+          "have",
+          "have.01"
+        ],
+        [
+          "been",
+          "be.03"
+        ],
+        [
+          "sent",
+          "send.01"
+        ],
+        [
+          "says",
+          "say.01"
+        ]
+      ],
+      "tokens_det": [
+        {
+          "id": 41,
+          "token": "cell",
+          "pos_tags": "NOUN",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 413
+        },
+        {
+          "id": 42,
+          "token": "phones",
+          "pos_tags": "NOUN",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 414
+        },
+        {
+          "id": 43,
+          "token": "found",
+          "pos_tags": "VERB",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 415
+        },
+        {
+          "id": 44,
+          "token": "so",
+          "pos_tags": "ADV",
+          "is_alpha": true,
+          "is_stop": true,
+          "aligned_to": 416
+        },
+        {
+          "id": 45,
+          "token": "far",
+          "pos_tags": "ADV",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 417
+        },
+        {
+          "id": 46,
+          "token": "have",
+          "pos_tags": "AUX",
+          "is_alpha": true,
+          "is_stop": true,
+          "aligned_to": 418
+        },
+        {
+          "id": 47,
+          "token": "been",
+          "pos_tags": "AUX",
+          "is_alpha": true,
+          "is_stop": true,
+          "aligned_to": 419
+        },
+        {
+          "id": 48,
+          "token": "sent",
+          "pos_tags": "VERB",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 420
+        },
+        {
+          "id": 49,
+          "token": "to",
+          "pos_tags": "ADP",
+          "is_alpha": true,
+          "is_stop": true,
+          "aligned_to": 795
+        },
+        {
+          "id": 50,
+          "token": "the",
+          "pos_tags": "DET",
+          "is_alpha": true,
+          "is_stop": true,
+          "aligned_to": 825
+        },
+        {
+          "id": 51,
+          "token": "site",
+          "pos_tags": "NOUN",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 826
+        },
+        {
+          "id": 52,
+          "token": ",",
+          "pos_tags": "PUNCT",
+          "is_alpha": false,
+          "is_stop": false,
+          "aligned_to": 1249
+        },
+        {
+          "id": 53,
+          "token": "he",
+          "pos_tags": "PRON",
+          "is_alpha": true,
+          "is_stop": true,
+          "aligned_to": 1251
+        },
+        {
+          "id": 54,
+          "token": "says",
+          "pos_tags": "VERB",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": []
+        },
+        {
+          "id": 55,
+          "token": ".",
+          "pos_tags": "PUNCT",
+          "is_alpha": false,
+          "is_stop": false,
+          "aligned_to": 1355
+        }
+      ]
+    }
+  ],
+  "alignment": [
+    [
+      1,
+      8
+    ],
+    [
+      2,
+      9
+    ],
+    [
+      3,
+      10
+    ],
+    [
+      4,
+      12
+    ],
+    [
+      5,
+      13
+    ],
+    [
+      6,
+      15
+    ],
+    [
+      7,
+      16
+    ],
+    [
+      8,
+      17
+    ],
+    [
+      9,
+      18
+    ],
+    [
+      10,
+      19
+    ],
+    [
+      11,
+      78
+    ],
+    [
+      12,
+      101
+    ],
+    [
+      14,
+      104
+    ],
+    [
+      15,
+      105
+    ],
+    [
+      16,
+      106
+    ],
+    [
+      17,
+      107
+    ],
+    [
+      18,
+      108
+    ],
+    [
+      19,
+      109
+    ],
+    [
+      20,
+      110
+    ],
+    [
+      21,
+      111
+    ],
+    [
+      22,
+      112
+    ],
+    [
+      23,
+      127
+    ],
+    [
+      24,
+      135
+    ],
+    [
+      26,
+      152
+    ],
+    [
+      30,
+      170
+    ],
+    [
+      31,
+      171
+    ],
+    [
+      32,
+      172
+    ],
+    [
+      33,
+      173
+    ],
+    [
+      34,
+      174
+    ],
+    [
+      35,
+      175
+    ],
+    [
+      36,
+      177
+    ],
+    [
+      37,
+      178
+    ],
+    [
+      38,
+      221
+    ],
+    [
+      39,
+      282
+    ],
+    [
+      40,
+      408
+    ],
+    [
+      41,
+      413
+    ],
+    [
+      42,
+      414
+    ],
+    [
+      43,
+      415
+    ],
+    [
+      44,
+      416
+    ],
+    [
+      45,
+      417
+    ],
+    [
+      46,
+      418
+    ],
+    [
+      47,
+      419
+    ],
+    [
+      48,
+      420
+    ],
+    [
+      49,
+      795
+    ],
+    [
+      50,
+      825
+    ],
+    [
+      51,
+      826
+    ],
+    [
+      52,
+      1249
+    ],
+    [
+      53,
+      1251
+    ],
+    [
+      55,
+      1355
+    ]
+  ],
+  "commonWords": [
+    {
+      "token": "video",
+      "freq": 4
+    },
+    {
+      "token": "investigation",
+      "freq": 2
+    },
+    {
+      "token": "germanwings",
+      "freq": 2
+    },
+    {
+      "token": "flight",
+      "freq": 2
+    },
+    {
+      "token": "cell",
+      "freq": 2
+    },
+    {
+      "token": "found",
+      "freq": 2
+    },
+    {
+      "token": "french",
+      "freq": 1
+    },
+    {
+      "token": "prosecutor",
+      "freq": 1
+    },
+    {
+      "token": "leading",
+      "freq": 1
+    },
+    {
+      "token": "crash",
+      "freq": 1
+    },
+    {
+      "token": "harrowing",
+      "freq": 1
+    },
+    {
+      "token": "final",
+      "freq": 1
+    },
+    {
+      "token": "seconds",
+      "freq": 1
+    },
+    {
+      "token": "board",
+      "freq": 1
+    },
+    {
+      "token": "phone",
+      "freq": 1
+    },
+    {
+      "token": "source",
+      "freq": 1
+    },
+    {
+      "token": "close",
+      "freq": 1
+    },
+    {
+      "token": "phones",
+      "freq": 1
+    },
+    {
+      "token": "far",
+      "freq": 1
+    },
+    {
+      "token": "sent",
+      "freq": 1
+    },
+    {
+      "token": "site",
+      "freq": 1
+    }
+  ],
+  "novelWords": [
+    {
+      "token": "shows",
+      "freq": 2
+    },
+    {
+      "token": "says",
+      "freq": 1
+    }
+  ]
+}

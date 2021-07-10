@@ -1,0 +1,1774 @@
+{
+  "article_id": 1,
+  "relations": [
+    {
+      "subject": "robin 's comments",
+      "relation": "follow",
+      "object": "claims"
+    },
+    {
+      "subject": "robin 's comments",
+      "relation": "follow",
+      "object": "claims by two magazines"
+    },
+    {
+      "subject": "robin",
+      "relation": "has",
+      "object": "comments"
+    },
+    {
+      "subject": "video",
+      "relation": "was",
+      "object": "recovered from phone at wreckage site"
+    },
+    {
+      "subject": "video",
+      "relation": "was recovered at",
+      "object": "wreckage site"
+    },
+    {
+      "subject": "video",
+      "relation": "was",
+      "object": "recovered"
+    },
+    {
+      "subject": "video",
+      "relation": "was recovered from",
+      "object": "phone"
+    }
+  ],
+  "sentences": [
+    {
+      "sent_id": 1,
+      "text": "french prosecutor says he was not aware of any video footage .",
+      "tokens": [
+        "french",
+        "prosecutor",
+        "says",
+        "he",
+        "was",
+        "not",
+        "aware",
+        "of",
+        "any",
+        "video",
+        "footage",
+        "."
+      ],
+      "pos_tags": [
+        "ADJ",
+        "NOUN",
+        "VERB",
+        "PRON",
+        "AUX",
+        "PART",
+        "ADJ",
+        "ADP",
+        "DET",
+        "NOUN",
+        "NOUN",
+        "PUNCT"
+      ],
+      "is_alpha": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false
+      ],
+      "is_stop": [
+        false,
+        false,
+        false,
+        true,
+        true,
+        true,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false
+      ],
+      "entities": [
+        [
+          "french",
+          "NORP",
+          0,
+          6
+        ]
+      ],
+      "chunks": [
+        [
+          "french prosecutor",
+          "NP",
+          0,
+          17
+        ],
+        [
+          "says",
+          "VP",
+          18,
+          22
+        ],
+        [
+          "he",
+          "NP",
+          23,
+          25
+        ],
+        [
+          "was",
+          "VP",
+          26,
+          29
+        ],
+        [
+          "aware",
+          "ADJP",
+          34,
+          39
+        ],
+        [
+          "of",
+          "PP",
+          40,
+          42
+        ],
+        [
+          "any video footage",
+          "NP",
+          43,
+          60
+        ]
+      ],
+      "frames": [
+        [
+          "says",
+          "say.01"
+        ],
+        [
+          "was",
+          "be.01"
+        ]
+      ],
+      "tokens_det": [
+        {
+          "id": 1,
+          "token": "french",
+          "pos_tags": "ADJ",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 8
+        },
+        {
+          "id": 2,
+          "token": "prosecutor",
+          "pos_tags": "NOUN",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 9
+        },
+        {
+          "id": 3,
+          "token": "says",
+          "pos_tags": "VERB",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": []
+        },
+        {
+          "id": 4,
+          "token": "he",
+          "pos_tags": "PRON",
+          "is_alpha": true,
+          "is_stop": true,
+          "aligned_to": 23
+        },
+        {
+          "id": 5,
+          "token": "was",
+          "pos_tags": "AUX",
+          "is_alpha": true,
+          "is_stop": true,
+          "aligned_to": 24
+        },
+        {
+          "id": 6,
+          "token": "not",
+          "pos_tags": "PART",
+          "is_alpha": true,
+          "is_stop": true,
+          "aligned_to": 25
+        },
+        {
+          "id": 7,
+          "token": "aware",
+          "pos_tags": "ADJ",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 26
+        },
+        {
+          "id": 8,
+          "token": "of",
+          "pos_tags": "ADP",
+          "is_alpha": true,
+          "is_stop": true,
+          "aligned_to": 27
+        },
+        {
+          "id": 9,
+          "token": "any",
+          "pos_tags": "DET",
+          "is_alpha": true,
+          "is_stop": true,
+          "aligned_to": 28
+        },
+        {
+          "id": 10,
+          "token": "video",
+          "pos_tags": "NOUN",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 29
+        },
+        {
+          "id": 11,
+          "token": "footage",
+          "pos_tags": "NOUN",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 30
+        },
+        {
+          "id": 12,
+          "token": ".",
+          "pos_tags": "PUNCT",
+          "is_alpha": false,
+          "is_stop": false,
+          "aligned_to": 78
+        }
+      ]
+    },
+    {
+      "sent_id": 2,
+      "text": "robin 's comments follow claims by two magazines , daily bild and french paris match .",
+      "tokens": [
+        "robin",
+        "'s",
+        "comments",
+        "follow",
+        "claims",
+        "by",
+        "two",
+        "magazines",
+        ",",
+        "daily",
+        "bild",
+        "and",
+        "french",
+        "paris",
+        "match",
+        "."
+      ],
+      "pos_tags": [
+        "PROPN",
+        "PART",
+        "NOUN",
+        "VERB",
+        "NOUN",
+        "ADP",
+        "NUM",
+        "NOUN",
+        "PUNCT",
+        "ADJ",
+        "PROPN",
+        "CCONJ",
+        "PROPN",
+        "PROPN",
+        "NOUN",
+        "PUNCT"
+      ],
+      "is_alpha": [
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false
+      ],
+      "is_stop": [
+        false,
+        true,
+        false,
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false,
+        false,
+        false
+      ],
+      "entities": [
+        [
+          "robin",
+          "PERSON",
+          0,
+          5
+        ],
+        [
+          "two",
+          "CARDINAL",
+          35,
+          38
+        ],
+        [
+          "french",
+          "NORP",
+          66,
+          72
+        ],
+        [
+          "paris",
+          "GPE",
+          73,
+          78
+        ]
+      ],
+      "chunks": [
+        [
+          "robin",
+          "NP",
+          0,
+          5
+        ],
+        [
+          "'s comments",
+          "NP",
+          6,
+          17
+        ],
+        [
+          "follow",
+          "VP",
+          18,
+          24
+        ],
+        [
+          "claims",
+          "NP",
+          25,
+          31
+        ],
+        [
+          "by",
+          "PP",
+          32,
+          34
+        ],
+        [
+          "two magazines",
+          "NP",
+          35,
+          48
+        ],
+        [
+          "daily bild and french paris match",
+          "NP",
+          51,
+          84
+        ]
+      ],
+      "frames": [
+        [
+          "follow",
+          "follow.01"
+        ]
+      ],
+      "tokens_det": [
+        {
+          "id": 13,
+          "token": "robin",
+          "pos_tags": "PROPN",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 80
+        },
+        {
+          "id": 14,
+          "token": "'s",
+          "pos_tags": "PART",
+          "is_alpha": false,
+          "is_stop": true,
+          "aligned_to": 81
+        },
+        {
+          "id": 15,
+          "token": "comments",
+          "pos_tags": "NOUN",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 82
+        },
+        {
+          "id": 16,
+          "token": "follow",
+          "pos_tags": "VERB",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 83
+        },
+        {
+          "id": 17,
+          "token": "claims",
+          "pos_tags": "NOUN",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 84
+        },
+        {
+          "id": 18,
+          "token": "by",
+          "pos_tags": "ADP",
+          "is_alpha": true,
+          "is_stop": true,
+          "aligned_to": 85
+        },
+        {
+          "id": 19,
+          "token": "two",
+          "pos_tags": "NUM",
+          "is_alpha": true,
+          "is_stop": true,
+          "aligned_to": 86
+        },
+        {
+          "id": 20,
+          "token": "magazines",
+          "pos_tags": "NOUN",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 87
+        },
+        {
+          "id": 21,
+          "token": ",",
+          "pos_tags": "PUNCT",
+          "is_alpha": false,
+          "is_stop": false,
+          "aligned_to": 88
+        },
+        {
+          "id": 22,
+          "token": "daily",
+          "pos_tags": "ADJ",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 90
+        },
+        {
+          "id": 23,
+          "token": "bild",
+          "pos_tags": "PROPN",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 91
+        },
+        {
+          "id": 24,
+          "token": "and",
+          "pos_tags": "CCONJ",
+          "is_alpha": true,
+          "is_stop": true,
+          "aligned_to": 92
+        },
+        {
+          "id": 25,
+          "token": "french",
+          "pos_tags": "PROPN",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 93
+        },
+        {
+          "id": 26,
+          "token": "paris",
+          "pos_tags": "PROPN",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 94
+        },
+        {
+          "id": 27,
+          "token": "match",
+          "pos_tags": "NOUN",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 95
+        },
+        {
+          "id": 28,
+          "token": ".",
+          "pos_tags": "PUNCT",
+          "is_alpha": false,
+          "is_stop": false,
+          "aligned_to": 127
+        }
+      ]
+    },
+    {
+      "sent_id": 3,
+      "text": "the video was recovered from a phone at the wreckage site .",
+      "tokens": [
+        "the",
+        "video",
+        "was",
+        "recovered",
+        "from",
+        "a",
+        "phone",
+        "at",
+        "the",
+        "wreckage",
+        "site",
+        "."
+      ],
+      "pos_tags": [
+        "DET",
+        "NOUN",
+        "AUX",
+        "VERB",
+        "ADP",
+        "DET",
+        "NOUN",
+        "ADP",
+        "DET",
+        "NOUN",
+        "NOUN",
+        "PUNCT"
+      ],
+      "is_alpha": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false
+      ],
+      "is_stop": [
+        true,
+        false,
+        true,
+        false,
+        true,
+        true,
+        false,
+        true,
+        true,
+        false,
+        false,
+        false
+      ],
+      "entities": [],
+      "chunks": [
+        [
+          "the video",
+          "NP",
+          0,
+          9
+        ],
+        [
+          "was recovered",
+          "VP",
+          10,
+          23
+        ],
+        [
+          "from",
+          "PP",
+          24,
+          28
+        ],
+        [
+          "a phone",
+          "NP",
+          29,
+          36
+        ],
+        [
+          "at",
+          "PP",
+          37,
+          39
+        ],
+        [
+          "the wreckage site",
+          "NP",
+          40,
+          57
+        ]
+      ],
+      "frames": [
+        [
+          "was",
+          "be.03"
+        ],
+        [
+          "recovered",
+          "recover.02"
+        ]
+      ],
+      "tokens_det": [
+        {
+          "id": 29,
+          "token": "the",
+          "pos_tags": "DET",
+          "is_alpha": true,
+          "is_stop": true,
+          "aligned_to": 134
+        },
+        {
+          "id": 30,
+          "token": "video",
+          "pos_tags": "NOUN",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 135
+        },
+        {
+          "id": 31,
+          "token": "was",
+          "pos_tags": "AUX",
+          "is_alpha": true,
+          "is_stop": true,
+          "aligned_to": 136
+        },
+        {
+          "id": 32,
+          "token": "recovered",
+          "pos_tags": "VERB",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 137
+        },
+        {
+          "id": 33,
+          "token": "from",
+          "pos_tags": "ADP",
+          "is_alpha": true,
+          "is_stop": true,
+          "aligned_to": 138
+        },
+        {
+          "id": 34,
+          "token": "a",
+          "pos_tags": "DET",
+          "is_alpha": true,
+          "is_stop": true,
+          "aligned_to": 139
+        },
+        {
+          "id": 35,
+          "token": "phone",
+          "pos_tags": "NOUN",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 140
+        },
+        {
+          "id": 36,
+          "token": "at",
+          "pos_tags": "ADP",
+          "is_alpha": true,
+          "is_stop": true,
+          "aligned_to": 141
+        },
+        {
+          "id": 37,
+          "token": "the",
+          "pos_tags": "DET",
+          "is_alpha": true,
+          "is_stop": true,
+          "aligned_to": 142
+        },
+        {
+          "id": 38,
+          "token": "wreckage",
+          "pos_tags": "NOUN",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 143
+        },
+        {
+          "id": 39,
+          "token": "site",
+          "pos_tags": "NOUN",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 144
+        },
+        {
+          "id": 40,
+          "token": ".",
+          "pos_tags": "PUNCT",
+          "is_alpha": false,
+          "is_stop": false,
+          "aligned_to": 230
+        }
+      ]
+    },
+    {
+      "sent_id": 4,
+      "text": "marseille prosecutor brice robin says `` no videos were used in the crash investigation ''",
+      "tokens": [
+        "marseille",
+        "prosecutor",
+        "brice",
+        "robin",
+        "says",
+        "`",
+        "`",
+        "no",
+        "videos",
+        "were",
+        "used",
+        "in",
+        "the",
+        "crash",
+        "investigation",
+        "''"
+      ],
+      "pos_tags": [
+        "PROPN",
+        "NOUN",
+        "PROPN",
+        "PROPN",
+        "VERB",
+        "PUNCT",
+        "PUNCT",
+        "DET",
+        "NOUN",
+        "AUX",
+        "VERB",
+        "ADP",
+        "DET",
+        "NOUN",
+        "NOUN",
+        "PUNCT"
+      ],
+      "is_alpha": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false
+      ],
+      "is_stop": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        false,
+        false,
+        false
+      ],
+      "entities": [
+        [
+          "marseille",
+          "GPE",
+          0,
+          9
+        ],
+        [
+          "brice robin",
+          "PERSON",
+          21,
+          32
+        ]
+      ],
+      "chunks": [
+        [
+          "marseille prosecutor brice robin",
+          "NP",
+          0,
+          32
+        ],
+        [
+          "says",
+          "VP",
+          33,
+          37
+        ],
+        [
+          "no videos",
+          "NP",
+          41,
+          50
+        ],
+        [
+          "were used",
+          "VP",
+          51,
+          60
+        ],
+        [
+          "in",
+          "PP",
+          61,
+          63
+        ],
+        [
+          "the crash investigation",
+          "NP",
+          64,
+          87
+        ]
+      ],
+      "frames": [
+        [
+          "says",
+          "say.01"
+        ],
+        [
+          "were",
+          "be.03"
+        ],
+        [
+          "used",
+          "use.01"
+        ]
+      ],
+      "tokens_det": [
+        {
+          "id": 41,
+          "token": "marseille",
+          "pos_tags": "PROPN",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": []
+        },
+        {
+          "id": 42,
+          "token": "prosecutor",
+          "pos_tags": "NOUN",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": []
+        },
+        {
+          "id": 43,
+          "token": "brice",
+          "pos_tags": "PROPN",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": []
+        },
+        {
+          "id": 44,
+          "token": "robin",
+          "pos_tags": "PROPN",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": []
+        },
+        {
+          "id": 45,
+          "token": "says",
+          "pos_tags": "VERB",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": []
+        },
+        {
+          "id": 46,
+          "token": "`",
+          "pos_tags": "PUNCT",
+          "is_alpha": false,
+          "is_stop": false,
+          "aligned_to": 253
+        },
+        {
+          "id": 47,
+          "token": "`",
+          "pos_tags": "PUNCT",
+          "is_alpha": false,
+          "is_stop": false,
+          "aligned_to": 254
+        },
+        {
+          "id": 48,
+          "token": "no",
+          "pos_tags": "DET",
+          "is_alpha": true,
+          "is_stop": true,
+          "aligned_to": []
+        },
+        {
+          "id": 49,
+          "token": "videos",
+          "pos_tags": "NOUN",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": []
+        },
+        {
+          "id": 50,
+          "token": "were",
+          "pos_tags": "AUX",
+          "is_alpha": true,
+          "is_stop": true,
+          "aligned_to": 330
+        },
+        {
+          "id": 51,
+          "token": "used",
+          "pos_tags": "VERB",
+          "is_alpha": true,
+          "is_stop": true,
+          "aligned_to": []
+        },
+        {
+          "id": 52,
+          "token": "in",
+          "pos_tags": "ADP",
+          "is_alpha": true,
+          "is_stop": true,
+          "aligned_to": 432
+        },
+        {
+          "id": 53,
+          "token": "the",
+          "pos_tags": "DET",
+          "is_alpha": true,
+          "is_stop": true,
+          "aligned_to": 505
+        },
+        {
+          "id": 54,
+          "token": "crash",
+          "pos_tags": "NOUN",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 506
+        },
+        {
+          "id": 55,
+          "token": "investigation",
+          "pos_tags": "NOUN",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 543
+        },
+        {
+          "id": 56,
+          "token": "''",
+          "pos_tags": "PUNCT",
+          "is_alpha": false,
+          "is_stop": false,
+          "aligned_to": 622
+        }
+      ]
+    },
+    {
+      "sent_id": 5,
+      "text": "new : `` a person who has such a video needs to immediately give it to the investigators , '' he says .",
+      "tokens": [
+        "new",
+        ":",
+        "`",
+        "`",
+        "a",
+        "person",
+        "who",
+        "has",
+        "such",
+        "a",
+        "video",
+        "needs",
+        "to",
+        "immediately",
+        "give",
+        "it",
+        "to",
+        "the",
+        "investigators",
+        ",",
+        "''",
+        "he",
+        "says",
+        "."
+      ],
+      "pos_tags": [
+        "ADJ",
+        "PUNCT",
+        "PUNCT",
+        "PUNCT",
+        "DET",
+        "NOUN",
+        "PRON",
+        "AUX",
+        "DET",
+        "DET",
+        "NOUN",
+        "VERB",
+        "PART",
+        "ADV",
+        "VERB",
+        "PRON",
+        "ADP",
+        "DET",
+        "NOUN",
+        "PUNCT",
+        "PUNCT",
+        "PRON",
+        "VERB",
+        "PUNCT"
+      ],
+      "is_alpha": [
+        true,
+        false,
+        false,
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        false,
+        true,
+        true,
+        false
+      ],
+      "is_stop": [
+        false,
+        false,
+        false,
+        false,
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        false,
+        false,
+        true,
+        false,
+        true,
+        true,
+        true,
+        true,
+        false,
+        false,
+        false,
+        true,
+        false,
+        false
+      ],
+      "entities": [],
+      "chunks": [
+        [
+          "new",
+          "ADJP",
+          0,
+          3
+        ],
+        [
+          "a person",
+          "NP",
+          9,
+          17
+        ],
+        [
+          "who",
+          "NP",
+          18,
+          21
+        ],
+        [
+          "has",
+          "VP",
+          22,
+          25
+        ],
+        [
+          "such a video",
+          "NP",
+          26,
+          38
+        ],
+        [
+          "needs to immediately give",
+          "VP",
+          39,
+          64
+        ],
+        [
+          "it",
+          "NP",
+          65,
+          67
+        ],
+        [
+          "to",
+          "PP",
+          68,
+          70
+        ],
+        [
+          "the investigators",
+          "NP",
+          71,
+          88
+        ],
+        [
+          "he",
+          "NP",
+          94,
+          96
+        ],
+        [
+          "says",
+          "VP",
+          97,
+          101
+        ]
+      ],
+      "frames": [
+        [
+          "has",
+          "have.03"
+        ],
+        [
+          "needs",
+          "need.01"
+        ],
+        [
+          "give",
+          "give.01"
+        ],
+        [
+          "says",
+          "say.01"
+        ]
+      ],
+      "tokens_det": [
+        {
+          "id": 57,
+          "token": "new",
+          "pos_tags": "ADJ",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": []
+        },
+        {
+          "id": 58,
+          "token": ":",
+          "pos_tags": "PUNCT",
+          "is_alpha": false,
+          "is_stop": false,
+          "aligned_to": []
+        },
+        {
+          "id": 59,
+          "token": "`",
+          "pos_tags": "PUNCT",
+          "is_alpha": false,
+          "is_stop": false,
+          "aligned_to": 712
+        },
+        {
+          "id": 60,
+          "token": "`",
+          "pos_tags": "PUNCT",
+          "is_alpha": false,
+          "is_stop": false,
+          "aligned_to": 713
+        },
+        {
+          "id": 61,
+          "token": "a",
+          "pos_tags": "DET",
+          "is_alpha": true,
+          "is_stop": true,
+          "aligned_to": 964
+        },
+        {
+          "id": 62,
+          "token": "person",
+          "pos_tags": "NOUN",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": []
+        },
+        {
+          "id": 63,
+          "token": "who",
+          "pos_tags": "PRON",
+          "is_alpha": true,
+          "is_stop": true,
+          "aligned_to": []
+        },
+        {
+          "id": 64,
+          "token": "has",
+          "pos_tags": "AUX",
+          "is_alpha": true,
+          "is_stop": true,
+          "aligned_to": []
+        },
+        {
+          "id": 65,
+          "token": "such",
+          "pos_tags": "DET",
+          "is_alpha": true,
+          "is_stop": true,
+          "aligned_to": []
+        },
+        {
+          "id": 66,
+          "token": "a",
+          "pos_tags": "DET",
+          "is_alpha": true,
+          "is_stop": true,
+          "aligned_to": 986
+        },
+        {
+          "id": 67,
+          "token": "video",
+          "pos_tags": "NOUN",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": []
+        },
+        {
+          "id": 68,
+          "token": "needs",
+          "pos_tags": "VERB",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": []
+        },
+        {
+          "id": 69,
+          "token": "to",
+          "pos_tags": "PART",
+          "is_alpha": true,
+          "is_stop": true,
+          "aligned_to": 1056
+        },
+        {
+          "id": 70,
+          "token": "immediately",
+          "pos_tags": "ADV",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": []
+        },
+        {
+          "id": 71,
+          "token": "give",
+          "pos_tags": "VERB",
+          "is_alpha": true,
+          "is_stop": true,
+          "aligned_to": []
+        },
+        {
+          "id": 72,
+          "token": "it",
+          "pos_tags": "PRON",
+          "is_alpha": true,
+          "is_stop": true,
+          "aligned_to": 1093
+        },
+        {
+          "id": 73,
+          "token": "to",
+          "pos_tags": "ADP",
+          "is_alpha": true,
+          "is_stop": true,
+          "aligned_to": 1124
+        },
+        {
+          "id": 74,
+          "token": "the",
+          "pos_tags": "DET",
+          "is_alpha": true,
+          "is_stop": true,
+          "aligned_to": 1127
+        },
+        {
+          "id": 75,
+          "token": "investigators",
+          "pos_tags": "NOUN",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": 1150
+        },
+        {
+          "id": 76,
+          "token": ",",
+          "pos_tags": "PUNCT",
+          "is_alpha": false,
+          "is_stop": false,
+          "aligned_to": 1249
+        },
+        {
+          "id": 77,
+          "token": "''",
+          "pos_tags": "PUNCT",
+          "is_alpha": false,
+          "is_stop": false,
+          "aligned_to": 1250
+        },
+        {
+          "id": 78,
+          "token": "he",
+          "pos_tags": "PRON",
+          "is_alpha": true,
+          "is_stop": true,
+          "aligned_to": 1251
+        },
+        {
+          "id": 79,
+          "token": "says",
+          "pos_tags": "VERB",
+          "is_alpha": true,
+          "is_stop": false,
+          "aligned_to": []
+        },
+        {
+          "id": 80,
+          "token": ".",
+          "pos_tags": "PUNCT",
+          "is_alpha": false,
+          "is_stop": false,
+          "aligned_to": 1355
+        }
+      ]
+    }
+  ],
+  "alignment": [
+    [
+      1,
+      8
+    ],
+    [
+      2,
+      9
+    ],
+    [
+      4,
+      23
+    ],
+    [
+      5,
+      24
+    ],
+    [
+      6,
+      25
+    ],
+    [
+      7,
+      26
+    ],
+    [
+      8,
+      27
+    ],
+    [
+      9,
+      28
+    ],
+    [
+      10,
+      29
+    ],
+    [
+      11,
+      30
+    ],
+    [
+      12,
+      78
+    ],
+    [
+      13,
+      80
+    ],
+    [
+      14,
+      81
+    ],
+    [
+      15,
+      82
+    ],
+    [
+      16,
+      83
+    ],
+    [
+      17,
+      84
+    ],
+    [
+      18,
+      85
+    ],
+    [
+      19,
+      86
+    ],
+    [
+      20,
+      87
+    ],
+    [
+      21,
+      88
+    ],
+    [
+      22,
+      90
+    ],
+    [
+      23,
+      91
+    ],
+    [
+      24,
+      92
+    ],
+    [
+      25,
+      93
+    ],
+    [
+      26,
+      94
+    ],
+    [
+      27,
+      95
+    ],
+    [
+      28,
+      127
+    ],
+    [
+      29,
+      134
+    ],
+    [
+      30,
+      135
+    ],
+    [
+      31,
+      136
+    ],
+    [
+      32,
+      137
+    ],
+    [
+      33,
+      138
+    ],
+    [
+      34,
+      139
+    ],
+    [
+      35,
+      140
+    ],
+    [
+      36,
+      141
+    ],
+    [
+      37,
+      142
+    ],
+    [
+      38,
+      143
+    ],
+    [
+      39,
+      144
+    ],
+    [
+      40,
+      230
+    ],
+    [
+      46,
+      253
+    ],
+    [
+      47,
+      254
+    ],
+    [
+      50,
+      330
+    ],
+    [
+      52,
+      432
+    ],
+    [
+      53,
+      505
+    ],
+    [
+      54,
+      506
+    ],
+    [
+      55,
+      543
+    ],
+    [
+      56,
+      622
+    ],
+    [
+      59,
+      712
+    ],
+    [
+      60,
+      713
+    ],
+    [
+      61,
+      964
+    ],
+    [
+      66,
+      986
+    ],
+    [
+      69,
+      1056
+    ],
+    [
+      72,
+      1093
+    ],
+    [
+      73,
+      1124
+    ],
+    [
+      74,
+      1127
+    ],
+    [
+      75,
+      1150
+    ],
+    [
+      76,
+      1249
+    ],
+    [
+      77,
+      1250
+    ],
+    [
+      78,
+      1251
+    ],
+    [
+      80,
+      1355
+    ]
+  ],
+  "commonWords": [
+    {
+      "token": "video",
+      "freq": 3
+    },
+    {
+      "token": "french",
+      "freq": 2
+    },
+    {
+      "token": "prosecutor",
+      "freq": 2
+    },
+    {
+      "token": "robin",
+      "freq": 2
+    },
+    {
+      "token": "aware",
+      "freq": 1
+    },
+    {
+      "token": "footage",
+      "freq": 1
+    },
+    {
+      "token": "comments",
+      "freq": 1
+    },
+    {
+      "token": "follow",
+      "freq": 1
+    },
+    {
+      "token": "claims",
+      "freq": 1
+    },
+    {
+      "token": "magazines",
+      "freq": 1
+    },
+    {
+      "token": "daily",
+      "freq": 1
+    },
+    {
+      "token": "bild",
+      "freq": 1
+    },
+    {
+      "token": "paris",
+      "freq": 1
+    },
+    {
+      "token": "match",
+      "freq": 1
+    },
+    {
+      "token": "recovered",
+      "freq": 1
+    },
+    {
+      "token": "phone",
+      "freq": 1
+    },
+    {
+      "token": "wreckage",
+      "freq": 1
+    },
+    {
+      "token": "site",
+      "freq": 1
+    },
+    {
+      "token": "marseille",
+      "freq": 1
+    },
+    {
+      "token": "brice",
+      "freq": 1
+    },
+    {
+      "token": "videos",
+      "freq": 1
+    },
+    {
+      "token": "crash",
+      "freq": 1
+    },
+    {
+      "token": "investigation",
+      "freq": 1
+    },
+    {
+      "token": "person",
+      "freq": 1
+    },
+    {
+      "token": "needs",
+      "freq": 1
+    },
+    {
+      "token": "immediately",
+      "freq": 1
+    },
+    {
+      "token": "investigators",
+      "freq": 1
+    }
+  ],
+  "novelWords": [
+    {
+      "token": "says",
+      "freq": 3
+    },
+    {
+      "token": "new",
+      "freq": 1
+    }
+  ]
+}
