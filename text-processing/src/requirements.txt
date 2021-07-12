@@ -1,0 +1,13 @@
+torch==1.7.1
+sentence-transformers
+spacy
+bert-score
+click
+transformers
+sentencepiece
+pandas
+flair
+stanford_openie
+absl-py
+six
+rouge-score
