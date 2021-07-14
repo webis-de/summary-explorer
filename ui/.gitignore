@@ -134,4 +134,4 @@ GitHub.sublime-settings
 .history
 
 # Ignore settings file
-# SumViz/settings.py
+SumViz/settings.py

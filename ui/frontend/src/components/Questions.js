@@ -29,7 +29,7 @@ class Questions extends React.Component {
     render() {
         const {selected_container} = this.state;
         const select_models_button_style = "w-full  align-center my-1 rounded text-sm px-3 py-1 py-0 font-normal " +
-            "bg-blue-800 text-white hover:bg-blue-700 focus:outline-none";
+            "bg-blue-800 text-white hover:bg-red-700 focus:outline-none";
         return (
             <div className="bg-white w-full mt-2 rounded-lg shadow-xl mx-auto border border-gray-200">
                 <ul className="shadow-box">

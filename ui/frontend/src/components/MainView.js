@@ -200,7 +200,7 @@ class MainView extends React.Component {
                         {Object.keys(selected_models).length > 0 && question_id!==6?
                         <div className="mb-1 flex">
                             <button className="float-rightmy-1 rounded text-sm px-3 py-1  py-0 font-normal
-                                            hover:bg-blue-700 bg-blue-800 text-white outline-none text-xs"
+                                            hover:bg-red-700 bg-blue-800 text-white focus:outline-none text-xs"
                                             onClick={()=>{this.openSingleGroupView()}}>
                                                 Show Examples
                             </button>

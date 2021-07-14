@@ -10,6 +10,7 @@ import SummaryBlockHalucination from "./SummaryBlockHalucination";
 import SummaryBlockAHM from "./SummaryBlockAHM";
 import ArticleNavigationBar from "./ArticleNavigationBar";
 import ErrorMessage from "./ErrorMessage";
+import ShareButton from "./ShareButton";
 
 
 class SingleGroupViewArticleHM extends React.Component{
@@ -182,7 +183,6 @@ class SingleGroupViewArticleHM extends React.Component{
                                                       dataset_id={dataset_id}
                                                       loadArticleUserInput={this.loadArticleUserInput}
                                                       loadArticle={this.loadArticle}
-                                                      copyTextToClipboard={this.copyTextToClipboard}
                                 />:null
                              }
                              {this.state.show_error?
@@ -193,6 +193,7 @@ class SingleGroupViewArticleHM extends React.Component{
                               }
                          </div>
                          <div className="w-6/12 ">
+                             <ShareButton copyTextToClipboard={this.copyTextToClipboard} />
                          </div>
                      </div>
                      <div className="flex" id="singleModelView">

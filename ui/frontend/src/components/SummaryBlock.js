@@ -101,7 +101,7 @@ class SummaryBlock extends React.Component {
 
     }
 
-    ColorScale = (v, k)=> {
+    colorScale = (v, k)=> {
         // return d3.scaleSequential(d3.interpolateBlues).domain([0,2])(v);
         if(k==="semantic_similarity_candidates_bert_score")
             return d3.scaleSequential(d3.interpolateBlues).domain([0,3])(v);
@@ -133,7 +133,7 @@ class SummaryBlock extends React.Component {
         })
         Object.entries(article_sentences_freq).map(([key, value]) => {
             let score = value/max_score;
-            article_sentences[key] = {"backgroundColor":this.ColorScale(score, k), "color": "#222222"};
+            article_sentences[key] = {"backgroundColor":this.colorScale(score, k), "color": "#222222"};
         })
         this.setState({
             selected_sentences: summ_sentences,

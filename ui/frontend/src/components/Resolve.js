@@ -43,7 +43,7 @@ class Resolve extends React.Component {
     render() {
         const {dataset_id, article_id, question_id, models, current_question} = this.state
         return (
-            <div className="w-full p-1 pl-0 justify-end text-sm left-0 text-left ">
+            <div className="w-full p-1 pl-0 justify-end left-0 text-left ">
                         <DataSetBlock dataset_id={dataset_id} />
                         <h1 className="header_font font-semibold ml-1 text-blue-800">{current_question}</h1>
                         {question_id===1?

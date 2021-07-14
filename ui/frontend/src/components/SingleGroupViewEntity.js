@@ -7,6 +7,7 @@ import LoadingIcon from "../assets/images/loading.svg";
 import SummaryBlockEntities from "./SummaryBlockEntities";
 import ArticleNavigationBar from "./ArticleNavigationBar";
 import ErrorMessage from "./ErrorMessage";
+import ShareButton from "./ShareButton";
 
 
 class SingleGroupViewEntity extends React.Component{
@@ -150,17 +151,21 @@ class SingleGroupViewEntity extends React.Component{
                               :null
                             }
                          </div>
-                         <div className="w-6/12 ml-4 ">
+                         <div className="w-6/12 ml-4 flex">
                              {models_loaded?
-                                <div >
+                                <div className="w-1/2">
                                     <button onClick={()=>{this.toggleAggregate()}}
-                                    className={'px-1 py-1 text-xs rounded mr-1 hover:text-white hover:bg-blue-700 outline-none'
+                                    className={'px-1 py-1 text-xs rounded mr-1 hover:text-white hover:bg-red-700 focus:outline-none'
                                     + (aggregate ? " bg-gray-400  text-gray-800":" bg-blue-800  text-white") }>Show Summaries</button>
                                     <button onClick={()=>{this.toggleAggregate()}}
-                                    className={'px-1 py-1 text-xs rounded mr-1 hover:text-white hover:bg-blue-700 outline-none'
+                                    className={'px-1 py-1 text-xs rounded mr-1 hover:text-white hover:bg-red-700 focus:outline-none'
                                     + (aggregate ? " bg-blue-800  text-white":" bg-gray-400  text-gray-800") } >Aggregate Entities</button>
                                 </div>: null
                              }
+                             <div className="w-1/2">
+                                 <ShareButton copyTextToClipboard={this.copyTextToClipboard} />
+                             </div>
+
                          </div>
                      </div>
                      <div className="flex" id="singleModelViewHalucination">
@@ -185,7 +190,7 @@ class SingleGroupViewEntity extends React.Component{
                                 <div className="py-2 px-4 w-full leading-loose shadow-xl border bg-white mb-2 rounded-md flex-wrap  hover:border-yellow-600 hover:border-4">
                                     <div className="flex ">
                                         <h2 className="font-extrabold text-normal mb-0  article_header self-end ">
-                                            <span className="uppercase text-green-800">Covered Article Entities</span>
+                                            <span className="uppercase header_font text-blue-900">Covered Article Entities</span>
                                         </h2>
                                     </div>
                                     <div className="flex-wrap">
@@ -201,7 +206,7 @@ class SingleGroupViewEntity extends React.Component{
                                              return   summ.raw['entities'].length > 0 ?
                                                         (<div className="table-row flex mt-2 pt-2 mb-2 border-t border-gray-200">
 
-                                                            <div className="table-cell uppercase text-xs text-gray-700inline whitespace-no-wrap header_font font-semibold">{summ["smodel"]}</div>
+                                                            <div className="table-cell uppercase text-xs text-blue-900 inline whitespace-no-wrap header_font font-semibold">{summ["smodel"]}</div>
                                                             <div className="table-cell py-2 border-t border-gray-200">{summ.raw['entities'].map(h=>{
                                                                     return<div className="mt-2 inline mx-1 px-1 py-1 text-xs py-0
                                                                              hover:bg-green-800 bg-green-700 text-white rounded ">{h['text']}

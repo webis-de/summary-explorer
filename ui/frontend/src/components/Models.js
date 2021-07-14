@@ -74,6 +74,25 @@ class Models extends React.Component {
             return arr.sort((a, b) => a[prop] - b[prop]);
         }
 
+    datasetBadge = (dataset_id)=>{
+        let label = "";
+        let style = "";
+        if(dataset_id===1){
+            label = "CNN/DM";
+            style = "text-yellow-800 bg-yellow-100 ";
+        }else if(dataset_id===2){
+            label = "XSum";
+            style = "text-red-800 bg-red-100 ";
+        }else {
+            label = "Webis TL;DR";
+            style = "text-purple-800 bg-purple-100 ";
+        }
+
+        return <span className={style + " ml-3 flex-shrink-0 py-0.5 text-xxs font-medium rounded-full"}>
+                  {label}
+              </span>
+    }
+
     sortByVal= (v)=>{
         let sorted = this.sortBy(this.state.filtered_results, v)
         let asc = true
@@ -153,7 +172,6 @@ class Models extends React.Component {
                                                     <span>
                                                     <b>Rouge 1</b>
                                                     {this.state.asc?
-
                                                         <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3 inline-block" viewBox="0 0 20 20" fill="currentColor">
                                                           <path fillRule="evenodd" d="M5.293 9.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 7.414V15a1 1 0 11-2 0V7.414L6.707 9.707a1 1 0 01-1.414 0z" clipRule="evenodd" />
                                                         </svg>:
@@ -226,13 +244,16 @@ class Models extends React.Component {
                                 </div>
                         </li>
                     {filtered_results.map((obj, ind)=>{
+                        console.log(obj)
                     return <li className="relative border-b border-gray-200">
                                 <button type="button"
                                         className="w-full px-8 py-4 text-left focus:outline-none hover:bg-blue-100" >
                                     <div className="flex items-center justify-between">
                                         <span className="w-full flex">
                                             <span className="w-1/6 uppercase text-xs article_header font-semibold text-blue-800 header_font"
-                                            onClick={()=>{this.setContainer("container_"+ind)}}>{obj.name}</span>
+                                            onClick={()=>{this.setContainer("container_"+ind)}}>{obj.name}
+                                                {this.datasetBadge(obj.dataset_id)}
+                                            </span>
                                             <span className="w-3/6 font-normal text-xs text-black ml-5"
                                             onClick={()=>{this.setContainer("container_"+ind)}}>{obj.title}</span>
                                             <span className="w-2/6" >
@@ -266,12 +287,6 @@ class Models extends React.Component {
                                     <div className="px-8 py-4">
                                         <div className="mt-1 mb-1 text-xs text-justify"><b>Abstract: </b><span>{obj.abstract}</span></div>
                                         <div className="mt-1 mb-1 text-xs text-justify"><b>Human Evaluation: </b><span>{obj.human_evaluation}</span></div>
-                                        <div>
-                                          <a href={obj.url} target="_blank" className="inline-block text-xs hover:underline">
-                                        <svg xmlns="http://www.w3.org/2000/svg" className="inline-block h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
-                                        </svg>
-                                        {obj.url}</a></div>
                                     </div>
                                 </div>:null}
                             </li>

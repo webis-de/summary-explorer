@@ -11,6 +11,7 @@ import {Listbox} from "@headlessui/react";
 import ModelsScores from "./ModelsScores";
 import ArticleNavigationBar from "./ArticleNavigationBar";
 import ErrorMessage from "./ErrorMessage";
+import ShareButton from "./ShareButton";
 
 
 class SingleGroupView extends React.Component{
@@ -28,11 +29,10 @@ class SingleGroupView extends React.Component{
             selected_sentences: {},
             models_selected_sentences: {},
             active_buttons: {'lexical': false, 'bert': false, 'spacy': false},
-                //this.props.active_buttons?this.props.active_buttons:{'lexical': false, 'bert': false, 'spacy': false},
 
             models_loaded: false,
             smodels: [],
-            current_model: null, // this.props.selected_models[0], // null,
+            current_model: null,
 
             highlighted_sentences: [],
             corpus_upper_bound: {1: 11448, 2: 10360, 3:250},
@@ -162,7 +162,7 @@ class SingleGroupView extends React.Component{
                                                           dataset_id={dataset_id}
                                                           loadArticleUserInput={this.loadArticleUserInput}
                                                           loadArticle={this.loadArticle}
-                                                          copyTextToClipboard={this.copyTextToClipboard}
+
                                     />
                                     : null
                                 }
@@ -175,6 +175,7 @@ class SingleGroupView extends React.Component{
 
                             </div>
                             <div className="w-6/12 ">
+                               <ShareButton copyTextToClipboard={this.copyTextToClipboard} />
                             </div>
                         </div>
                         <div className="flex" id="singleModelView">

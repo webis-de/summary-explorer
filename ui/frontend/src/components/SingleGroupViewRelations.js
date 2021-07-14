@@ -7,6 +7,7 @@ import ArticleBlockRelations from "./ArticleBlockRelations";
 import SummaryBlockRelations from "./SummaryBlockRelations";
 import ArticleNavigationBar from "./ArticleNavigationBar";
 import ErrorMessage from "./ErrorMessage";
+import ShareButton from "./ShareButton";
 
 
 class SingleGroupViewRelations extends React.Component{
@@ -172,18 +173,9 @@ class SingleGroupViewRelations extends React.Component{
                                 :null
                                 }
                          </div>
-                         {/*<div className="w-6/12 ml-4 ">*/}
-                         {/*    {models_loaded?*/}
-                         {/*       <div >*/}
-                         {/*           <button onClick={()=>{this.toggleAggregate()}}*/}
-                         {/*           className={'px-1 py-1 text-xs rounded mr-1 hover:text-white hover:bg-green-700 outline-none'*/}
-                         {/*           + (aggregate ? " bg-gray-400  text-gray-800":" bg-green-600  text-white") }>Show Summaries</button>*/}
-                         {/*           <button onClick={()=>{this.toggleAggregate()}}*/}
-                         {/*           className={'px-1 py-1 text-xs rounded mr-1 hover:text-white hover:bg-green-700 outline-none'*/}
-                         {/*           + (aggregate ? " bg-green-600  text-white":" bg-gray-400  text-gray-800") } >Aggregate Halucinations</button>*/}
-                         {/*       </div>: null*/}
-                         {/*    }*/}
-                         {/*</div>*/}
+                         <div className="w-6/12 ml-4 ">
+                            <ShareButton copyTextToClipboard={this.copyTextToClipboard} />
+                         </div>
                      </div>
                      <div className="flex" id="singleModelViewHalucination">
                         <div className="w-6/12 bg-white text-left border rounded-t-md shadow-xl" >

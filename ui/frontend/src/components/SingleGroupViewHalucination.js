@@ -11,6 +11,7 @@ import ModelsScores from "./ModelsScores";
 import SummaryBlockHalucination2 from "./SummaryBlockHallucinations2";
 import ArticleNavigationBar from "./ArticleNavigationBar";
 import ErrorMessage from "./ErrorMessage";
+import ShareButton from "./ShareButton";
 
 
 class SingleGroupViewHalucination extends React.Component{
@@ -167,17 +168,20 @@ class SingleGroupViewHalucination extends React.Component{
                              }
 
                          </div>
-                         <div className="w-6/12 ml-4 ">
+                         <div className="w-6/12 ml-4 flex">
                              {models_loaded?
-                                <div >
+                                <div className="w-1/2">
                                     <button onClick={()=>{this.toggleAggregate()}}
-                                    className={'px-1 py-1 text-xs rounded mr-1 hover:text-white hover:bg-green-700 outline-none'
-                                    + (aggregate ? " bg-gray-400  text-gray-800":" bg-green-600  text-white") }>Show Summaries</button>
+                                    className={'px-1 py-1 text-xs rounded mr-1 hover:text-white hover:bg-red-700 outline-none'
+                                    + (aggregate ? " bg-gray-400  text-gray-800":" bg-blue-800   text-white") }>Show Summaries</button>
                                     <button onClick={()=>{this.toggleAggregate()}}
-                                    className={'px-1 py-1 text-xs rounded mr-1 hover:text-white hover:bg-green-700 outline-none'
-                                    + (aggregate ? " bg-green-600  text-white":" bg-gray-400  text-gray-800") } >Aggregate Halucinations</button>
+                                    className={'px-1 py-1 text-xs rounded mr-1 hover:text-white hover:bg-red-700 outline-none focus:outline-none '
+                                    + (aggregate ? " bg-blue-800  text-white":" bg-gray-400  text-gray-800") } >Aggregate Halucinations</button>
                                 </div>: null
                              }
+                             <div className="w-1/2">
+                                 <ShareButton copyTextToClipboard={this.copyTextToClipboard} />
+                             </div>
                          </div>
                      </div>
                      <div className="flex" id="singleModelViewHalucination">
@@ -201,7 +205,7 @@ class SingleGroupViewHalucination extends React.Component{
                                         <div className="py-2 px-4 w-full leading-loose shadow-xl border bg-white mb-2
                                         rounded-md flex-wrap  hover:border-gray-600 hover:border-4">
                                         <div className="flex ">
-                                            <h2 className="font-extrabold text-normal mb-0  article_header self-end ">
+                                            <h2 className="font-extrabold text-normal mb-0  text-blue-900  self-end ">
                                                 <span className="uppercase">Hallucinations</span>
                                             </h2>
                                         </div>
@@ -218,7 +222,8 @@ class SingleGroupViewHalucination extends React.Component{
                                             <div className="table mt-2">
                                             {summaries.map(summ=>{
                                                 return <div className="table-row flex mb-2">
-                                                           <div className="table-cell uppercase text-xs text-gray-700inline whitespace-no-wrap header_font font-semibold">{summ["smodel_id"]}</div>
+                                                           <div className="table-cell uppercase text-xs text-gray-700inline text-blue-900
+                                                           whitespace-no-wrap header_font font-semibold">{summ["smodel_id"]}</div>
                                                      <div className="table-cell py-2 border-t border-gray-200" >{summ['novelWords'].map(h=>{
                                                 return <div className="mt-2 inline mx-1 px-1 py-1 text-xs  py-0
                                                  hover:bg-gray-400 bg-gray-300 text-red-700 rounded ">{h['token']}
