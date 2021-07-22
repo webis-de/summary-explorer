@@ -4,4 +4,4 @@ The SQL database dump can be downloaded from [here](https://files.webis.de/summa
 
 Set up the front end as instructed [here.](ui/README.md)
 
-Text processing pipeline and sample datat can be found [here.](text-processing/)
+Text processing pipeline and sample data can be found [here.](text-processing/)
