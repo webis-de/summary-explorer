@@ -40,6 +40,12 @@ class Resolve extends React.Component {
 
     }
 
+    setArticleId = (id) => {
+        this.setState({
+            article_id: id
+        })
+    }
+
     render() {
         const {dataset_id, article_id, question_id, models, current_question} = this.state
         return (
@@ -48,37 +54,42 @@ class Resolve extends React.Component {
                         <h1 className="header_font font-semibold ml-1 text-blue-800">{current_question}</h1>
                         {question_id===1?
                             <SingleGroupView key="ModelGroupView"
-                                     dataset_id={dataset_id}
-                                     article_id={article_id}
-                                     selected_models={models}
+                                             dataset_id={dataset_id}
+                                             article_id={article_id}
+                                             setArticleId = {this.setArticleId}
+                                             selected_models={models}
                                      />:null
                         }
                         {question_id===2?
                             <SingleGroupViewHalucination key="ModelGroupViewHalucination"
-                                     dataset_id={dataset_id}
-                                     article_id={article_id}
-                                     selected_models={models}
+                                                         dataset_id={dataset_id}
+                                                         article_id={article_id}
+                                                         setArticleId = {this.setArticleId}
+                                                         selected_models={models}
                                      />:null
                         }
                         {question_id===3?
                             <SingleGroupViewEntity key="SingleGroupViewEntity"
-                                     dataset_id={dataset_id}
-                                     article_id={article_id}
-                                     selected_models={models}
+                                                   dataset_id={dataset_id}
+                                                   article_id={article_id}
+                                                   setArticleId = {this.setArticleId}
+                                                   selected_models={models}
                                      />:null
                         }
                         {question_id===4?
                             <SingleGroupViewRelations key="SingleGroupViewRelations"
-                                     dataset_id={dataset_id}
-                                     article_id={article_id}
-                                     selected_models={models}
+                                                      dataset_id={dataset_id}
+                                                      article_id={article_id}
+                                                      setArticleId = {this.setArticleId}
+                                                      selected_models={models}
                                      />:null
                         }
                         {question_id===5?
                             <SingleGroupViewArticleHM key="SingleGroupViewArticleHM"
-                                     dataset_id={dataset_id}
-                                     article_id={article_id}
-                                     selected_models={models}
+                                                      dataset_id={dataset_id}
+                                                      article_id={article_id}
+                                                      setArticleId = {this.setArticleId}
+                                                      selected_models={models}
                                      />:null
                         }
                     </div>

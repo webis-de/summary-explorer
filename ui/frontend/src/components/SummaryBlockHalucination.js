@@ -9,7 +9,6 @@ class SummaryBlockHalucination extends React.Component {
 
     constructor(props) {
         super(props);
-        console.log("Constructor called")
         this.state = {
             article_id: this.props.article_id,
             api_summary_url : `../api/summary/`,
@@ -29,10 +28,6 @@ class SummaryBlockHalucination extends React.Component {
             selected_sentences: {},
 
     }
-    }
-
-    componentDidMount() {
-        console.log("componentDidMount called")
     }
 
     componentDidUpdate(prevProps, prevState) {
@@ -64,7 +59,6 @@ class SummaryBlockHalucination extends React.Component {
         })
         const {article_id, api_summary_url } = this.state;
         const url = api_summary_url+ article_id +"/" + model_id;
-        console.log(url)
         axios.get(url)
             .then(res => {
                 const summary = res.data[0].raw;
@@ -105,7 +99,6 @@ class SummaryBlockHalucination extends React.Component {
         let summ_sentences = {};
 
         sentences.map((sentence, idx) => {
-            console.log(idx)
             summ_sentences[sentence.sent_id] = colors[idx];
             sentence[k].map(elm=>{
                 article_sentences[elm['article_sent_id']] = colors[idx];
@@ -185,7 +178,6 @@ class SummaryBlockHalucination extends React.Component {
                                             let regex = "/\b(\w|')+\b/gim";
                                             // let tokens = str.match(/\b(w|')+\b/gim);
                                             let tokens = str.split(/\s+/);
-                                            console.log("matching tokens", tokens);
 
                                             return (
                                                 <span key={summ_model + "_sent_" + sentence.sent_id} className={bg}>

@@ -76,7 +76,6 @@ class SingleGroupViewRelations extends React.Component{
         axios.get(url)
           .then(res => {
               const article = res.data.raw;
-              console.log(res)
               this.setState({
                   article_id: res.data.article_id,
                   sentences: article.sentences,
@@ -94,7 +93,6 @@ class SingleGroupViewRelations extends React.Component{
       });
         const url = '../api/article/relations?ds_id='+this.state.dataset_id+'&id='+
             this.state.article_id+'&models='+selected_models.join(",");
-        console.log(url)
         axios.get(url)
         .then(res => {
           this.setState({
@@ -104,7 +102,6 @@ class SingleGroupViewRelations extends React.Component{
               relations: res.data.relations_list,
               hallucinations: res.data.unique_hallucinations,
           });
-          console.log(res.data.smodels)
       });
     };
 
@@ -137,7 +134,6 @@ class SingleGroupViewRelations extends React.Component{
 
     highlight_article_sentences = (sentences, current_model) =>{
         // this.reset_highlighting_all_models()
-        console.log(sentences)
         this.setState({
             selected_sentences: sentences,
             relation_view: false
@@ -151,7 +147,6 @@ class SingleGroupViewRelations extends React.Component{
     }
 
     render(){
-        console.log("rendering...")
         const {article_loaded, models_loaded, sentences, smodels, current_model, dataset_id, hallucinations, summaries,
             aggregate, article_id, relations, corpus_upper_bound, selected_relation} = this.state;
         return (

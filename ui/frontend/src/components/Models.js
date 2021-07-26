@@ -244,7 +244,6 @@ class Models extends React.Component {
                                 </div>
                         </li>
                     {filtered_results.map((obj, ind)=>{
-                        console.log(obj)
                     return <li className="relative border-b border-gray-200">
                                 <button type="button"
                                         className="w-full px-8 py-4 text-left focus:outline-none hover:bg-blue-100" >

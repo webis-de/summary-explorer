@@ -24,7 +24,6 @@ class AllModelsView extends React.Component {
     }
 
     componentDidMount() {
-        console.log("AllModelsView, ComponentDidMount",this.props)
         this.loadScores(this.props.article_id, this.props.dataset_id)
     }
 
@@ -35,7 +34,6 @@ class AllModelsView extends React.Component {
       });
 
       const url="../api/article/" + article_id +"/"+dataset_id+"/scores";
-      console.log(url)
       axios.get(url)
           .then(res => {
               this.setState({
@@ -50,7 +48,6 @@ class AllModelsView extends React.Component {
                   missing_entities: res.data.missing_entities,
                   data_loaded: true,
               });
-              console.log(res.data.spacy_article_map);
           });
     };
 

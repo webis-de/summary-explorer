@@ -377,7 +377,7 @@ class MainView extends React.Component {
                                              dataset_id={dataset_id}
                                              article_id={article_id}
                                              all_models={models}
-                                             setArticleId = {this.setArticleId}
+                                             setArticleId={this.setArticleId}
                                              selected_models={Object.keys(selected_models)}
                                      />:null
                         }

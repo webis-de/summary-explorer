@@ -8,7 +8,6 @@ import axios from "axios";
 class SummaryBlockRelations extends React.Component {
     constructor(props) {
         super(props);
-        console.log("Constructor called")
         this.state = {
             article_id: this.props.article_id,
             api_summary_url : `../api/summary/`,
@@ -33,13 +32,8 @@ class SummaryBlockRelations extends React.Component {
 
     }
 
-    componentDidMount() {
-        console.log("componentDidMount called")
-    }
 
     componentDidUpdate(prevProps, prevState) {
-        console.log(this.props.current_model, this.props.summ_model, prevState.selected_sentences)
-
       if (this.props.current_model !== this.props.summ_model && Object.keys(prevState.selected_sentences).length!==0) {
           this.setState({
             active_buttons: {'lexical': false, 'bert': false, 'spacy': false},
@@ -68,7 +62,6 @@ class SummaryBlockRelations extends React.Component {
         })
         const {article_id, api_summary_url } = this.state;
         const url = api_summary_url+ article_id +"/" + model_id;
-        console.log(url)
         axios.get(url)
             .then(res => {
                 const summary = res.data[0].raw;

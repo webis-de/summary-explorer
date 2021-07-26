@@ -14,8 +14,6 @@ class ArticleBlockRelations extends React.Component {
     }
 
     componentDidUpdate(prevProps, prevState, snapshot) {
-        console.log("Article Block Relations")
-        console.log(this.props)
         if(this.props.selected_relation !==prevState.selected_relation ||
             this.props.relation_view !==prevState.relation_view ||
             this.props.selected_sentences !==prevState.selected_sentences){
@@ -47,7 +45,6 @@ class ArticleBlockRelations extends React.Component {
     }
 
     render() {
-        console.log("TokenizedText")
         const {relation_view, selected_relation} = this.state;
         const {json, selected_sentences, relations} = this.props;
         return (
