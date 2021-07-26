@@ -72,6 +72,7 @@ class SingleGroupViewEntity extends React.Component{
                   sentences: article.sentences,
                   article_loaded: true,
               });
+              this.props.setArticleId(res.data.article_id);
               this.loadGroupSummaries(selected_models);
           });
     }

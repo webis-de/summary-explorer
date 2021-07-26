@@ -83,6 +83,7 @@ class SingleGroupViewRelations extends React.Component{
                   article_loaded: true,
                   selected_relation: null
               });
+              this.props.setArticleId(res.data.article_id);
               this.loadGroupSummaries(selected_models);
           });
     }

@@ -21,8 +21,6 @@ class ArticleBlockEntities extends React.Component {
     };
 
     render() {
-        console.log("TokenizedText")
-
         const {json, selected_sentences, missing_entities} = this.props;
         return (
             <div>
@@ -51,6 +49,7 @@ class ArticleBlockEntities extends React.Component {
                                 }
                                 if(start < sentence.text.length)
                                     arr+=sentence.text.slice(start);
+                                arr+= ". "
                             return (
                                  <span id={"sent_" + sentence.sent_id}
                                        className={bg}

@@ -102,6 +102,7 @@ class SingleGroupViewArticleHM extends React.Component{
                   article_loaded: true,
                   selected_sentence_article_id: null
               });
+              this.props.setArticleId(res.data.article_id);
               this.loadGroupSummaries(selected_models);
           });
     }

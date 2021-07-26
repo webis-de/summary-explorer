@@ -37,6 +37,7 @@ class MainView extends React.Component {
             question_id: null,
             selected_models: {},
             article_bars_HM_selected_article: null,
+            article_id: -1
 
         }
     }
@@ -55,7 +56,13 @@ class MainView extends React.Component {
         }else{
             const url="../api/smodel/"+model_name+"/"+this.props.dataset_id;
             let temp = this.state.selected_models
-            axios.get(url)
+            if(model_name in temp){
+                delete temp[model_name]
+                this.setState({
+                      selected_models: temp
+                  });
+            }else{
+              axios.get(url)
               .then(res => {
                   temp[res.data.name] = res.data
                   this.setState({
@@ -63,6 +70,8 @@ class MainView extends React.Component {
                       selected_models: temp
                   });
               });
+            }
+
         }
 
     }
@@ -166,9 +175,15 @@ class MainView extends React.Component {
         })
     }
 
+    setArticleId = (id) => {
+        this.setState({
+            article_id: id
+        })
+    }
+
     render() {
         const {models, metrics, dataset_id, data_loaded, selected_model, current_question, metrics_subset,selected_models,
-            user_selected_models, default_view, question_id} = this.state;
+            user_selected_models, default_view, question_id, article_id} = this.state;
         return (
             <div>
                 <DataSetBlock dataset_id={dataset_id} />
@@ -359,42 +374,47 @@ class MainView extends React.Component {
                         <h1 className="header_font font-semibold text-blue-800 ml-1">{current_question}</h1>
                         {question_id===1?
                             <SingleGroupView key="ModelGroupView"
-                                     dataset_id={dataset_id}
-                                     article_id={-1}
-                                     all_models={models}
-                                     selected_models={Object.keys(selected_models)}
+                                             dataset_id={dataset_id}
+                                             article_id={article_id}
+                                             all_models={models}
+                                             setArticleId = {this.setArticleId}
+                                             selected_models={Object.keys(selected_models)}
                                      />:null
                         }
                         {question_id===2?
                             <SingleGroupViewHalucination key="ModelGroupViewHalucination"
-                                     dataset_id={dataset_id}
-                                     article_id={-1}
-                                     all_models={models}
-                                     selected_models={Object.keys(selected_models)}
+                                                         dataset_id={dataset_id}
+                                                         article_id={article_id}
+                                                         all_models={models}
+                                                         setArticleId = {this.setArticleId}
+                                                         selected_models={Object.keys(selected_models)}
                                      />:null
                         }
                         {question_id===3?
                             <SingleGroupViewEntity key="SingleGroupViewEntity"
-                                     dataset_id={dataset_id}
-                                     article_id={-1}
-                                     all_models={models}
-                                     selected_models={Object.keys(selected_models)}
+                                                   dataset_id={dataset_id}
+                                                   article_id={article_id}
+                                                   all_models={models}
+                                                   setArticleId = {this.setArticleId}
+                                                   selected_models={Object.keys(selected_models)}
                                      />:null
                         }
                         {question_id===4?
                             <SingleGroupViewRelations key="SingleGroupViewRelations"
-                                     dataset_id={dataset_id}
-                                     article_id={-1}
-                                     all_models={models}
-                                     selected_models={Object.keys(selected_models)}
+                                                      dataset_id={dataset_id}
+                                                      article_id={article_id}
+                                                      all_models={models}
+                                                      setArticleId = {this.setArticleId}
+                                                      selected_models={Object.keys(selected_models)}
                                      />:null
                         }
                         {question_id===5?
                             <SingleGroupViewArticleHM key="SingleGroupViewArticleHM"
-                                     dataset_id={dataset_id}
-                                     article_id={-1}
-                                     all_models={models}
-                                     selected_models={Object.keys(selected_models)}
+                                                      dataset_id={dataset_id}
+                                                      article_id={article_id}
+                                                      all_models={models}
+                                                      setArticleId = {this.setArticleId}
+                                                      selected_models={Object.keys(selected_models)}
                                      />:null
                         }
                     </div>

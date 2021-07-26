@@ -29,7 +29,6 @@ class ArticlesBarsHeatMap extends React.Component {
       });
 
         const url = '../api/smodel/'+model_name+"/"+this.state.dataset_id+'/articlemaps';
-        console.log(url)
         axios.get(url)
         .then(res => {
           this.setState({
@@ -57,10 +56,8 @@ class ArticlesBarsHeatMap extends React.Component {
     }
 
     drawPanel = (selected_metric)=>{
-        console.log("start drawing")
         const setArticleId = this.props.setArticleBarsHeatMapSelectedModel
         const {articles, max_length} = this.state;
-        console.log(articles)
         const node = ReactDOM.findDOMNode(this);
         const divWidth = node.getBoundingClientRect().width-20;
         // set the dimensions and margins of the graph
@@ -96,17 +93,25 @@ class ArticlesBarsHeatMap extends React.Component {
 
         // add labels
         articles.map((article, ind)=>{
-                svg.append("text").attr("x", 20)
-                .attr("y", function(d) { return paddingY/2 + (cell_height+ paddingY)/2 + ind*(cell_height+ paddingY); })
-                .text( article.id) //.toUpperCase()
-                .attr("font-family", "sans-serif")
+                svg.append("text")
+                    .attr("x", 20)
+                    .attr("y", function(d) { return paddingY/2 + (cell_height+ paddingY)/2 + ind*(cell_height+ paddingY); })
+                    .text( article.id) //.toUpperCase()
+                    .attr("font-family", "sans-serif")
                     .attr("width", horizontal_labels_width)
                     .attr("text-anchor", "end")
-                .attr("font-size", "8px")
-                .attr("fill", labels_color)
+                    .attr("font-size", "8px")
+                    .style('cursor', 'pointer')
+                    .attr("fill", labels_color)
+                    .on("mouseover", function(d){
+                        d3.select(this).style("fill", "#9b2c2c").attr("font-weight", "bold");
+                        })
+                    .on("mouseout", function(d){
+                        d3.select(this).style("fill", labels_color).attr("font-weight", "");
+                        })
                     .on("click", function (){
-                    setArticleId(article.id)
-                });
+                        setArticleId(article.id)
+                    });
                 let start = 0;
                 article.sentences.map((sent, sent_ind)=> {
                     const cell_width = 30;

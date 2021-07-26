@@ -151,18 +151,20 @@ class HeatMap extends React.Component {
                             .style("color", "#FFFFFF").style("opacity", .95);
                         // highlight the model and the metric
                         d3.selectAll("[metric='"+mod+ "']").attr("fill", "#DB0565").attr("font-weight", "bold");
-                        //d3.selectAll("[model='"+value['model']+ "']").attr("fill", "#db0565").attr("font-weight", "bold");
+                        d3.selectAll("[model='"+value['model']+ "']").attr("fill", "#db0565").attr("font-weight", "bold");
                         //d3.selectAll("[model_attr='"+value['model']+ "']").style("stroke", "#d69e2e");
 
                     })
                     .on("mouseout", function(s) {
                         tooltip.html("").style("opacity", 0);
                         d3.selectAll("[metric='"+mod+ "']").attr("fill", labels_color).attr("font-weight", "");
-                        //d3.selectAll("[model='"+value['model']+ "']").attr("fill", labels_color).attr("font-weight", "");
+                        d3.selectAll("[model='"+value['model']+ "']").attr("fill", labels_color).attr("font-weight", "");
+                        d3.selectAll("[model='"+value['model']+ "']").each(function (p, j) {
+                            const highlight = selected_models.includes(this.getAttribute("model"))
+                             d3.select(this).attr("fill", highlight?"rgb(161, 14, 21)": labels_color)
+                        })
                         //d3.selectAll("[model_attr='"+value['model']+ "']").style("stroke", "")
-
                     })
-
                     counter+=1;
                 }
 

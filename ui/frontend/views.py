@@ -26,7 +26,7 @@ def models(request):
     return render(request, 'frontend/models.html', context)
 
 
-def metrics(request):
+def about(request):
     context = {
     }
-    return render(request, 'frontend/metrics.html', context)
+    return render(request, 'frontend/about.html', context)
