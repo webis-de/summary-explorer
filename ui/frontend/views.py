@@ -30,3 +30,8 @@ def about(request):
     context = {
     }
     return render(request, 'frontend/about.html', context)
+
+def credits(request):
+    context = {
+    }
+    return render(request, 'frontend/credits.html', context)

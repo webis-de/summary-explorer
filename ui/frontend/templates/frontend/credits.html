@@ -1,0 +1,32 @@
+{% extends "frontend/base.html" %}
+{% block js %}
+
+{% endblock %}
+
+
+{% block content %}
+    <div id="root" class="container mx-auto w-full mt-2">
+        <div class="w-full p-1 bg-white rounded-lg mt-4 px-4 py-4 justify-end text-sm left-0 text-left ">
+            <h1 class="text-xl font-bold text-normal mb-0 px-4 py-2 font-extrabold text-justify article_header text-blue-900
+                             header_font">
+                                Credits
+            </h1>
+
+            <div class="h-64">
+                <ul class="list-disc px-10 leading-loose">
+                    <li>Shahbaz Syed (Leipzig University) *</li>
+                    <li>Tariq Yousef (Leipzig University) *</li>
+                    <li>Khalid Al-Khatib (Leipzig University)</li>
+                    <li>Stefan Jänicke (University of Southern Denmark)</li>
+                    <li>Martin Potthast (Leipzig University)</li>
+                </ul>
+            </div>
+
+
+        </div>
+
+    </div>
+    {% load static %}
+{#    <script src="{% static "frontend/main.js" %}"></script>#}
+{% endblock %}
+
