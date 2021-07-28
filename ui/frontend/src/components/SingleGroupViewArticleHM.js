@@ -197,6 +197,16 @@ class SingleGroupViewArticleHM extends React.Component{
                              <ShareButton copyTextToClipboard={this.copyTextToClipboard} />
                          </div>
                      </div>
+                     {/* <div className="w-1/2 text-right mr-1">*/}
+                     {/*   <button onClick={()=>{this.buttonClicked('lexical')}}*/}
+                     {/*       className={'px-1 py-1 text-xxs rounded mr-1 hover:text-white hover:bg-blue-700 outline-none'*/}
+                     {/*       + (buttons['lexical'] ? " bg-blue-800  text-white":" bg-gray-400  text-gray-800") }>Lexical*/}
+                     {/*   </button>*/}
+                     {/*   <button onClick={()=>{this.buttonClicked('bert')}}*/}
+                     {/*       className={'px-1 py-1 text-xxs rounded mr-1 hover:text-white hover:bg-blue-700 outline-none'*/}
+                     {/*       + (buttons['bert'] ? " bg-blue-800  text-white":" bg-gray-400  text-gray-800") }>Semantic*/}
+                     {/*   </button>*/}
+                     {/*</div>*/}
                      <div className="flex" id="singleModelView">
                         <div className="w-6/12 bg-white text-left border rounded-t-md shadow-xl" >
                             {article_loaded && models_loaded && current_array!==null?
@@ -204,6 +214,8 @@ class SingleGroupViewArticleHM extends React.Component{
                                         article_id={article_id}
                                         set_id={this.set_selected_sentence_article_id}
                                         sentences={sentences}
+                                        buttons={buttons}
+                                        buttonClicked={this.buttonClicked}
                                         sentences_array={current_array}
                                         lexical={this.state.current_selection==="lexical"}
                                         num_of_summaries={smodels.length}

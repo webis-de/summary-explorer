@@ -1,5 +1,4 @@
 import React from 'react';
-//import '../assets/main.css';
 import * as d3 from 'd3';
 import ReactDOM from "react-dom";
 import Legend from "./Legend";
@@ -56,11 +55,22 @@ class HeatMap extends React.Component {
         horizontal_labels_width = (metrics.includes("entities") || metrics.includes("relations"))?90:horizontal_labels_width;
         const vertical_labels_height = 110;
 
+        const ColorWithNormalization = (highlight, model_name, v, min_val=0, max_val=1)=>{
+            var scale = d3.scaleSequential(d3.interpolateBlues).domain([min_val*0.9, max_val*1.1]);
+            var highlight_scale = d3.scaleSequential(d3.interpolateReds).domain([min_val*0.9, max_val*1.1]);
+            var reference_scale = d3.scaleSequential(d3.interpolateGreens).domain([min_val*0.9, max_val*1.1]);
+            return highlight?highlight_scale(v):
+                ( model_name=== "reference" || model_name=== "references")?reference_scale(v):scale(v)
+        }
+
         const cell_width = 18;
         const cell_height = 18;
         const paddingX = 2;
         const paddingY = 2;
         const labels_color = "#333333";
+        const labels_highlight_color = "#db0565";
+        const reference_label_color = ColorWithNormalization(false, "references", 90,0,100); //"#026128";
+        const selected_model_labels_color = ColorWithNormalization(true, "", 90,0,100); //"#A10E15";
         const height = (cell_width + paddingY)*metrics.length + vertical_labels_height - margin.top - margin.bottom;
 
         d3.select("#all_models_scores").select("svg").remove();
@@ -70,6 +80,15 @@ class HeatMap extends React.Component {
             .append("g")
             .attr("transform",
                 "translate(" + margin.left + "," + margin.top + ")");
+
+
+
+
+        const getLabelColor = (highlighted, model_name) =>{
+            return highlighted?selected_model_labels_color:
+                             ( model_name.toLowerCase()=== "reference" || model_name.toLowerCase()=== "references")?
+                                reference_label_color:labels_color
+        }
 
 
         // Build X scales and axis:
@@ -110,16 +129,11 @@ class HeatMap extends React.Component {
                 .text( value["model"].toUpperCase())
                 .attr("font-family", "sans-serif")
                 .attr("font-size", "9px")
-                .attr("fill", highlight?"rgb(161, 14, 21)": labels_color)
+                .attr("fill", getLabelColor(highlight, value["model"]))
                 .style('text-anchor', 'end')
                 .attr("transform", "translate("+xx+"," + y+ "), rotate(-45)");
         })
 
-        const ColorWithNormalization = (higligt, v, min_val=0, max_val=1)=>{
-            var scale = d3.scaleSequential(d3.interpolateBlues).domain([min_val*0.9, max_val*1.1]);
-            var higlight_scale = d3.scaleSequential(d3.interpolateReds).domain([min_val*0.9, max_val*1.1]);
-            return higligt?higlight_scale(v):scale(v)
-        }
 
         // Draw HeatMap
         scores.map((value, idx) => {
@@ -136,7 +150,7 @@ class HeatMap extends React.Component {
                     .attr("model_attr", value['model'])
                     .attr("metric_attr", mod)
                     .style("fill", ()=>{
-                        return ColorWithNormalization(highlight, value[mod], min_vals[mod], max_vals[mod])
+                        return ColorWithNormalization(highlight, value['model'].toLowerCase(), value[mod], min_vals[mod], max_vals[mod])
                     })
                     .on("click", function (s){
                         tooltip.html("").style("opacity", 0)
@@ -150,27 +164,29 @@ class HeatMap extends React.Component {
                             .style("background-color", "rgb(10, 72, 141)")
                             .style("color", "#FFFFFF").style("opacity", .95);
                         // highlight the model and the metric
-                        d3.selectAll("[metric='"+mod+ "']").attr("fill", "#DB0565").attr("font-weight", "bold");
-                        d3.selectAll("[model='"+value['model']+ "']").attr("fill", "#db0565").attr("font-weight", "bold");
-                        //d3.selectAll("[model_attr='"+value['model']+ "']").style("stroke", "#d69e2e");
-
+                        d3.selectAll("[metric='"+mod+ "']").attr("fill", labels_highlight_color).attr("font-weight", "bold");
+                        d3.selectAll("[model='"+value['model']+ "']").attr("fill", labels_highlight_color).attr("font-weight", "bold");
                     })
                     .on("mouseout", function(s) {
                         tooltip.html("").style("opacity", 0);
                         d3.selectAll("[metric='"+mod+ "']").attr("fill", labels_color).attr("font-weight", "");
                         d3.selectAll("[model='"+value['model']+ "']").attr("fill", labels_color).attr("font-weight", "");
                         d3.selectAll("[model='"+value['model']+ "']").each(function (p, j) {
-                            const highlight = selected_models.includes(this.getAttribute("model"))
-                             d3.select(this).attr("fill", highlight?"rgb(161, 14, 21)": labels_color)
+                            const model_name = this.getAttribute("model")
+                            const highlight = selected_models.includes(model_name)
+                             d3.select(this).attr("fill", getLabelColor(highlight, model_name))
                         })
-                        //d3.selectAll("[model_attr='"+value['model']+ "']").style("stroke", "")
                     })
                     counter+=1;
                 }
 
             });
         })
+
+
     }
+
+
 
     metric_clicked =(metric)=> {
         let temp= this.state.metrics;

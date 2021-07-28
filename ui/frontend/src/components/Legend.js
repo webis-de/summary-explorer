@@ -25,9 +25,9 @@ class Legend extends React.Component {
 
         const d3_color_interpolator = interpolator
         // set the dimensions and margins of the graph
-        const margin = {top: 3, right: 3, bottom: 3, left: 3};
-        const width =  200- margin.left - margin.right;
-        const height = 40 - margin.top - margin.bottom;
+        const margin = {top: 1, right: 3, bottom: 1, left: 3};
+        const width =  140- margin.left - margin.right;
+        const height = 28 - margin.top - margin.bottom;
         const legend_width = 120;
         const legend_height = 12
         const idGradient = "legendGradient_"+this.props.id_;
@@ -40,7 +40,7 @@ class Legend extends React.Component {
                 "translate(" + margin.left + "," + margin.top + ")");
             svg.append("text")
                 .attr("x", margin.left)
-                .attr("y", 25)
+                .attr("y", 22)
                 .text( label_left) // "Low"
                 .attr("font-family", "sans-serif")
                 .attr("font-size", "8px")
@@ -49,7 +49,7 @@ class Legend extends React.Component {
 
             svg.append("text")
                 .attr("x", margin.left+102)
-                .attr("y", 25)
+                .attr("y", 22)
                 .text( label_right)// "High"
                 .attr("font-family", "sans-serif")
                 .attr("font-size", "8px")

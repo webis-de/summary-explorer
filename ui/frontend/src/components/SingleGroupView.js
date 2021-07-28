@@ -1,18 +1,12 @@
 import React from 'react';
 import '../assets/main.css';
-import ShuffleIcon from "../assets/images/shuffle.svg"
 import ArticleBlock from "./ArticleBlock";
 import SummaryBlock from "./SummaryBlock";
 import axios from "axios";
 import LoadingIcon from "../assets/images/loading.svg";
-import LinkIcon from "./icons/LinkIcon"
-import ListBoxGroups from "./ListBoxGroups";
-import {Listbox} from "@headlessui/react";
-import ModelsScores from "./ModelsScores";
 import ArticleNavigationBar from "./ArticleNavigationBar";
 import ErrorMessage from "./ErrorMessage";
 import ShareButton from "./ShareButton";
-
 
 class SingleGroupView extends React.Component{
 

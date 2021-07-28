@@ -19,12 +19,14 @@ class ArticleHeatMap extends React.Component {
         return (
             <div>
                 <h2 className="flex text-normal mb-0 px-4 py-2  text-justify article_header text-blue-900">
-                    <span className="w-1/2 uppercase font-bold">
+                    <span className="w-1/3 uppercase font-bold">
                         ARTICLE {this.props.article_id}
                     </span>
-                    <div className="flex-end w-1/2  text-right mr-1">
-                        <span className="inline text-xs">Agreement</span>
+                    <div className="flex-end w-2/3  text-right mr-1">
                         <div className="flex float-right">
+                            <div className="flex float-right">
+                                <span className="px-1 py-1 text-xxs">Agreement</span>
+                            </div>
                             {this.props.lexical?
                             <Legend key="AHMlegend"
                                 label_left="Low"
@@ -34,7 +36,22 @@ class ArticleHeatMap extends React.Component {
                                 label_left="Low"
                                 label_right="High" id_="articleheatmap_legend"
                                 interpolator={d3.interpolateBlues}
-                        />}</div>
+                            />}
+
+                            <div className="flex">
+                                <button onClick={()=>{this.props.buttonClicked('lexical')}}
+                                    className={'px-1 py-1 text-xxs rounded mr-1 hover:text-white hover:bg-blue-700 focus:outline-none'
+                                    + (this.props.buttons['lexical'] ? " bg-blue-800  text-white":" bg-gray-400  text-gray-800") }>Lexical
+                                </button>
+                                <button onClick={()=>{this.props.buttonClicked('bert')}}
+                                    className={'px-1 py-1 text-xxs rounded mr-1 hover:text-white hover:bg-blue-700 focus:outline-none'
+                                    + (this.props.buttons['bert'] ? " bg-blue-800  text-white":" bg-gray-400  text-gray-800") }>Semantic
+                                </button>
+                            </div>
+
+
+
+                        </div>
 
                     </div>
                 </h2>
