@@ -2,7 +2,7 @@ import React from 'react';
 import '../assets/main.css';
 import axios from "axios";
 import Fuse from 'fuse.js';
-import LinkIcon from "./icons/LinkIcon";
+import PaperIcon from './icons/PaperIcon';
 
 class Models extends React.Component {
 
@@ -263,7 +263,7 @@ class Models extends React.Component {
                                                 <span className="w-1/5 inline-block text-xs  font-normal text-black ml-5"
                                                 onClick={()=>{this.setContainer("container_"+ind)}}>{obj.rougel.toFixed(2)}</span>
                                                 <span className="cursor-pointer w-1/6 inline-block ml-5 text-xs">
-                                                    <a href={obj.url} className="text-blue-800 font-semibold" target="_blank"> <LinkIcon /> </a>
+                                                    <a href={obj.url} className="text-blue-800 font-semibold" target="_blank"> <PaperIcon/> </a>
                                                 </span>
                                             </span>
 
