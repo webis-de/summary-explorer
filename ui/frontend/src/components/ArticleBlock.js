@@ -29,14 +29,20 @@ class ArticleBlock extends React.Component {
                         ARTICLE {this.props.article_id}
                     </span>
                 </h2>
-                <div className="px-4 text-sm text-left leading-relaxed pb-2">
-                    <div style={{fontFamily: "Verdana, serif"}}>{
-                        json.map(sent => {
+                <div className="px-4 text-sm  text-left leading-relaxed pb-2" style={{fontFamily: "Verdana, serif"}}>
+                    <div>{
+                        json.map((sent, idx) => {
                             const bg = sent.sent_id in selected_sentences?selected_sentences[sent.sent_id] : {}
+                            const style = sent.sent_id%5===0?"mb-3": ""
+                            const fullstop = sent.text.trim().slice(-1)==="."?"":". "
                             return (
+                                <div className={style+" inline"}>
                                  <span id={"sent_" + sent.sent_id} style={bg}>
-                                     {sent.text+ ". "}
-                                 </span>)
+                                     {sent.text+ fullstop}
+                                </span>
+                                    {sent.sent_id%5===0?<div className="h-3"/>:null}
+                                </div>
+                                )
                          })
                     }
                     </div>

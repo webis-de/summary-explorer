@@ -61,16 +61,18 @@ class ArticleHeatMap extends React.Component {
                             const score = sent.sent_id in sentences_array?sentences_array[sent.sent_id] : 0
                             const font_color = score > 0 ? "#FFFFFF": "#000000"
                             let label = Math.round(score*this.props.num_of_summaries) +"/"+this.props.num_of_summaries;
+                            const style = sent.sent_id%5===0?"mb-3": ""
+                            const fullstop = sent.text.trim().slice(-1)==="."?"":". "
                             return (
-                                <span>
+                                <div className={style+" inline"}>
                                      <span id={"sent_" + sent.sent_id} className="mr-1 cursor-pointer"
                                            title={label}
                                            onClick={()=>{this.props.set_id(sent.sent_id)}}
                                            style={{backgroundColor: score===0?"#FFFFFF":this.Color(score), color: font_color}}>
-                                         {sent.text+ "."}
+                                         {sent.text+ fullstop}
                                      </span>
-                                    &nbsp;
-                                </span>)
+                                    {sent.sent_id%5===0?<div className="h-3"/>:null}
+                                </div>)
                          })
                     }
                     </div>

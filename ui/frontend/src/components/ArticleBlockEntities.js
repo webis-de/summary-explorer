@@ -33,6 +33,7 @@ class ArticleBlockEntities extends React.Component {
                     <div style={{fontFamily: "Verdana, serif"}}>{
                         json.map(sentence => {
                             const bg = sentence.sent_id in selected_sentences?selected_sentences[sentence.sent_id] : ""
+                            const style = sentence.sent_id%5===0?"mb-3": ""
                             let start=0
                                 let arr = ""
                                 for(let i=0; i<sentence.entities.length;i++){
@@ -49,13 +50,18 @@ class ArticleBlockEntities extends React.Component {
                                 }
                                 if(start < sentence.text.length)
                                     arr+=sentence.text.slice(start);
-                                arr+= ". "
+                                if (arr.trim().slice(-1)!==".")
+                                    arr+= ". "
                             return (
-                                 <span id={"sent_" + sentence.sent_id}
-                                       className={bg}
-                                 dangerouslySetInnerHTML={{ __html: arr+" " }}>
-                                     {/*{sentence.text+ ". "}*/}
-                                 </span>)
+                                <div className={style+" inline"}>
+                                     <span id={"sent_" + sentence.sent_id}
+                                           className={bg}
+                                     dangerouslySetInnerHTML={{ __html: arr+" " }}>
+
+                                     </span>
+                                    {sentence.sent_id%5===0?<div className="h-3"/>:null}
+                                </div>
+                                    )
                          })
                     }
                     </div>

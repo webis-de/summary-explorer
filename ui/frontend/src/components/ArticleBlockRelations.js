@@ -90,10 +90,15 @@ class ArticleBlockRelations extends React.Component {
                         :
                         json.map(sent => {
                             const bg = sent.sent_id in this.state.selected_sentences?selected_sentences[sent.sent_id]: {}
+                            const style = sent.sent_id%5===0?"mb-3": ""
+                            const fullstop = sent.text.trim().slice(-1)==="."?"":". "
                             return (
-                                 <span id={"sent_" + sent.sent_id} style={bg}>
-                                     {sent.text+ ". "}
-                                 </span>)
+                                <div className={style+" inline"}>
+                                     <span id={"sent_" + sent.sent_id} style={bg}>
+                                         {sent.text+ fullstop}
+                                     </span>
+                                    {sent.sent_id%5===0?<div className="h-3"/>:null}
+                                </div>)
                          })
                     }
                     </div>
