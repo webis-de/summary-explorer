@@ -16,9 +16,6 @@ SQL_PASSWORD=****
 SQL_HOST=****
 SQL_PORT=5432
 DATABASE=postgres</code></pre>
-- Since the imported database already contains the processed data, there is no need to run the migrations again (**fake** them).    
-<pre><code>python manage.py makemigrations
-python manage.py migrate **--fake**</code></pre>
 - Run the server:   
 <code>python manage.py runserver</code>
 - Frontend URL: http://127.0.0.1:8000/
