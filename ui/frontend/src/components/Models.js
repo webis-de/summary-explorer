@@ -115,7 +115,7 @@ class Models extends React.Component {
             <div className="w-full p-1 bg-white rounded-lg mt-4 px-4 py-4 justify-end text-sm left-0 text-left">
                 <h1 className="text-xl font-bold text-normal mb-0 px-4 py-2 header_font text-justify text-blue-900">
                     <span>
-                        Summarization Models
+                        Hosted Models
                     </span>
                 </h1>
                 <div className="bg-white shadow py-2 px-4 mx-4 flex">

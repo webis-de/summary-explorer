@@ -1,7 +1,7 @@
 {
   "name": "frontend",
   "version": "1.0.0",
-  "description": "",
+  "description": "Summary Explorer",
   "main": "index.js",
   "scripts": {
     "dev": "webpack --mode development ./src/index.js --output ./static/frontend/main.js",
