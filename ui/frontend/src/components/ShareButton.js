@@ -29,7 +29,7 @@ class ShareButton extends React.Component{
                 <button className="px-1 py-1 bg-blue-800 text-white text-xs rounded mr-1
                 hover:bg-red-700 cursor-pointer mr-1 focus:outline-none"
                         onClick={() => {this.shareButtonClicked()}}>
-                    <span className="mx-1">Share</span>
+                    <span className="mx-1">Share View</span>
                     <CopyIcon/>
                 </button>
             </div>

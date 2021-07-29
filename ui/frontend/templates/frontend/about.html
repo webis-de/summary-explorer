@@ -5,72 +5,89 @@
 
 
 {% block content %}
-    <div id="root" class="container mx-auto w-full mt-2">
-        <div class="w-full p-1 bg-white rounded-lg mt-4 px-4 py-4 justify-end text-sm left-0 text-left ">
-            <h1 class="text-xl font-bold text-normal mb-0 px-4 py-2 font-extrabold text-justify article_header text-blue-900
+<div id="root" class="container mx-auto w-full mt-2">
+    <div class="w-full p-1 bg-white rounded-lg mt-4 px-4 py-4 justify-end text-sm left-0 text-left ">
+        <h1 class="text-xl font-bold text-normal mb-0 px-4 py-2 font-extrabold text-justify article_header text-blue-900
                              header_font">
-                                About
-            </h1>
+            Model Submission
+        </h1>
 
-            <div class="bg-blue-100 border-l-4 mx-4 mt-2 border-blue-700 text-blue-800 px-4 py-2" role="alert">
-<h2 class="font-bold text-blue-900">Submit your model</h2>
-                <ul class="p-2 leading-loose">
-                    <li>- Download the test set for a dataset (a single text file with one article per line)
-                            <span >
-                                <a href="https://files.webis.de/summary-explorer/test-set/cnn-dm/cnn_dm_articles.txt" class="underline" target="_blank">CNN/Daily Mail</a></span>,
-                            <span>
-                                <a href="https://files.webis.de/summary-explorer/test-set/xsum/xsum_articles.txt" class="underline" target="_blank">XSum</a></span>,
-                            <span>
-                                <a href="https://files.webis.de/summary-explorer/test-set/tldr/tldr_articles.txt" class="underline" target="_blank">Webis TL;DR</a></span>.
-                    </li>
-                    <li>- Generate summaries in the <b>exact order</b> to avoid alignment errors with existing models.</li>
-                    <li>- Send us the output file with summaries (a single text file with one summary per line) to
-                        <span class="underline">shahbaz.syed[at]uni-leipzig.de</span> or <span class="underline">tariq.yousef[at]uni-leipzig.de</span>.</li>
-                </ul>
+        <div class="bg-blue-100 border-l-4 mx-4 mt-2 border-blue-700 text-blue-800 px-4 py-2" role="alert">
+            <ol class=" list-decimal p-2 leading-loose">
+                <li>Download the test set for a dataset (a single text file with one article per line):
+                    <span>
+                        <a href="https://files.webis.de/summary-explorer/test-set/cnn-dm/cnn_dm_articles.txt"
+                            class="underline font-semibold" target="_blank">CNN/Daily Mail</a></span>,
+                    <span>
+                        <a href="https://files.webis.de/summary-explorer/test-set/xsum/xsum_articles.txt"
+                            class="underline font-semibold" target="_blank">XSum</a></span>,
+                    <span>
+                        <a href="https://files.webis.de/summary-explorer/test-set/tldr/tldr_articles.txt"
+                            class="underline font-semibold" target="_blank">Webis TL;DR</a></span>
+                </li>
+                <li>Generate summaries from your model in the <b>exact order</b> to avoid alignment errors with hosted models.</li>
+                <li>Send us the output file with summaries (a single text file with one summary per line) to
+                    <span class="underline">shahbaz.syed[at]uni-leipzig.de</span> or <span
+                        class="underline">tariq.yousef[at]uni-leipzig.de</span>.</li>
+            <ol/>
 
-            </div>
-
-            <h1 class="text-xl font-bold mt-6 text-normal mb-0 px-4 py-2 font-extrabold text-justify article_header text-blue-900
-             header_font">
-                Automatic Metrics
-            </h1>
-            <div class="m-4">
-                <span class="font-bold text-blue-900">Summary Length:</span> It is the number of words in the summary.
-            </div>
-
-            <div class="m-4">
-                <span class="font-bold text-blue-900">Novelty:</span> It is the percentage of summary words that are not in the document.
-            </div>
-
-            <div class="m-4">
-                <span class="font-bold text-blue-900">Compression Ratio:</span> It is the word ratio between the article and the summary.
-                <div class="bg-orange-100 border-l-4 mt-2 border-orange-500 text-orange-700 p-4" role="alert">
-                    <p>A summary with higher <b>compression</b> is challenging as it requires capturing more precisely the critical aspects of the text.</p>
-                </div>
-            </div>
-
-            <div class="m-4">
-                <span class="font-bold  text-blue-900">ROUGE:</span> We use the Python implementation provide by
-                <a href="https://github.com/google-research/google-research/tree/master/rouge" class="underline text-orange-800">Google Research</a>.
-            </div>
-
-            <div class="m-4">
-                <span class="font-bold text-blue-900">Factual Consistency:</span> We compute this on two levels inspired by
-                <a href="https://www.aclweb.org/anthology/2021.eacl-main.235/" class="underline text-orange-800">Nan et.al, 2021</a>.
-                <div class="mx-10 mt-2">
-                    <ul>
-                    <li class="mt-2 leading-relaxed"><span class="font-bold text-orange-800 ">Entity-level:</span> the percentage of named entities in the summary that are found in the document. We also match partial entities to their longer counterparts from the document if they share parts of the entity.</li>
-                    <li class="mt-2 leading-relaxed"><span class="font-bold text-orange-800 ">Relation-level:</span> the percentage of relations (extracted using
-                        <a href="http://nlp.stanford.edu/software/openie.html" class="underline text-orange-800">Stanford OpenIE</a>) in the summary that are found in the document.
-Since we consider reference also a model, we only compute the precision with respect to the source document.</li>
-                </ul>
-                </div>
-
-            </div>
         </div>
 
+        <h1 class="text-xl font-bold mt-6 text-normal mb-0 px-4 py-2 font-extrabold text-justify article_header text-blue-900
+             header_font">
+            Automatic Metrics
+        </h1>
+        <div class="m-4">
+            <span class="font-bold text-blue-900">Summary Length:</span> It is the number of words in the summary.
+        </div>
+
+        <div class="m-4">
+            <span class="font-bold text-blue-900">Novelty:</span> It is the percentage of summary words that are not in
+            the document.
+        </div>
+
+        <div class="m-4">
+            <span class="font-bold text-blue-900">Compression Ratio:</span> It is the word ratio between the article and
+            the summary.
+            <!-- <div class="bg-orange-100 border-l-4 mt-2 border-orange-500 text-orange-700 p-4" role="alert">
+                <p>A summary with higher <b>compression</b> is challenging as it requires capturing more precisely the
+                    critical aspects of the text.</p>
+            </div> -->
+        </div>
+
+        <div class="m-4">
+            <span class="font-bold  text-blue-900">ROUGE:</span> We use the Python implementation provide by
+            <a href="https://github.com/google-research/google-research/tree/master/rouge"
+                class="underline text-orange-800">Google Research</a>.
+        </div>
+
+        <div class="m-4">
+            <span class="font-bold text-blue-900">Factual Consistency:</span> We compute this on two levels inspired by
+            <a href="https://www.aclweb.org/anthology/2021.eacl-main.235/" class="underline text-orange-800">Nan et.al,
+                2021</a>.
+            <div class="mx-5 mt-2">
+                <ul>
+                    <li class="mt-2 leading-relaxed"><span class="font-bold text-orange-800 ">Entity-level:</span> the
+                        percentage of named entities in the summary that are found in the document. We also match
+                        partial entities to their longer counterparts from the document if they share parts of the
+                        entity.</li>
+                    <li class="mt-2 leading-relaxed"><span class="font-bold text-orange-800 ">Relation-level:</span> the
+                        percentage of relations (extracted using
+                        <a href="http://nlp.stanford.edu/software/openie.html"
+                            class="underline text-orange-800">Stanford OpenIE</a>) in the summary that are found in the
+                        document.
+                        Since we consider reference also a model, we only compute the precision with respect to the
+                        source document.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="m-4">
+            <span class="font-bold text-blue-900">N-gram Abstractiveness:</span>
+            We compute the n-gram abstractiveness upto 4-grams following <a href="https://aclanthology.org/W19-8665/" class="underline">Gehrmann et al., 2019</a>. It is the normalized score for novelty that tracks parts of a summary that are already among the n-grams it has in common with the document.
+        </div>
     </div>
-    {% load static %}
+
+</div>
+{% load static %}
 {#    <script src="{% static "frontend/main.js" %}"></script>#}
 {% endblock %}
-

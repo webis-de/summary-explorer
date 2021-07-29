@@ -354,7 +354,7 @@ def getAllModels(request):
     models_list = ModelDataset.objects.all().order_by("smodel_id")
     models_arr = []
     for model in models_list:
-        if model.smodel_id.upper() not in ["BETTER-REWARDS-BERT", "BETTER-REWARDS-ROUGE", "REFERENCES"]:
+        if model.smodel_id.upper() not in ["BETTER-REWARDS-BERT", "BETTER-REWARDS-ROUGE", "REFERENCES", "LEAD3"]:
             raw = model.smodel.raw
             models_arr.append({"name": model.smodel_id, "dataset_id":model.dataset_id, "title": raw['title'], "url": raw['url'],
                                "rouge1": model.stats["rouge1"], "rouge2": model.stats["rouge2"], "rougel": model.stats["rougeL"],
