@@ -29,7 +29,7 @@ class ArticleBlockEntities extends React.Component {
                         ARTICLE {this.props.article_id}
                     </span>
                 </h2>
-                <div className="px-4 text-sm text-left leading-relaxed">
+                <div className="px-4 text-sm text-left leading-relaxed  pb-2">
                     <div style={{fontFamily: "Verdana, serif"}}>{
                         json.map(sentence => {
                             const bg = sentence.sent_id in selected_sentences?selected_sentences[sentence.sent_id] : ""

@@ -55,7 +55,7 @@ class ArticleHeatMap extends React.Component {
 
                     </div>
                 </h2>
-                <div className="px-4 text-sm text-left leading-relaxed mb-2">
+                <div className="px-4 text-sm text-left leading-relaxed mb-2  pb-2">
                     <div style={{fontFamily: "Verdana, serif"}}>{
                         sentences.map(sent => {
                             const score = sent.sent_id in sentences_array?sentences_array[sent.sent_id] : 0

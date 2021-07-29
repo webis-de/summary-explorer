@@ -66,7 +66,7 @@ class ArticleBlockRelations extends React.Component {
                         </button>
                     </div>
                 </h2>
-                <div className="px-4 text-sm text-left leading-relaxed">
+                <div className="px-4 text-sm text-left leading-relaxed  pb-2">
                     <div style={{fontFamily: "Verdana, serif"}}>
                         {relation_view?
                            relations.map(rel =>{
