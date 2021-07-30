@@ -105,7 +105,7 @@ class SummaryBlockHallucinations2 extends React.Component {
     ColorScale = (v, k)=> {
         // return d3.scaleSequential(d3.interpolateBlues).domain([0,2])(v);
         if(k==="semantic_similarity_candidates_bert_score")
-            return d3.scaleSequential(d3.interpolateOrRd).domain([0,3])(v);
+            return d3.scaleSequential(d3.interpolateBlues).domain([0,3])(v);
         else
             return d3.scaleSequential(d3.interpolateGreens).domain([0,3])(v);
         }
@@ -116,7 +116,7 @@ class SummaryBlockHallucinations2 extends React.Component {
         let article_sentences_freq = {};
         let summ_sentences = {};
         const highlight_color = k==="semantic_similarity_candidates_bert_score"?
-            {"backgroundColor":"rgb(253, 194, 140)", "color": "#222222"}:
+            {"backgroundColor":"rgb(171, 207, 230)", "color": "#222222"}:
             {"backgroundColor":"#b5dcad", "color": "#222222"}
 
         sentences.map((sentence, idx) => {
