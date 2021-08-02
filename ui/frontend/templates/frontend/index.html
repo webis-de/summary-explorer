@@ -1,5 +1,25 @@
 {% extends "frontend/base.html" %}
+{% load static %}
+
 {% block js %}
+    <script src="{% static "frontend/glider.js" %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static "frontend/glider.css" %}">
+    <script>
+      window.addEventListener('load', function(){
+        new Glider(document.querySelector('.glider'), {
+            slidesToShow: 1, //'auto',
+            slidesToScroll: 1,
+            draggable: true,
+            scrollLock: false,
+            dots: '.dots',
+            rewind: true,
+            arrows: {
+                prev: '.glider-prev',
+                next: '.glider-next'
+            },
+        })
+      })
+    </script>
 {% endblock %}
 {% block content %}
     <div id="root" class="container mx-auto w-full mt-2">
@@ -7,12 +27,12 @@
         <span class="font-extrabold header_font">Summary Explorer</span>
          is a tool to visually inspect the summaries from several state-of-the-art neural summarization models across multiple datasets. It provides a guided assessment of summary quality dimensions such as coverage, faithfulness and position bias. You can inspect summaries from a single model or compare multiple models.
 
-        <div class="mt-5">
+        <div class="">
           To integrate your model in <span class="font-extrabold header_font">Summary Explorer</span>, please prepare your summaries as
         described <a href="/about" class="underline">here</a> and contact us.
         </div>
       </div>
-        <ul class="grid grid-cols-1 gap-20 sm:grid-cols-2 lg:grid-cols-3 mt-8">
+        <ul class="grid grid-cols-1 gap-20 sm:grid-cols-2 lg:grid-cols-3 mb-8 mt-8">
           <li class="col-span-1 bg-white rounded-lg divide-y divide-gray-200 z-0">
             <div class="w-full flex items-center justify-between p-6 space-x-6">
               <div class="flex-1 truncate">
@@ -80,6 +100,21 @@
             </div>
           </li>
         </ul>
+
+      <div class="glider-contain mt-10">
+          <div class="glider">
+            <div ><img class="m-auto" src="{% static "frontend/images/slider/1.svg" %}"></div>
+            <div ><img class="m-auto" src="{% static "frontend/images/slider/2.svg" %}"></div>
+            <div ><img class="m-auto" src="{% static "frontend/images/slider/3.svg" %}"></div>
+            <div ><img class="m-auto" src="{% static "frontend/images/slider/4.svg" %}"></div>
+            <div ><img class="m-auto" src="{% static "frontend/images/slider/5.svg" %}"></div>
+            <div ><img class="m-auto" src="{% static "frontend/images/slider/6.svg" %}"></div>
+          </div>
+
+          <button aria-label="Previous" class="glider-prev mt-16 text-2xl">&lsaquo;</button>
+          <button aria-label="Next" class="glider-next mt-16">&rsaquo;</button>
+          <div role="tablist" class="dots opacity-50"></div>
+        </div>
     </div>
 {% endblock %}
 
