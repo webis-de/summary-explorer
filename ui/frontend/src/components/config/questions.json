@@ -7,7 +7,7 @@
     "metrics_subset": [ "length",  "rouge1", "rouge2", "rougeL"],
     "badge": "Document vs. Summary/Summaries",
     "badge_style": " text-yellow-800 bg-yellow-100",
-    "image_path": "/static/frontend/images/q1_compressed.gif"
+    "image_path": "/static/frontend/images/gifs/q1.gif"
   },
   {
     "id": 3,
@@ -17,7 +17,7 @@
     "metrics_subset": [ "entities"],
     "badge": "Document vs. Summary/Summaries",
     "badge_style": " text-yellow-800 bg-yellow-100",
-    "image_path": "/static/frontend/images/q3_compressed.gif"
+    "image_path": "/static/frontend/images/gifs/q3.gif"
   },
   {
     "id": 4,
@@ -27,7 +27,7 @@
     "metrics_subset": ["length",  "rouge1", "rouge2", "rougeL"],
     "badge": "Document vs. Summary/Summaries",
     "badge_style": " text-yellow-800 bg-yellow-100",
-    "image_path": "/static/frontend/images/q4_compressed.gif"
+    "image_path": "/static/frontend/images/gifs/q4.gif"
   },
   {
     "id": 2,
@@ -37,7 +37,7 @@
     "metrics_subset": [ "compression", "uni_gram_abs", "bi_gram_abs", "tri_gram_abs", "four_gram_abs"],
     "badge": "Document vs. Summary/Summaries",
     "badge_style": " text-yellow-800 bg-yellow-100",
-    "image_path": "/static/frontend/images/q2_compressed.gif"
+    "image_path": "/static/frontend/images/gifs/q2.gif"
   },
   {
     "id": 5,
@@ -47,7 +47,7 @@
     "metrics_subset":["compression", "length",  "rouge1", "rouge2", "rougeL", "entities", "relations"],
     "badge": "Document vs. Summaries",
     "badge_style": " text-red-800 bg-red-100",
-    "image_path": "/static/frontend/images/q5_compressed.gif"
+    "image_path": "/static/frontend/images/gifs/q5.gif"
   },
   {
     "id": 6,
@@ -57,6 +57,6 @@
     "metrics_subset":[ "compression", "uni_gram_abs", "bi_gram_abs", "tri_gram_abs", "four_gram_abs"],
     "badge": "Corpus vs. Model",
     "badge_style": " text-purple-800 bg-purple-100",
-    "image_path": "/static/frontend/images/q6_compressed.gif"
+    "image_path": "/static/frontend/images/gifs/q6.gif"
   }
 ]

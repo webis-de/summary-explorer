@@ -3,6 +3,7 @@ import '../assets/main.css';
 import axios from "axios";
 import Fuse from 'fuse.js';
 import PaperIcon from './icons/PaperIcon';
+import GithubIcon from "./icons/GithubIcon";
 
 class Models extends React.Component {
 
@@ -162,11 +163,9 @@ class Models extends React.Component {
                                                     </span>)
                                                     :"Model Name"}
                                             </span>
-                                            <span className="w-3/6 font-normal ml-5 text-xs article_header font-semibold
-                                            text-white ">Title</span>
-                                            <span className="w-2/6" >
-                                                <span className="cursor-pointer w-1/5 inline-block ml-5 text-xs article_header font-semibold
-                                            text-white"
+                                            <span className="w-2/6 font-normal ml-3 text-xs article_header font-semibold text-white ">Title</span>
+                                            <span className="w-3/6" >
+                                                <span className="cursor-pointer w-1/6 inline-block ml-3 text-xs article_header font-semibold text-white"
                                                 onClick={()=>{this.sortByVal("rouge1")}}>
                                                     {this.state.sorted_by==="rouge1"?(
                                                     <span>
@@ -185,8 +184,7 @@ class Models extends React.Component {
                                                     </span>)
                                                     :"Rouge 1"}
                                                 </span>
-                                                <span className="cursor-pointer w-1/5 inline-block ml-5 text-xs article_header font-semibold
-                                            text-white"
+                                                <span className="cursor-pointer w-1/6 inline-block ml-3 text-xs article_header font-semibold text-white"
                                                 onClick={()=>{this.sortByVal("rouge2")}}>
                                                     {this.state.sorted_by==="rouge2"?(
                                                     <span>
@@ -206,8 +204,7 @@ class Models extends React.Component {
                                                     </span>)
                                                     :"Rouge 2"}
                                                 </span>
-                                                <span className="cursor-pointer w-1/5 inline-block ml-5 text-xs article_header font-semibold
-                                            text-white"
+                                                <span className="cursor-pointer w-1/6 inline-block ml-3 text-xs article_header font-semibold text-white"
                                                 onClick={()=>{this.sortByVal("rougel")}}>
                                                     {this.state.sorted_by==="rougel"?(
                                                     <span>
@@ -228,10 +225,11 @@ class Models extends React.Component {
                                                     :"Rouge L"}
 
                                                 </span>
-
-                                                <span className="cursor-pointer w-1/6 inline-block ml-5 text-xs font-semibold
-                                            text-white">
+                                                <span className="cursor-pointer w-1/6 inline-block ml-3 text-xs font-semibold text-white">
                                                     Paper
+                                                </span>
+                                                <span className="cursor-pointer w-1/6 inline-block ml-3 text-xs font-semibold text-white">
+                                                    Git Repo
                                                 </span>
                                             </span>
                                         </span>
@@ -253,17 +251,21 @@ class Models extends React.Component {
                                             onClick={()=>{this.setContainer("container_"+ind)}}>{obj.name}
                                                 {this.datasetBadge(obj.dataset_id)}
                                             </span>
-                                            <span className="w-3/6 font-normal text-xs text-black ml-5"
+                                            <span className="w-2/6 font-normal text-xs text-black ml-5"
                                             onClick={()=>{this.setContainer("container_"+ind)}}>{obj.title}</span>
-                                            <span className="w-2/6" >
-                                                <span className="w-1/5 inline-block text-xs font-normal text-black ml-5"
+                                            <span className="w-3/6" >
+                                                <span className="w-1/6 inline-block text-xs font-normal text-black ml-5"
                                                 onClick={()=>{this.setContainer("container_"+ind)}}>{obj.rouge1.toFixed(2)}</span>
-                                                <span className="w-1/5 inline-block text-xs font-normal text-black ml-5"
+                                                <span className="w-1/6 inline-block text-xs font-normal text-black ml-5"
                                                 onClick={()=>{this.setContainer("container_"+ind)}}>{obj.rouge2.toFixed(2)}</span>
-                                                <span className="w-1/5 inline-block text-xs  font-normal text-black ml-5"
+                                                <span className="w-1/6 inline-block text-xs  font-normal text-black ml-5"
                                                 onClick={()=>{this.setContainer("container_"+ind)}}>{obj.rougel.toFixed(2)}</span>
-                                                <span className="cursor-pointer w-1/6 inline-block ml-5 text-xs">
+                                                <span className="cursor-pointer w-1/6 inline-block ml-3 text-xs">
                                                     <a href={obj.url} className="text-blue-800 font-semibold" target="_blank"> <PaperIcon/> </a>
+                                                </span>
+                                                <span className="cursor-pointer w-1/6 inline-block ml-3 m-auto text-xs">
+                                                    {obj.github===""?" - ":
+                                                    <a href={obj.github} className="text-blue-800 font-semibold" target="_blank"> <GithubIcon/> </a>}
                                                 </span>
                                             </span>
 

@@ -351,14 +351,19 @@ def getRelationByArticleID(request, *args, **kwargs):
 
 
 def getAllModels(request):
+    github_urls = {'banditsum': 'https://github.com/yuedongP/BanditSum', 'bart': 'https://github.com/pytorch/fairseq/tree/master/examples/bart', 'bert-lstm-pn-rl': 'https://github.com/fastnlp/fastNLP', 'bertsum-abs': 'https://github.com/nlpyang/PreSumm', 'bertsum-ext-abs': 'https://github.com/nlpyang/PreSumm', 'bert-tf-pn': 'https://github.com/fastnlp/fastNLP', 'bottom-up': 'https://github.com/sebastianGehrmann/bottom-up-summary', 'closed-book-cov': '', 'closed-book-non-cov': '', 'ctrl-dec-copy': 'https://github.com/LeenaShekhar/copy-controlled-decoding', 'get-to-point': 'https://github.com/abisee/pointer-generator', 'gpt2-rl': 'https://github.com/openai/lm-human-preferences', 'gpt2-rl-supervised': 'https://github.com/openai/lm-human-preferences', 'gpt2-zero-shot': 'https://github.com/openai/lm-human-preferences', 'improve-abs-baseline': '', 'improve-abs-novelty': '', 'improve-abs-novelty-lm': '', 'jointly-learning': 'https://github.com/magic282/NeuSum', 'lstm-pn-rl': 'https://github.com/fastnlp/fastNLP', 'mass': 'https://github.com/microsoft/MASS', 'matchsum-bert': 'https://github.com/maszhongming/MatchSum', 'matchsum-roberta': 'https://github.com/maszhongming/MatchSum', 'multi-reward-rl': '', 'multi-task-sum': '', 'pegasus': 'https://github.com/google-research/pegasus', 'ptgen': 'https://github.com/EdinburghNLP/XSum', 'reinforced': '', 'rnes-rouge': '', 'rnes-rouge-coh': '', 'seneca': '', 'seneca-coh-ref-app': '', 'seneca-sent-selection': '', 'sent-rewriting': 'https://github.com/ChenRocks/fast_abs_rl', 'strass': '', 'syn-compress': 'https://github.com/jiacheng-xu/neu-compression-sum', 't5-11B': 'https://github.com/google-research/text-to-text-transfer-transformer', 't5-3B': 'https://github.com/google-research/text-to-text-transfer-transformer', 't5-base': 'https://github.com/google-research/text-to-text-transfer-transformer', 't5-large': 'https://github.com/google-research/text-to-text-transfer-transformer', 't5-small': 'https://github.com/google-research/text-to-text-transfer-transformer', 'tf-pn': 'https://github.com/fastnlp/fastNLP', 'topic-convs2s': 'https://github.com/EdinburghNLP/XSum', 'transformer-abs': 'https://github.com/nlpyang/PreSumm', 'trans-seq2seq': '', 'unified-inc-loss': '', 'unified-lm': 'https://github.com/microsoft/unilm', 'unified-pgn': ''}
     models_list = ModelDataset.objects.all().order_by("smodel_id")
     models_arr = []
     for model in models_list:
-        if model.smodel_id.upper() not in ["BETTER-REWARDS-BERT", "BETTER-REWARDS-ROUGE", "REFERENCES", "LEAD3"]:
+        if model.smodel_id.upper() not in ["BETTER-REWARDS-BERT", "BETTER-REWARDS-ROUGE", "REFERENCES"]:
             raw = model.smodel.raw
+            if raw["name"].upper() == "LEAD3":
+                raw['human evaluation'] = "Acceptability"
+                raw['url'] = "https://aclanthology.org/P98-2222/"
+            raw['github'] = github_urls.get(raw["name"], '')
             models_arr.append({"name": model.smodel_id, "dataset_id":model.dataset_id, "title": raw['title'], "url": raw['url'],
                                "rouge1": model.stats["rouge1"], "rouge2": model.stats["rouge2"], "rougel": model.stats["rougeL"],
-                               "abstract": raw['abstract'], "human_evaluation": raw['human evaluation']})
+                               "abstract": raw['abstract'], "human_evaluation": raw['human evaluation'], 'github': raw['github']})
     return JsonResponse({'smodels': models_arr})
 
 
