@@ -1,4 +1,4 @@
-# Code and Resources for Summary Explorer
+# Summary Explorer
 
 [Summary Explorer](https://tldr.webis.de/) is a tool to visually inspect the summaries from several state-of-the-art neural summarization models across multiple datasets. It provides a guided assessment of summary quality dimensions such as coverage, faithfulness and position bias. You can inspect summaries from a single model or compare multiple models.
 
