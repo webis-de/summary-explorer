@@ -35,6 +35,19 @@ Download the database dump from [here](https://files.webis.de/summary-explorer/d
 
 **Note**: The tool is in active development and we plan to add new features. Please feel free to report any issues and provide suggestions.
 
+### Citation
+```
+@misc{syed2021summary,
+      title={Summary Explorer: Visualizing the State of the Art in Text Summarization}, 
+      author={Shahbaz Syed and Tariq Yousef and Khalid Al-Khatib and Stefan Jänicke and Martin Potthast},
+      year={2021},
+      eprint={2108.01879},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
+}
+```
+
+
 ### Acknowledgements
 We sincerely thank all the authors who made their code and model outputs publicly available, meta evaluations of [Fabbri et al., 2020](https://github.com/Yale-LILY/SummEval) and [Bhandari et al., 2020](https://github.com/neulab/REALSumm), and the summarization leaderboard at [NLP-Progress](https://nlpprogress.com/english/summarization.html). 
 
