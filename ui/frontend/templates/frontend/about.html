@@ -58,12 +58,12 @@
         <div class="m-4">
             <span class="font-bold  text-blue-900">ROUGE:</span> We use the Python implementation provide by
             <a href="https://github.com/google-research/google-research/tree/master/rouge"
-                class="underline text-orange-800">Google Research</a>.
+                class="underline">Google Research</a>.
         </div>
 
         <div class="m-4">
             <span class="font-bold text-blue-900">Factual Consistency:</span> We compute this on two levels inspired by
-            <a href="https://www.aclweb.org/anthology/2021.eacl-main.235/" class="underline text-orange-800">Nan et.al,
+            <a href="https://www.aclweb.org/anthology/2021.eacl-main.235/" class="underline">Nan et.al,
                 2021</a>.
             <div class="mx-5 mt-2">
                 <ul>
@@ -74,7 +74,7 @@
                     <li class="mt-2 leading-relaxed"><span class="font-bold text-orange-800 ">Relation-level:</span> the
                         percentage of relations (extracted using
                         <a href="http://nlp.stanford.edu/software/openie.html"
-                            class="underline text-orange-800">Stanford OpenIE</a>) in the summary that are found in the
+                            class="underline">Stanford OpenIE</a>) in the summary that are found in the
                         document.
                         Since we consider reference also a model, we only compute the precision with respect to the
                         source document.</li>
@@ -89,5 +89,4 @@
 
 </div>
 {% load static %}
-{#    <script src="{% static "frontend/main.js" %}"></script>#}
 {% endblock %}
