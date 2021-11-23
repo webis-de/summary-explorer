@@ -37,14 +37,19 @@ Download the database dump from [here](https://files.webis.de/summary-explorer/d
 
 ### Citation
 ```
-@misc{syed2021summary,
-      title={Summary Explorer: Visualizing the State of the Art in Text Summarization}, 
-      author={Shahbaz Syed and Tariq Yousef and Khalid Al-Khatib and Stefan Jänicke and Martin Potthast},
-      year={2021},
-      eprint={2108.01879},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL}
+@inproceedings{syed:2021,
+    title = "Summary Explorer: Visualizing the State of the Art in Text Summarization",
+    author = {Syed, Shahbaz  and
+      Yousef, Tariq  and
+      Al Khatib, Khalid  and
+      J{\"a}nicke, Stefan  and
+      Potthast, Martin},
+    booktitle = "Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing: System Demonstrations",
+    year = "2021",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2021.emnlp-demo.22"
 }
+
 ```
 
 
