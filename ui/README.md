@@ -6,7 +6,7 @@
 <pre><code>CREATE DATABASE <b>sumviz</b>;
 psql -h hostname -d <b>sumviz</b> -U username -f dbexport.sql</code></pre>
 
-- Create a `.env` file to save DB settings. Also update the database credentials in `SumViz/settings.py`  
+- Create a `.env` file to save DB settings. 
 <pre><code>DEBUG=0
 SECRET_KEY=**********
 DJANGO_ALLOWED_HOSTS=localhost 127.0.0.1 [::1]
