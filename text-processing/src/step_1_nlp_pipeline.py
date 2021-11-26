@@ -44,8 +44,9 @@ def get_merged_relations(relation_dicts):
     Returns merged relations from lexically overlapping relations grouped by the subject.
     """
     if len(relation_dicts):
+        cleaned_relation_dicts = [detokenize_relation(r) for r in relation_dicts]
         final_relations = []
-        rels_groups = pd.DataFrame(relation_dicts).groupby("subject")
+        rels_groups = pd.DataFrame(cleaned_relation_dicts).groupby("subject")
         for idx, group in rels_groups:
             subjs = group["subject"].tolist()
             rels = group["relation"].tolist()
@@ -166,6 +167,9 @@ def apply_nlp(input_dir, output_dir):
                 outf.write(json.dumps(rec))
                 outf.write("\n")
         print("Finished processing {}".format(model_name))
+    # Close the StanfordOpenIE client
+    RELATION_EXTRACTION_MODEL.client.stop()
+    print("Closed StanfordOpenIE client.")
 
 
 if __name__ == "__main__":

@@ -2,3 +2,5 @@
 **/*.ipynb_checkpoints/
 __pycache__/
 /ui/SumViz/settings.py
+data_cg/
+data/
