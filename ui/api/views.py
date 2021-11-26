@@ -1,5 +1,7 @@
 import json
 from itertools import chain
+
+from django.db.models import Max, Min
 from django.http import JsonResponse
 from django.shortcuts import render
 from django.core.exceptions import ObjectDoesNotExist
@@ -151,6 +153,13 @@ def articleModelGroup(request, *args, **kwarg):
         summaries_list.append(obj)
     return JsonResponse(summaries_list, safe=False)
 
+def getDatasetBoundaries(request, *args, **kwarg):
+    dataset_id = kwarg['id']
+    try:
+        boundaries = Article.objects.filter(dataset__id=dataset_id).aggregate(Max('article_id'),Min('article_id'))
+        return boundaries
+    except Exception as e:
+        return {'article_id__max': 0, 'article_id__min': 0}
 
 def getDatasetModelsStat(request, *args, **kwarg):
     selected_models = []
@@ -158,6 +167,12 @@ def getDatasetModelsStat(request, *args, **kwarg):
     # summarization_models = SModel.objects.filter(dataset__id=dataset_id)
     summarization_models = SModel.objects.filter(dataset__id=dataset_id, modeldataset__stats__isnull=False).order_by(
         'name')
+    boundaries = {'article_id__max': 0, 'article_id__min': 0}
+    try:
+        boundaries = Article.objects.filter(dataset__id=dataset_id).aggregate(Max('article_id'), Min('article_id'))
+    except Exception as e:
+        pass
+
     metrics = ["compression", "length", "rouge1", "rouge2", "rougeL", "entities", "relations",
                "uni_gram_abs", "bi_gram_abs", "tri_gram_abs", "four_gram_abs"]
     for sm in summarization_models:
@@ -170,7 +185,7 @@ def getDatasetModelsStat(request, *args, **kwarg):
             for metric in metrics:
                 obj[metric] = "{:.2f}".format(stats[metric])
             selected_models.append(obj)
-    return JsonResponse({"metrics": metrics, "models": selected_models}, safe=False)
+    return JsonResponse({"metrics": metrics, "models": selected_models, "boundaries": boundaries}, safe=False)
 
 
 def getEntitiesByArticleID(request, *args, **kwargs):

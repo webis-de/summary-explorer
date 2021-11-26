@@ -4,6 +4,7 @@ import LoadingIcon from '../assets/images/loading.svg';
 import ListBoxModels from "./ListBoxModels";
 import PopoverDiv from "./Popover";
 import axios from "axios";
+import RougeScoreBlock from "./RougeScoreBlock";
 
 class SummaryBlockEntities extends React.Component {
 
@@ -202,6 +203,7 @@ class SummaryBlockEntities extends React.Component {
                                 </div>
                                     :null
                                 }
+                                <RougeScoreBlock rouge_score={this.props.rouge_score}/>
 
                         </div>
                         :<div className="flex">

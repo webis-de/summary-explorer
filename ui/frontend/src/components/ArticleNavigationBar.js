@@ -5,12 +5,11 @@ import NextIcon from "./icons/NextIcon";
 import PrevIcon from "./icons/PrevIcon";
 
 export default function ArticleNavigationBar(props) {
-    const {article_id, dataset_id} = props;
-    const corpus_upper_bound = {1: 11448, 2: 10360, 3:250};
+    const {article_id, dataset_id, dataset_boundaries} = props;
     const btn_style = "px-1 py-1 bg-blue-800 text-white text-xs rounded mr-1 hover:bg-red-700 cursor-pointer";
     return (
         <div className="flex mb-1">
-                                {article_id > 1?
+                                {article_id > dataset_boundaries['article_id__min']?
                                  <span className={btn_style}
                                        onClick={()=>{props.loadArticle(article_id-1, dataset_id)}}>
                                         <PrevIcon />
@@ -21,7 +20,7 @@ export default function ArticleNavigationBar(props) {
                                      <span dangerouslySetInnerHTML={{__html: ShuffleIcon}} className="m-auto block" />
                                  </span>
 
-                                {article_id < corpus_upper_bound[dataset_id]?
+                                {article_id < dataset_boundaries['article_id__max']?
                                  <span className={btn_style}
                                        onClick={()=>{props.loadArticle(article_id+1, dataset_id)}}>
                                     <NextIcon />

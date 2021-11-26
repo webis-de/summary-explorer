@@ -22,6 +22,7 @@ urlpatterns = [
     path('dataset/<int:id>/models', DatasetModelsView.as_view()),
     path('dataset/<int:id>/models_stat', getDatasetModelsStat),
     path('dataset/<int:id>/groups', DatasetGroupsView.as_view()),
+    path('dataset/<int:id>/boundaries', getDatasetBoundaries),
     path('smodel/<int:pk>', SModelRetriveView.as_view()),
     path('smodel/all/', getAllModels),
     path('smodel/<str:name>/<int:id>', getSModelInfo),

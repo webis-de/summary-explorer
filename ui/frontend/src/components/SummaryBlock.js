@@ -5,6 +5,7 @@ import ListBoxModels from "./ListBoxModels";
 import PopoverDiv from "./Popover";
 import axios from "axios";
 import * as d3 from "d3";
+import RougeScoreBlock from "./RougeScoreBlock";
 
 class SummaryBlock extends React.Component {
 
@@ -242,35 +243,38 @@ class SummaryBlock extends React.Component {
                                 {/*</span>*/}
                             </div>
                                 {!this.state.hide_content?
-                                <div>
-                                    <div  className="mt-1 px-4 pb-2 ">
-                                {sentences.map(sentence => {
-                                const bg = sentence.sent_id in selected_sentences?selected_sentences[sentence.sent_id] : {}
-                                return (
-                                    <span key={summ_model + "_sent_" + sentence.sent_id}
-                                          className={"cursor-pointer hover:underline hover:font-red-600 hover:bg-yellow-100 "}
-                                          style={bg}
-                                          onClick={()=>{this.higlightCorrespondings(sentence.sent_id)}}
-                                    >
-                                        {sentence.text +". "}
-                                    </span>
-                                )})}
-                            </div>
-                                    <div className="px-4 mb-1">
-                                        <span className={" text-xs rounded p-1 mr-1 cursor-pointer "
-                                        +(this.state.active_buttons==="lexical"? "bg-blue-800 text-white": "bg-gray-200 text-gray-800")}
-                                        onClick={(e)=>{this.enableLexical()}}>Lexical</span>
-                                        {/*<span className={" text-xs rounded p-1 mr-1 cursor-pointer " + (this.state.active_buttons.spacy?"bg-blue-300": "bg-gray-300")}*/}
-                                        {/*onClick={(e)=>{this.enableSemanticSpacy()}}>Semantic (Spacy)</span>*/}
-                                        <span className={" text-xs rounded p-1 mr-1 cursor-pointer "
-                                        +(this.state.active_buttons==="bert"? "bg-blue-800 text-white": "bg-gray-200 text-gray-800")}
-                                        onClick={(e)=>{this.enableSemanticBert()}}>Semantic</span>
+                                    <div>
+                                        <div  className="mt-1 px-4 pb-2 ">
+                                            {sentences.map(sentence => {
+                                                const bg = sentence.sent_id in selected_sentences?selected_sentences[sentence.sent_id] : {}
+                                                return (
+                                                    <span key={summ_model + "_sent_" + sentence.sent_id}
+                                                          className={"cursor-pointer hover:underline hover:font-red-600 hover:bg-yellow-100 "}
+                                                          style={bg}
+                                                          onClick={()=>{this.higlightCorrespondings(sentence.sent_id)}}
+                                                    >
+                                                        {sentence.text +". "}
+                                                    </span>
+                                                )})
+                                            }
+                                        </div>
+                                        <div className="px-4 mb-1">
+                                            <span className={" text-xs rounded p-1 mr-1 cursor-pointer "
+                                            +(this.state.active_buttons==="lexical"? "bg-blue-800 text-white": "bg-gray-200 text-gray-800")}
+                                            onClick={(e)=>{this.enableLexical()}}>Lexical</span>
+                                            {/*<span className={" text-xs rounded p-1 mr-1 cursor-pointer " + (this.state.active_buttons.spacy?"bg-blue-300": "bg-gray-300")}*/}
+                                            {/*onClick={(e)=>{this.enableSemanticSpacy()}}>Semantic (Spacy)</span>*/}
+                                            <span className={" text-xs rounded p-1 mr-1 cursor-pointer "
+                                            +(this.state.active_buttons==="bert"? "bg-blue-800 text-white": "bg-gray-200 text-gray-800")}
+                                            onClick={(e)=>{this.enableSemanticBert()}}>Semantic</span>
+                                        </div>
+
                                     </div>
-                                </div>
                                     :null
                                 }
 
-                        </div>
+                                <RougeScoreBlock rouge_score={this.props.rouge_score}/>
+                            </div>
                         :<div className="flex">
                             <div dangerouslySetInnerHTML={{__html: LoadingIcon}} className="p-5 m-auto block" />
                         </div>}

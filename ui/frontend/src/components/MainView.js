@@ -37,7 +37,8 @@ class MainView extends React.Component {
             question_id: null,
             selected_models: {},
             article_bars_HM_selected_article: null,
-            article_id: -1
+            article_id: -1,
+            boundaries: {'article_id__max': 0, 'article_id__min': 0},
 
         }
     }
@@ -88,9 +89,11 @@ class MainView extends React.Component {
                   dataset_id: dataset_id,
                   models: res.data.models,
                   metrics: res.data.metrics,
+                  boundaries : res.data.boundaries,
                   data_loaded: true,
               });
           });
+
     };
 
     setSubMetrics = (metrics_list, question, q_id) => {
@@ -182,7 +185,7 @@ class MainView extends React.Component {
     }
 
     render() {
-        const {models, metrics, dataset_id, data_loaded, selected_model, current_question, metrics_subset,selected_models,
+        const {models, metrics, boundaries, dataset_id, data_loaded, selected_model, current_question, metrics_subset,selected_models,
             user_selected_models, default_view, question_id, article_id} = this.state;
         return (
             <div>
@@ -375,6 +378,7 @@ class MainView extends React.Component {
                         {question_id===1?
                             <SingleGroupView key="ModelGroupView"
                                              dataset_id={dataset_id}
+                                             dataset_boundaries = {boundaries}
                                              article_id={article_id}
                                              all_models={models}
                                              setArticleId={this.setArticleId}
@@ -384,6 +388,7 @@ class MainView extends React.Component {
                         {question_id===2?
                             <SingleGroupViewHalucination key="ModelGroupViewHalucination"
                                                          dataset_id={dataset_id}
+                                                         dataset_boundaries = {boundaries}
                                                          article_id={article_id}
                                                          all_models={models}
                                                          setArticleId = {this.setArticleId}
@@ -393,6 +398,7 @@ class MainView extends React.Component {
                         {question_id===3?
                             <SingleGroupViewEntity key="SingleGroupViewEntity"
                                                    dataset_id={dataset_id}
+                                                   dataset_boundaries = {boundaries}
                                                    article_id={article_id}
                                                    all_models={models}
                                                    setArticleId = {this.setArticleId}
@@ -402,6 +408,7 @@ class MainView extends React.Component {
                         {question_id===4?
                             <SingleGroupViewRelations key="SingleGroupViewRelations"
                                                       dataset_id={dataset_id}
+                                                      dataset_boundaries = {boundaries}
                                                       article_id={article_id}
                                                       all_models={models}
                                                       setArticleId = {this.setArticleId}
@@ -411,6 +418,7 @@ class MainView extends React.Component {
                         {question_id===5?
                             <SingleGroupViewArticleHM key="SingleGroupViewArticleHM"
                                                       dataset_id={dataset_id}
+                                                      dataset_boundaries = {boundaries}
                                                       article_id={article_id}
                                                       all_models={models}
                                                       setArticleId = {this.setArticleId}

@@ -19,4 +19,3 @@ DATABASE=postgres</code></pre>
 - Run the server:   
 <code>python manage.py runserver</code>
 - Frontend URL: http://127.0.0.1:8000/
-- Visit <a href="http://127.0.0.1:8000/api/article/1" target=_blank>`http://127.0.0.1:8000/api/article/1`</a> to see the first article as API response.

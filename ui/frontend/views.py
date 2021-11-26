@@ -1,10 +1,13 @@
 from django.shortcuts import render, redirect
 
-from api.models import ModelDataset, SModel
+from api.models import ModelDataset, SModel, Dataset
 
 
 def index(request):
+    datasets = Dataset.objects.all()
+    datasets_list = [ {"id": dataset.pk, "name": dataset.name, "description_items": dataset.description.split("\n")} for dataset in datasets]
     context = {
+        "datasets": datasets_list
     }
     return render(request, 'frontend/index.html', context)
 

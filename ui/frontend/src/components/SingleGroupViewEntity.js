@@ -139,6 +139,7 @@ class SingleGroupViewEntity extends React.Component{
                          <div className="w-6/12 items-end">
                             {article_loaded?
                                 <ArticleNavigationBar article_id={article_id}
+                                                      dataset_boundaries = {this.props.dataset_boundaries}
                                                       dataset_id={dataset_id}
                                                       loadArticleUserInput={this.loadArticleUserInput}
                                                       loadArticle={this.loadArticle}
@@ -225,15 +226,16 @@ class SingleGroupViewEntity extends React.Component{
                                         <div>
                                            {smodels.map((model, i)=>{
                                                 return <SummaryBlockEntities key={"SummaryView"+i}
-                                                                     all_models={this.props.all_models}
-                                                                     sentences={model.raw.sentences}
-                                                                     model_info={model.model_info}
-                                                                     summ_model={model.smodel}
-                                                                     novelWords={model.raw.novelWords}
-                                                                     article_id={this.state.article_id}
-                                                                     current_model={current_model}
+                                                                             all_models={this.props.all_models}
+                                                                             sentences={model.raw.sentences}
+                                                                             model_info={model.model_info}
+                                                                             summ_model={model.smodel}
+                                                                             novelWords={model.raw.novelWords}
+                                                                             article_id={this.state.article_id}
+                                                                             current_model={current_model}
                                                                              article_entities={this.state.article_entities}
-                                                                     highlight_article_sentences={this.highlight_article_sentences}
+                                                                             highlight_article_sentences={this.highlight_article_sentences}
+                                                                             rouge_score={model.raw.rouge_score}
                                                         />
                                         })}
                                        </div>

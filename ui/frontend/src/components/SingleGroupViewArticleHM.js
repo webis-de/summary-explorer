@@ -181,6 +181,7 @@ class SingleGroupViewArticleHM extends React.Component{
                          <div className="w-6/12 items-end">
                               {article_loaded?
                                 <ArticleNavigationBar article_id={article_id}
+                                                      dataset_boundaries = {this.props.dataset_boundaries}
                                                       dataset_id={dataset_id}
                                                       loadArticleUserInput={this.loadArticleUserInput}
                                                       loadArticle={this.loadArticle}
@@ -238,6 +239,7 @@ class SingleGroupViewArticleHM extends React.Component{
                                                              current_model={current_model}
                                                              selected_sentence_article_id={this.state.selected_sentence_article_id}
                                                              similarity_type={this.state.current_selection}
+                                                             rouge_score={model.raw.rouge_score}
                                             />
                                 }):
                                 <div className="w-full bg-white text-left border rounded-t-md shadow-xl">

@@ -5,6 +5,7 @@ import ListBoxModels from "./ListBoxModels";
 import PopoverDiv from "./Popover";
 import axios from "axios";
 import * as d3 from "d3";
+import RougeScoreBlock from "./RougeScoreBlock";
 
 class SummaryBlockHallucinations2 extends React.Component {
 
@@ -281,6 +282,7 @@ class SummaryBlockHallucinations2 extends React.Component {
                                 </div>
                                     :null
                                 }
+                                <RougeScoreBlock rouge_score={this.props.rouge_score}/>
 
                         </div>
                         :<div className="flex">

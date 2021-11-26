@@ -155,6 +155,7 @@ class SingleGroupViewHalucination extends React.Component{
                          <div className="w-6/12 items-end ">
                              {article_loaded?
                                 <ArticleNavigationBar article_id={article_id}
+                                                      dataset_boundaries = {this.props.dataset_boundaries}
                                                       dataset_id={dataset_id}
                                                       loadArticleUserInput={this.loadArticleUserInput}
                                                       loadArticle={this.loadArticle}
@@ -246,8 +247,8 @@ class SingleGroupViewHalucination extends React.Component{
                                                                      article_id={this.state.article_id}
                                                                      current_model={current_model}
                                                                      setHighlighted_sentences = {this.setHighlighted_sentences}
-
                                                                      highlight_article_sentences={this.highlight_article_sentences}
+                                                                                  rouge_score={model.raw.rouge_score}
                                                         />
                                         })}
                                        </div>

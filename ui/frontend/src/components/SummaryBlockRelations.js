@@ -4,6 +4,7 @@ import LoadingIcon from '../assets/images/loading.svg';
 import ListBoxModels from "./ListBoxModels";
 import PopoverDiv from "./Popover";
 import axios from "axios";
+import RougeScoreBlock from "./RougeScoreBlock";
 
 class SummaryBlockRelations extends React.Component {
     constructor(props) {
@@ -213,6 +214,7 @@ class SummaryBlockRelations extends React.Component {
                                 </div>
                                     :null
                                 }
+                                <RougeScoreBlock rouge_score={this.props.rouge_score}/>
 
                         </div>
                         :<div className="flex">
