@@ -104,11 +104,13 @@ class SingleGroupViewEntity extends React.Component{
     loadArticleUserInput = ()=>{
         const {dataset_id, corpus_upper_bound} = this.state;
         let article_id = document.getElementById("article_id_input").value;
-        if(!isNaN(article_id) && article_id > 0 && article_id < corpus_upper_bound[dataset_id]){
+        if(!isNaN(art_id) && art_id >= this.props.dataset_boundaries['article_id__min'] &&
+            art_id <= this.props.dataset_boundaries['article_id__max'] ){
             this.loadArticle(article_id, dataset_id)
         }else{
             this.setState({
-                error_message:"Article ID should be a number between 1 and "+corpus_upper_bound[dataset_id],
+                error_message:"Article ID should be a number between " + this.props.dataset_boundaries['article_id__min']
+                    + " and " + this.props.dataset_boundaries['article_id__max'],
                 show_error: true
             })
             document.getElementById("article_id_input").value = article_id;
