@@ -2,6 +2,7 @@
 - Install dependencies.     
 `pip3 install -r requirements.txt`
 - Create a postgres database and import from the downloaded database [file](https://files.webis.de/summary-explorer/database/dbexport.sql). 
+<pre>psql --username=postgres</pre>
 <pre><code>CREATE DATABASE <b>sumviz</b>;
 psql -h hostname -d <b>sumviz</b> -U username -f dbexport.sql</code></pre>
 
