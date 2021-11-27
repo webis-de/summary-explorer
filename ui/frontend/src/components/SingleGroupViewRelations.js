@@ -158,7 +158,7 @@ class SingleGroupViewRelations extends React.Component{
                          <div className="w-6/12 items-end">
                                 {article_loaded?
                                     <ArticleNavigationBar article_id={article_id}
-                                                          dataset_boundaries = {this.props.boundaries}
+                                                          dataset_boundaries = {this.props.dataset_boundaries}
                                                           dataset_id={dataset_id}
                                                           loadArticleUserInput={this.loadArticleUserInput}
                                                           loadArticle={this.loadArticle}

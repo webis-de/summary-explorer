@@ -38,16 +38,21 @@
                                 </button>
                             </a>
                             <ul class="dropdown-menu absolute hidden text-white -mt-1 pt-1 bg-blue-900 rounded shadow z-50 opacity-100">
+                                {% for dataset in datasets %}
                                 <li class=""><a
                                         class="rounded-t bg-blue-900 hover:text-yellow-800 text-xs  hover:bg-white hover:border hover:border-blue-800  py-2 px-4 block whitespace-no-wrap"
-                                        href="main?dataset=1">CNN/DailyMail</a></li>
-                                <li class=""><a
-                                        class=" bg-blue-900  hover:text-yellow-800  text-xs  hover:bg-white hover:border hover:border-blue-800  py-2 px-4 block whitespace-no-wrap"
-                                        href="main?dataset=2">
-                                    XSum</a></li>
-                                <li class=""><a
-                                        class="rounded-b bg-blue-900  hover:text-yellow-800 text-xs   hover:bg-white hover:border hover:border-blue-800 py-2 px-4 block whitespace-no-wrap"
-                                        href="main?dataset=3">Webis TL;DR</a></li>
+                                        href="main?dataset={{dataset.id}}">{{dataset.name}}</a></li>
+                                {% endfor %}
+<!--                                <li class=""><a-->
+<!--                                        class="rounded-t bg-blue-900 hover:text-yellow-800 text-xs  hover:bg-white hover:border hover:border-blue-800  py-2 px-4 block whitespace-no-wrap"-->
+<!--                                        href="main?dataset=1">CNN/DailyMail</a></li>-->
+<!--                                <li class=""><a-->
+<!--                                        class=" bg-blue-900  hover:text-yellow-800  text-xs  hover:bg-white hover:border hover:border-blue-800  py-2 px-4 block whitespace-no-wrap"-->
+<!--                                        href="main?dataset=2">-->
+<!--                                    XSum</a></li>-->
+<!--                                <li class=""><a-->
+<!--                                        class="rounded-b bg-blue-900  hover:text-yellow-800 text-xs   hover:bg-white hover:border hover:border-blue-800 py-2 px-4 block whitespace-no-wrap"-->
+<!--                                        href="main?dataset=3">Webis TL;DR</a></li>-->
                             </ul>
                         </div>
 

@@ -6,11 +6,11 @@ import json
 from argparse import FileType
 from django.core.management.base import BaseCommand
 from collections import defaultdict, Counter
-# Call it like:
-# python manage.py import_dataset -c config.json
+from .functions import getModelHistogramData, compute_length
 from api.models import Dataset, Article, SModel, Summary, ModelDataset
 
-
+# Call it like:
+# python manage.py import_dataset -c config.json
 class Command(BaseCommand):
     help = 'Import a new dataset'
 
@@ -73,16 +73,6 @@ class Command(BaseCommand):
             if created:
                 self._success(f"Model ({model['name']}) is imported")
 
-            defaults = {'smodel_id': model["name"],
-                        'dataset_id': dataset_id,
-                        'stats': model["statistics"],
-                        'histogram': model["histogram"]}
-
-            obj, created = ModelDataset.objects.update_or_create(defaults=defaults,
-                                                                 smodel_id=model["name"],
-                                                                 dataset_id= dataset_id)
-            if created:
-                self._success(f"Model ({model['name']}) details are imported")
 
     def import_articles(self, path_to_articles, dataset_id):
         try:
@@ -123,7 +113,7 @@ class Command(BaseCommand):
             sum_list = [summary for summary in sum_list if summary.strip() != ""]
             saved_summaries_counter = 0
             unsaved_summaries_counter = 0
-
+            # import the summaries
             for idx in range(len(sum_list)):
                 # load the summary
                 summ_json = json.loads(sum_list[idx])
@@ -152,7 +142,7 @@ class Command(BaseCommand):
                 tri_gram_abs = summ_updated["ngram_abstractiveness"]["tri_gram_abs"]
                 four_gram_abs = summ_updated["ngram_abstractiveness"]["four_gram_abs"]
 
-                summ_length = self.compute_length(summary_text)
+                summ_length = compute_length(summary_text)
 
                 novelty, compression, factual_consistency = 0, 0, 0
                 if summ_length != 0:
@@ -205,11 +195,19 @@ class Command(BaseCommand):
             if unsaved_summaries_counter > 0:
                 self._success(f"{unsaved_summaries_counter} summaries couldn't be imported")
 
-    def get_words(self, text):
-        return re.compile('\w+').findall(text)
+            histogram_data, stats = getModelHistogramData(path)
+            defaults = {'smodel_id': model_name,
+                        'dataset_id': dataset_id,
+                        'stats': stats,
+                        'histogram': histogram_data}
 
-    def compute_length(self, text):
-        return len(self.get_words(text))
+            obj, created = ModelDataset.objects.update_or_create(defaults=defaults,
+                                                                 smodel_id=model_name,
+                                                                 dataset_id=dataset_id)
+            if created:
+                self._success(f"Model ({model_name}) details are imported")
+
+
 
     def CountFrequency(self, my_list):
         # Creating an empty dictionary
