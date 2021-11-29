@@ -130,8 +130,7 @@ class Command(BaseCommand):
                 summary_text = " ".join(s['text'] for s in summ_updated['sentences'])
 
                 # get hallucinations
-                temp = Counter(summ_updated["hallucinations"])
-                summ_updated["novelWords"] = [{"freq":freq, "token":token} for token, freq in temp.items()]
+                summ_updated["novelWords"] = summ_updated["hallucinations"]
 
                 rouge1 = round(summ_updated['rouge_score']['rouge1']['fmeasure'] * 100.0, 2) if 'rouge_score'in summ_updated else 0
                 rouge2 = round(summ_updated['rouge_score']['rouge2']['fmeasure'] * 100.0, 2) if 'rouge_score'in summ_updated else 0
