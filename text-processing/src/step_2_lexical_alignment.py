@@ -34,7 +34,8 @@ def compute_lexical_alignment(input_dir, output_dir):
     article_file_lines = open(article_file_path, "r", encoding="utf-8").readlines()
     article_records = [json.loads(a.strip("\n")) for a in article_file_lines]
     print("Read {} article records.".format(len(article_file_lines)))
-    print("Found {} model files to be processed".format(len(input_file_paths)))
+    print("Found {} model files to be processed, including references.".format(len(input_file_paths)))
+    
     for file in tqdm(input_file_paths):
         model_name = file.split("/")[-1].replace(".jsonl", "").strip()
         print("Processing {} \n".format(model_name))
