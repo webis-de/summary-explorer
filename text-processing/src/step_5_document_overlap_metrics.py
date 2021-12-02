@@ -23,7 +23,8 @@ from metrics import compute_compression, compute_entity_level_factuality, comput
 
 def compute_document_overlap_metrics(input_dir, output_dir):
     input_file_paths = [str(p) for p in pathlib.Path(input_dir).rglob("*.jsonl")]
-    article_file_path = str(pathlib.Path(input_dir).parent) + "/nlp-processed/articles.jsonl"
+    article_file_path = [p for p in input_file_paths if "articles" in p][0]
+    input_file_paths.remove(article_file_path)
     pathlib.Path(output_dir).mkdir(parents=True, exist_ok=True)
     article_file_lines = open(article_file_path, "r", encoding="utf-8").readlines()
     article_records = [json.loads(a.strip("\n")) for a in article_file_lines]
