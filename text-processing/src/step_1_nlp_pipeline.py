@@ -171,6 +171,5 @@ def apply_nlp(input_dir, output_dir):
     RELATION_EXTRACTION_MODEL.client.stop()
     print("Closed StanfordOpenIE client.")
 
-
 if __name__ == "__main__":
     apply_nlp()

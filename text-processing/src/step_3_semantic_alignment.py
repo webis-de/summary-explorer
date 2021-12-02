@@ -5,9 +5,9 @@ import json
 import pathlib
 from glob import glob
 from bert_score import BERTScorer
+from shutil import copy, copyfile
 
 try:
-    NLP = spacy.load("en_core_web_lg")
     BERT_SCORER = BERTScorer(
         nthreads=8,
         batch_size=512,
@@ -17,14 +17,6 @@ try:
     )
 except Exception as e:
     print(e)
-
-
-def spacy_similarity(text_a, text_b):
-    nlp = NLP
-    doc_a = nlp(text_a)
-    doc_b = nlp(text_b)
-    sim = doc_a.similarity(doc_b)
-    return sim
 
 
 def bert_score_similarity(summary_sents, article_sents):
@@ -55,15 +47,17 @@ def bert_score_similarity(summary_sents, article_sents):
     default=".",
     help="Path to store files with semantic similarities computed",
 )
-def compute_similarity(input_dir, output_dir):
-    input_files = glob(input_dir + "*.jsonl")
+def compute_semantic_alignment(input_dir, output_dir):
+    input_file_paths = [str(p) for p in pathlib.Path(input_dir).rglob("*.jsonl")]
+    article_file_path = [p for p in input_file_paths if "articles" in p][0]
+    input_file_paths.remove(article_file_path)
     pathlib.Path(output_dir).mkdir(parents=True, exist_ok=True)
-    articles_file = [a for a in input_files if "articles.jsonl" in a][0]
-    input_files.remove(articles_file)
-    articles_file_lines = open(articles_file, "r", encoding="utf-8").readlines()
-    article_records = [json.loads(a.strip("\n")) for a in articles_file_lines]
-    # remaining files are the models for which semantically aligned sentences from the articles must be found
-    for file in tqdm(input_files):
+    article_file_lines = open(article_file_path, "r", encoding="utf-8").readlines()
+    article_records = [json.loads(a.strip("\n")) for a in article_file_lines]
+    print("Read {} article records.".format(len(article_file_lines)))
+    print("Found {} model files to be processed, including references.".format(len(input_file_paths)))
+
+    for file in tqdm(input_file_paths):
         model_name = file.split("/")[-1].replace(".jsonl", "").strip()
         print("Processing {} \n".format(model_name))
         out_file_name = output_dir + model_name + ".jsonl"
@@ -76,36 +70,23 @@ def compute_similarity(input_dir, output_dir):
                 for s_sent in summary_sentences:
                     # BertScore works faster when a summary sentence is broadcasted to be paired against each article sentence.
                     art_sents = [a["text"] for a in article_sentences]
+                    # broadcasting each summary sentence
                     s_sents = [s_sent["text"]] * len(art_sents)
                     bert_score_candidates = bert_score_similarity(s_sents, art_sents)
-                    spacy_similarities = []
                     s_sent_text = s_sent["text"]
                     for a_sent in article_sentences:
                         a_sent_id = a_sent["sent_id"]
                         a_sent_text = a_sent["text"]
-                        # Spacy similarity
-                        spacy_sim = spacy_similarity(s_sent_text, a_sent_text)
-                        spacy_similarities.append(
-                            {
-                                "summary_sent": s_sent_text,
-                                "article_sent": a_sent_text,
-                                "article_sent_id": a_sent_id,
-                                "similarity": spacy_sim,
-                            }
-                        )
-                    spacy_sorted_sims = sorted(
-                        spacy_similarities, key=lambda i: i["similarity"], reverse=True
-                    )
-                    s_sent["semantic_similarity_candidates_spacy"] = spacy_sorted_sims[
-                        :3
-                    ]
                     s_sent[
-                        "semantic_similarity_candidates_bert_score"
+                        "semantic_alignment_candidates_bert_score"
                     ] = bert_score_candidates
                 outf.write(json.dumps(model))
                 outf.write("\n")
         print("Finished processing {}".format(model_name))
-
-
+    
+    # Copy article files to the destination folder for the next step.
+    destination = str(pathlib.Path(output_dir)) + "/articles.jsonl"
+    copyfile(pathlib.Path(article_file_path), pathlib.Path(destination))
+    print("Copied the articles file to the output directory.")
 if __name__ == "__main__":
-    compute_similarity()
+    compute_semantic_alignment()

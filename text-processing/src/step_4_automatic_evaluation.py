@@ -22,6 +22,7 @@ from shutil import copy, copyfile
 
 def compute_automatic_scores(input_dir, output_dir):
     input_file_paths = [str(p) for p in pathlib.Path(input_dir).rglob("*.jsonl")]
+    article_file_path = [p for p in input_file_paths if "articles" in p][0]
     references_file_path = [a for a in input_file_paths if "references" in a][0]
     pathlib.Path(output_dir).mkdir(parents=True, exist_ok=True)
     references_file_lines = open(references_file_path, "r", encoding="utf-8").readlines()
@@ -42,8 +43,14 @@ def compute_automatic_scores(input_dir, output_dir):
                 outf.write(json.dumps(model))
                 outf.write("\n")
             print("Finished processing {}".format(model_name))
-    destination = str(pathlib.Path(output_dir)) + "/references.jsonl"
-    copyfile(pathlib.Path(references_file_path), pathlib.Path(destination))
+    
+    # Copy the processed articles and references files to the destination folder for the next step.
+    art_destination = str(pathlib.Path(output_dir)) + "/articles.jsonl"
+    copyfile(pathlib.Path(article_file_path), pathlib.Path(art_destination))
+    print("Copied the articles file to the output directory.")
+
+    ref_destination = str(pathlib.Path(output_dir)) + "/references.jsonl"
+    copyfile(pathlib.Path(references_file_path), pathlib.Path(ref_destination))
     print("Copied the references file to the output directory.")
 
 if __name__ == "__main__":

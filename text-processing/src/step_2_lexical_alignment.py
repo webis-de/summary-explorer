@@ -3,6 +3,7 @@ import click
 from metrics import compute_mean_rouge_overlap
 from tqdm import tqdm
 import pathlib
+from shutil import copy, copyfile
 
 
 def get_remaining_content(candidate, matched):
@@ -112,6 +113,11 @@ def compute_lexical_alignment(input_dir, output_dir):
                 outf.write(json.dumps(model))
                 outf.write("\n")
         print("Finished processing {}".format(model_name))
+    
+    # Copy article files to the destination folder for the next step.
+    destination = str(pathlib.Path(output_dir)) + "/articles.jsonl"
+    copyfile(pathlib.Path(article_file_path), pathlib.Path(destination))
+    print("Copied the articles file to the output directory.")
 
 
 if __name__ == "__main__":
