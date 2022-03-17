@@ -9,6 +9,8 @@ from collections import defaultdict, Counter
 from .functions import getModelHistogramData, compute_length
 from api.models import Dataset, Article, SModel, Summary, ModelDataset
 
+# TODO: if there is any problem occurs during the import process, rollback and remove all inserted values
+
 # Call it like:
 # python manage.py import_dataset -c config.json
 class Command(BaseCommand):
@@ -25,7 +27,6 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         try:
             configs = json.load(options['config'])
-            # print(configs)
             # 1 - Create a new dataset record
             ds = Dataset(name=configs["dataset"]["name"], description=configs["dataset"]["description"])
             try:
@@ -87,6 +88,10 @@ class Command(BaseCommand):
             try:
                 ar = json.loads(ar)
                 ar = self.update_structure(ar)
+                for sentence in ar['sentences']:
+                    sentence["filtered_relations"] = sentence.pop("relations")
+                    for relation in sentence["filtered_relations"]:
+                        relation['text'] = f"{relation['subject']} {relation['relation']} {relation['object']}"
                 defaults = {'raw': ar, 'article_id': int(ar["article_id"]), 'dataset_id': dataset_id}
                 obj, created = Article.objects.update_or_create(defaults=defaults,
                                                                 article_id=int(ar["article_id"]),
@@ -131,6 +136,12 @@ class Command(BaseCommand):
 
                 # get hallucinations
                 summ_updated["novelWords"] = summ_updated["hallucinations"]
+
+                for sentence in summ_updated['sentences']:
+                    sentence["filtered_relations"] = sentence.pop("relations")
+                    if "semantic_similarity_candidates_bert_score" not in sentence:
+                        sentence["semantic_similarity_candidates_bert_score"] = sentence.pop("semantic_alignment_candidates_bert_score")
+
 
                 rouge1 = round(summ_updated['rouge_score']['rouge1']['fmeasure'] * 100.0, 2) if 'rouge_score'in summ_updated else 0
                 rouge2 = round(summ_updated['rouge_score']['rouge2']['fmeasure'] * 100.0, 2) if 'rouge_score'in summ_updated else 0

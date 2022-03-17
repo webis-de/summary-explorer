@@ -245,8 +245,8 @@ def getArticleHMByArticleID(request, *args, **kwargs):
                'model_info': summ.smodel.raw}
         smodels.append(obj)
 
-        spacy_article_map.extend(list(set([candidate["article_sent_id"] for sentence in summ.raw['sentences']
-                                           for candidate in sentence["semantic_similarity_candidates_spacy"][:2]])))
+        # spacy_article_map.extend(list(set([candidate["article_sent_id"] for sentence in summ.raw['sentences']
+        #                                    for candidate in sentence["semantic_similarity_candidates_spacy"][:2]])))
 
         bert_article_map.extend(list(set([candidate["article_sent_id"] for sentence in summ.raw['sentences']
                                           for candidate in sentence["semantic_similarity_candidates_bert_score"][:2]])))
@@ -255,9 +255,9 @@ def getArticleHMByArticleID(request, *args, **kwargs):
                                              for candidate in
                                              sentence["lexical_alignment_candidates_mean_rouge"][:2]])))
 
-    spacy_article_map = Counter(spacy_article_map).most_common()
-    max_spacy = max([s[1] for s in spacy_article_map])
-    spacy_article_map = {a: round(b / len(summaries), 2) for a, b in spacy_article_map}
+    # spacy_article_map = Counter(spacy_article_map).most_common()
+    # max_spacy = max([s[1] for s in spacy_article_map])
+    # spacy_article_map = {a: round(b / len(summaries), 2) for a, b in spacy_article_map}
 
     bert_article_map = Counter(bert_article_map).most_common()
     max_bert = max([s[1] for s in bert_article_map])
@@ -400,18 +400,18 @@ def getArticleMaps(request, smodel_id, ds_id):
         max_val = max([s[1] for s in bert_article_map])
         bert_article_map_normalized = {a: b / max_val for a, b in bert_article_map}
 
-        spacy_article_map = [candidate["article_sent_id"] for sentence in summary.raw['sentences']
-                             for candidate in sentence["semantic_similarity_candidates_spacy"]]
-        spacy_article_map = Counter(spacy_article_map).most_common()
-        max_val = max([s[1] for s in spacy_article_map])
-        spacy_article_map_normalized = {a: b / max_val for a, b in spacy_article_map}
+        # spacy_article_map = [candidate["article_sent_id"] for sentence in summary.raw['sentences']
+        #                      for candidate in sentence["semantic_similarity_candidates_spacy"]]
+        # spacy_article_map = Counter(spacy_article_map).most_common()
+        # max_val = max([s[1] for s in spacy_article_map])
+        # spacy_article_map_normalized = {a: b / max_val for a, b in spacy_article_map}
 
         sentences_list = []
         for sent in article.raw['sentences']:
             sentences_list.append({'len': len(sent['tokens']),
                                    'lexical': lexical_article_map_normalized.get(sent["sent_id"], 0),
-                                   'bert': bert_article_map_normalized.get(sent["sent_id"], 0),
-                                   'spacy': spacy_article_map_normalized.get(sent["sent_id"], 0)})
+                                   'bert': bert_article_map_normalized.get(sent["sent_id"], 0), # 'spacy': spacy_article_map_normalized.get(sent["sent_id"], 0)
+                                   })
         sentence_length = sum([s['len'] for s in sentences_list])
         if sentence_length > max_length:
             max_length = sentence_length
