@@ -19,7 +19,7 @@
     "@babel/preset-react": "^7.10.4",
     "@heroicons/react": "^1.0.1",
     "autoprefixer": "^10.0.0",
-    "axios": "^0.20.0",
+    "axios": "^0.21.2",
     "babel-loader": "^8.1.0",
     "css-loader": "^4.3.0",
     "postcss-cli": "^7.1.2",
