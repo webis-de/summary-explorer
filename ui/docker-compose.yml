@@ -1,41 +1,51 @@
-version: '3.7'
+version: "3.7"
 
 services:
   web:
-    build: ./
-    command: gunicorn SumViz.wsgi:application  --bind 0.0.0.0:8000 #python manage.py runserver 0.0.0.0:8000 # --timeout 120 --workers 6
+    image: api:latest
+    build: .
+    working_dir: /app
     volumes:
-      #- ./:/usr/src/sumviz/
-      - static_volume:/usr/src/sumviz/static/
-    expose:
-      - 8000
-    env_file:
-      - ./.env
+      - .:/app
+      - web_root_data:/root/.local
+      - static_volume:/app/static
+    environment:
+      - PYTHONDONTWRITEBYTECODE=1
+      - PYTHONUNBUFFERED=1
+      - SECRET_KEY=secret
+      - DJANGO_ALLOWED_HOSTS=localhost 127.0.0.1 [::1]
+      - SQL_DATABASE=django
+      - SQL_PASSWORD=postgres
+      - SQL_HOST=db
     depends_on:
       - db
-    restart: always
+    # restart: always
+    command: ./boot.sh
 
   db:
-    image: postgres:12
+    image: postgres:latest
     volumes:
       - postgres_data:/var/lib/postgresql/data/
-    env_file:
-      - ./.env.db
-    shm_size: '2gb'
+    environment:
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=django
+    shm_size: "2gb"
+    ports:
+      - 127.0.0.1:5432:5432
     restart: always
-
 
   nginx:
     build: ./nginx
     restart: always
     ports:
-      - 127.0.0.1::80
+      - 127.0.0.1:5000:80
     volumes:
       - static_volume:/usr/src/sumviz/static
     depends_on:
       - web
 
-
 volumes:
-  postgres_data:
   static_volume:
+  web_root_data:
+  postgres_data:
