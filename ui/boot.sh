@@ -15,4 +15,4 @@ if [ -n "$SQL_HOST" ]; then
   echo "database started"
 fi
 
-gunicorn SumViz.wsgi:application --bind 0.0.0.0:8000 --reload
+gunicorn SumViz.wsgi:application --bind 0.0.0.0:5000 --reload

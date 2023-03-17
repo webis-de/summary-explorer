@@ -1,10 +1,12 @@
 version: "3.7"
 
 services:
-  web:
+  api:
     image: api:latest
     build: .
     working_dir: /app
+    ports:
+      - 127.0.0.1:5000:5000
     volumes:
       - .:/app
       - web_root_data:/root/.local
@@ -19,7 +21,6 @@ services:
       - SQL_HOST=db
     depends_on:
       - db
-    # restart: always
     command: ./boot.sh
 
   db:
@@ -35,17 +36,22 @@ services:
       - 127.0.0.1:5432:5432
     restart: always
 
-  nginx:
-    build: ./nginx
-    restart: always
+  frontend:
+    image: node:19-slim
+    working_dir: /app
+    stdin_open: true
     ports:
-      - 127.0.0.1:5000:80
+      - 127.0.0.1:3000:3000
     volumes:
-      - static_volume:/usr/src/sumviz/static
-    depends_on:
-      - web
+      - ./frontend/:/app
+      - frontend_node_modules:/app/node_modules
+    environment:
+      - NODE_ENV=development
+      - REACT_APP_API_PORT=5000
+    command: bash -c "chown -R node:node /app/node_modules && npm install && npm start"
 
 volumes:
   static_volume:
   web_root_data:
   postgres_data:
+  frontend_node_modules:

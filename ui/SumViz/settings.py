@@ -27,6 +27,10 @@ SECRET_KEY = "h8p0cjo0yuby_noebi!@!clsw_ch*4$-00b&&lfy_24%rb5s#="
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:3000",
+]
+
 ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS", "*").split(" ")
 
 # Application definition
@@ -40,11 +44,13 @@ INSTALLED_APPS = [
     "django_extensions",
     "rest_framework",
     "api",
-    "frontend",
     "django.contrib.admin",
+    "corsheaders",
 ]
 
 MIDDLEWARE = [
+    "corsheaders.middleware.CorsMiddleware",
+    "django.middleware.common.CommonMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -56,21 +62,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = "SumViz.urls"
 
-TEMPLATES = [
-    {
-        "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [os.path.join(BASE_DIR, "frontend/templates")],
-        "APP_DIRS": True,
-        "OPTIONS": {
-            "context_processors": [
-                "django.template.context_processors.debug",
-                "django.template.context_processors.request",
-                "django.contrib.auth.context_processors.auth",
-                "django.contrib.messages.context_processors.messages",
-            ],
-        },
-    },
-]
+TEMPLATES = None
 
 WSGI_APPLICATION = "SumViz.wsgi.application"  # SumViz
 

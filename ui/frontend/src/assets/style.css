@@ -1,0 +1,177 @@
+body {
+  background-color: #f0f2f5;
+  font-family: Verdana, serif;
+}
+
+:root {
+  --body_bg_color: #ffffff;
+  --nav_bg_color: #122b3c; /*#122b3c; /* #1A1A1A */
+  --nav_txt_color: #eda820;
+  --content_font: Verdana;
+  --headers_font: "Open Sans";
+  --sum_bg_color: #dfe4e6;
+}
+
+.header_font {
+  font-family: var(--headers_font), sans-serif;
+}
+.text-xxxs {
+  font-size: 0.5rem;
+}
+
+.text-xxs {
+  font-size: 0.6rem;
+}
+
+/* Navbar */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+#menu-toggle:checked + #menu {
+  display: block;
+}
+
+ul.pagination {
+  list-style: none;
+}
+ul.pagination li {
+  text-transform: capitalize;
+  border: 1px solid #e8e8e8;
+  min-width: 30px;
+  text-align: center;
+  margin: 1px;
+  border-radius: 3px;
+  padding: 4px 8px 4px 8px;
+  display: inline;
+  font-size: 16px;
+  font-weight: 400;
+  height: 33px;
+  line-height: 24px;
+  color: #444444;
+}
+
+ul.pagination li:hover {
+  color: #4299e1;
+  border: 1px solid #4299e1;
+}
+ul.pagination li.active {
+  border: 1px solid #4299e1;
+  background: #4299e1;
+  color: #ffffff;
+}
+
+.shadow {
+  stroke: #eeeeee;
+  stroke-width: 4px;
+  opacity: 0.8;
+  color: #111111;
+}
+
+.sankey_line {
+  /*fill: none;*/
+  /*stroke-width: 1;*/
+  /*stroke: #EEEEEE;*/
+  fill-opacity: 0.7;
+}
+
+.sankey_line:hover {
+  fill-opacity: 0.95;
+}
+
+/* Tooltip */
+
+div.tooltip_navigation {
+  position: absolute;
+  text-align: left;
+  flex-wrap: wrap;
+  padding: 4px;
+  font: 10px sans-serif;
+  /*color: #2a4365;*/
+  /*background: #ebf8ff;*/
+  border: 1px solid #aaaaaa;
+  pointer-events: none;
+  border-radius: 3px;
+}
+
+div.tooltip {
+  text-align: left;
+  width: 200px;
+  flex-wrap: wrap;
+  padding: 4px;
+  font: 11px sans-serif;
+  color: #444444;
+  background: #ffffff;
+  border: 1px solid #888888;
+  border-radius: 1px;
+  pointer-events: none;
+}
+
+.highlighted_bar {
+  background-color: #2f855a;
+  fill: #fc8181;
+}
+
+.slidecontainer {
+  width: 100%; /* Width of the outside container */
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none; /* Override default CSS styles */
+  appearance: none;
+  width: 90%; /* Full-width */
+  height: 15px; /* Specified height */
+  background: #e3e3e3; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
+  transition: opacity 0.2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 18px; /* Set a specific slider handle width */
+  height: 18px; /* Slider handle height */
+  background: #ed8936; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  width: 18px; /* Set a specific slider handle width */
+  height: 18px; /* Slider handle height */
+  background: #ed8936; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.toggle__dot {
+  top: -0.2rem;
+  left: -0.25rem;
+  transition: all 0.3s ease-in-out;
+}
+
+input:checked ~ .toggle__dot {
+  transform: translateX(100%);
+  background-color: #2b6cb0;
+}
+
+.svg-container {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%; /* aspect ratio */
+  vertical-align: top;
+  overflow: hidden;
+}
+.svg-content-responsive {
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  left: 0;
+}

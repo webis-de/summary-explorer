@@ -4,6 +4,7 @@ from .views import *
 
 urlpatterns = [
     path('index', index, name='home'),
+    path('datasets/', getDatasets),
     # returns all articles ids, needed for corpus navigation view
     path('articles/', ArticleIDSListView.as_view()),
     # returns a single article
@@ -33,5 +34,4 @@ urlpatterns = [
     path('group/<int:article>/<int:group>', getSummariesByArticleIDandGroupID),  # ArticleSummaries.as_view()
     path('summary/<int:article>/<str:smodel>', getSummariesByArticleIDandModelID),  # SummaryListView.as_view()
     path('smodel/<str:smodel>/all', AllSummaryListView.as_view())
-
 ]

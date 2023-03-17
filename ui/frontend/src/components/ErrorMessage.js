@@ -1,8 +1,5 @@
+/* eslint-disable */
 import React from "react";
-import ShuffleIcon from "../assets/images/shuffle.svg";
-import LinkIcon from "./icons/LinkIcon";
-import NextIcon from "./icons/NextIcon";
-import PrevIcon from "./icons/PrevIcon";
 
 export default function ErrorMessage(props) {
     return (
